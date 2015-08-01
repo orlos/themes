@@ -1,9 +1,16 @@
-Caffeinated Themes
+Caffeinated Themes v3
 ==================
-[![Laravel 5.0](https://img.shields.io/badge/Laravel-5.0-orange.svg?style=flat-square)](http://laravel.com)
-[![Laravel 5.1](https://img.shields.io/badge/Laravel-5.1-orange.svg?style=flat-square)](http://laravel.com)
+
+[![Build Status](https://img.shields.io/travis/caffeinated/themes.svg?branch=v3&style=flat-square)](https://travis-ci.org/caffeinated/themes)
+[![Scrutinizer coverage](https://img.shields.io/scrutinizer/coverage/g/caffeinated/themes/v3.svg?&style=flat-square)](https://scrutinizer-ci.com/g/caffeinated/themes/?branch=v3)
+[![Scrutinizer quality](https://img.shields.io/scrutinizer/g/caffeinated/themes/v3.svg?&style=flat-square)](https://scrutinizer-ci.com/g/caffeinated/themes/?branch=v3)
 [![Source](http://img.shields.io/badge/source-caffeinated/themes-blue.svg?style=flat-square)](https://github.com/caffeinated/themes)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
+
+<!--- 
+[![Laravel 5.1](https://img.shields.io/badge/Laravel-5.1-orange.svg?style=flat-square)](http://laravel.com)
+[![GitHub Version](https://img.shields.io/github/tag/caffeinated/themes.svg?style=flat-square&label=version)](http://badge.fury.io/gh/caffeinated%2Fthemes) 
+--->
 
 Caffeinated Themes gives the means to group together a set of views and assets for Laravel 5.0 and Laravel 5.1. This gives an easy way to further decouple the way your web application looks from your code base.
 
@@ -32,7 +39,7 @@ composer require caffeinated/themes=~1.0
 
 #### Laravel 5.1.x
 ```
-composer require caffeinated/themes=~2.0
+composer require caffeinated/themes=~3.0
 ```
 
 Once this operation is complete, simply add both the service provider and facade classes to your project's `config/app.php` file:
@@ -45,7 +52,7 @@ Once this operation is complete, simply add both the service provider and facade
 
 ##### Facade
 ```php
-'Theme' => 'Caffeinated\Themes\Facades\Theme',
+'Themes' => 'Caffeinated\Themes\Facades\Themes',
 ```
 
 #### Laravel 5.1.x
