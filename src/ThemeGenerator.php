@@ -40,8 +40,8 @@ class ThemeGenerator extends StubGenerator
      *
      * @param      $slug
      * @param      $name
-     * @param null $parent
-     * @param null $viewFile
+     * @param null|string $parent
+     * @param null|string $viewFile
      * @return bool
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */

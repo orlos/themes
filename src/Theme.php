@@ -57,10 +57,22 @@ class Theme
      */
     protected $slug;
 
+    /**
+     * @var
+     */
     protected $dispatcher;
 
+    /**
+     * @var bool Is booted
+     */
     protected $booted = false;
 
+    /**
+     * @param \Caffeinated\Themes\Contracts\ThemeFactory $themes
+     * @param \Illuminate\Contracts\Events\Dispatcher    $dispatcher
+     * @param                                            $path
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     */
     public function __construct(ThemeFactoryContract $themes, Dispatcher $dispatcher, $path)
     {
         $this->themes     = $themes;
@@ -69,7 +81,7 @@ class Theme
 
         if ( ! $this->themes->getFiles()->exists($path . '/theme.php') )
         {
-            throw new FileNotFoundException("Error while loading theme, could not find " . $path . '/theme.php');
+            throw new FileNotFoundException("Error while loading theme, could not find {$path}/theme.php");
         }
 
         $this->config = $this->themes->getFiles()->getRequire($path . '/theme.php');
@@ -118,6 +130,12 @@ class Theme
         return $path;
     }
 
+    /**
+     * getPath
+     *
+     * @param null $for
+     * @return string
+     */
     public function getPath($for = null)
     {
         if ( is_null($for) )
@@ -130,7 +148,9 @@ class Theme
         }
     }
 
-
+    /**
+     * boot
+     */
     public function boot()
     {
         if ( $this->booted )
@@ -149,65 +169,121 @@ class Theme
         $this->booted = true;
     }
 
-
-    //
-    /* SIMPLE GETTERS/SETTERS */
-    //
+    /**
+     * getConfig
+     *
+     * @return array|mixed
+     */
     public function getConfig()
     {
         return $this->config;
     }
 
+    /**
+     * getParentTheme
+     *
+     * @return \Caffeinated\Themes\Theme
+     */
     public function getParentTheme()
     {
         return $this->parentTheme;
     }
 
+    /**
+     * getParentSlug
+     *
+     * @return array|mixed|string
+     */
     public function getParentSlug()
     {
         return $this->parentSlug;
     }
 
+    /**
+     * getThemes
+     *
+     * @return \Caffeinated\Themes\Contracts\ThemeFactory|\Caffeinated\Themes\ThemeFactory
+     */
     public function getThemes()
     {
         return $this->themes;
     }
 
+    /**
+     * getName
+     *
+     * @return array|mixed|string
+     */
     public function getName()
     {
         return $this->name;
     }
 
+    /**
+     * getSlug
+     *
+     * @return array|mixed|string
+     */
     public function getSlug()
     {
         return $this->slug;
     }
 
+    /**
+     * hasParent
+     *
+     * @return bool
+     */
     public function hasParent()
     {
         return isset($this->parentTheme);
     }
 
+    /**
+     * isActive
+     *
+     * @return bool
+     */
     public function isActive()
     {
         return $this->themes->getActive() instanceof $this;
     }
 
+    /**
+     * isDefault
+     *
+     * @return bool
+     */
     public function isDefault()
     {
         return $this->themes->getDefault() instanceof $this;
     }
 
+    /**
+     * getSlugProvider
+     *
+     * @return mixed
+     */
     public function getSlugProvider()
     {
         return explode('/', $this->slug)[ 0 ];
     }
 
+    /**
+     * getSlugKey
+     *
+     * @return mixed
+     */
     public function getSlugKey()
     {
         return explode('/', $this->slug)[ 1 ];
     }
 
+    /**
+     * isBooted
+     *
+     * @return bool
+     */
     public function isBooted()
     {
         return $this->booted;
