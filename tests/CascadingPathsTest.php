@@ -115,6 +115,10 @@ class CascadingPathsTest extends TestCase
 
         #$themes->addNamespace('nstestaa', 'nstest');
 
+
+        $this->assertEquals(url('themes/frontend/example/assets/scriptfix.js'), $themes->assetUrl('scriptfix.js'));
+
+
         #$this->assertViewContent('nstestaa::index', 'index of frontend/example::nstest');
     }
 

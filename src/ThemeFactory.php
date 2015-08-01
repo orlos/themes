@@ -647,74 +647,10 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
         return new ArrayIterator($this->themes);
     }
 
-    /**
-     * Get the NavigationFactory instance
-     *
-     * @return NavigationFactory
-     */
-    public function getNavigation()
-    {
-        return $this->navigation;
-    }
 
-    /**
-     * Sets the NavigationFactory instance
-     *
-     * @param NavigationFactory $navigation
-     * @return NavigationFactory
-     */
-    public function setNavigation($navigation)
-    {
-        $this->navigation = $navigation;
 
-        return $this;
-    }
 
-    /**
-     * Get the value of breadcrumbs
-     *
-     * @return \DaveJamesMiller\Breadcrumbs\Manager
-     */
-    public function getBreadcrumbs()
-    {
-        return $this->breadcrumbs;
-    }
 
-    /**
-     * Sets the value of breadcrumbs
-     *
-     * @param \DaveJamesMiller\Breadcrumbs\Manager $breadcrumbs
-     * @return $this
-     */
-    public function setBreadcrumbs($breadcrumbs)
-    {
-        $this->breadcrumbs = $breadcrumbs;
-
-        return $this;
-    }
-
-    /**
-     * Get the asset factory instance
-     *
-     * @return \Caffeinated\Themes\Assets\AssetFactory
-     */
-    public function getAssets()
-    {
-        return $this->assets;
-    }
-
-    /**
-     * Sets the value of assets
-     *
-     * @param Assets\AssetFactory $assets
-     * @return $this
-     */
-    public function setAssets($assets)
-    {
-        $this->assets = $assets;
-
-        return $this;
-    }
 
     /**
      * get themeClass value

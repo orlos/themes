@@ -13,7 +13,7 @@ namespace Caffeinated\Tests\Themes;
 use Illuminate\Support\NamespacedItemResolver;
 use Caffeinated\Themes\ThemeFactory;
 use Mockery as m;
-use Symfony\Component\VarDumper\VarDumper;
+
 
 
 /**
@@ -23,7 +23,10 @@ use Symfony\Component\VarDumper\VarDumper;
  */
 class ThemeFactoryTest extends TestCase
 {
-    protected $fs, $factory;
+    protected $fs;
+
+    /** @var \Caffeinated\Themes\ThemeFactory */
+    protected $factory;
     public function setUp()
     {
         parent::setUp();
@@ -177,6 +180,18 @@ class ThemeFactoryTest extends TestCase
 
     }
 
+    public function testPublishing()
+    {
+        $this->fs->shouldReceive('isDirectory')->once()->andReturn(true);
+        $this->fs->shouldReceive('exists')->once()->andReturn(true);
+        $this->_resolveTheme();
+        $this->factory->setActive('frontend/example');
+
+        $this->factory->addNamespacePublisher('nstest', public_path('themes/frontend/default/namespaces/nstest'));
+        $this->factory->addPackagePublisher('testvendor/testpkg', public_path('themes/frontend/default/packages/testvendor/testpkg'));
+        $publishers = $this->factory->getPublishers();
+        $this->assertTrue(is_array($publishers) && count($publishers) == 2);
+    }
 
 
 }
