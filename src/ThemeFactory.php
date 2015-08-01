@@ -315,7 +315,8 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
             $current = $parent;
         }
 
-        if ( $default = $this->getDefault() && ! in_array($default, $looped) )
+        $default = $this->getDefault();
+        if ( ! in_array($default, $looped, true) )
         {
             $paths[] = $default->getCascadedPath($cascadeType, $cascadeName, $pathType);
         }
