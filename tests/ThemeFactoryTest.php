@@ -11,10 +11,6 @@
 namespace Caffeinated\Tests\Themes;
 
 use Illuminate\Support\NamespacedItemResolver;
-use Laradic\Support\String;
-use Caffeinated\Themes\Assets\AssetFactory;
-
-use Caffeinated\Themes\Theme;
 use Caffeinated\Themes\ThemeFactory;
 use Mockery as m;
 use Symfony\Component\VarDumper\VarDumper;

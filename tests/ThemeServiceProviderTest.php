@@ -10,8 +10,6 @@
  */
 namespace Caffeinated\Tests\Themes;
 
-use Laradic\Dev\AbstractTestCase;
-use Laradic\Dev\Traits\LaravelTestCaseTrait;
 use Laradic\Dev\Traits\ServiceProviderTestCaseTrait;
 
 /**

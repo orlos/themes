@@ -29,10 +29,12 @@ class CascadingPathsTest extends TestCase
         $this->app->register(\Caffeinated\Themes\ThemeServiceProvider::class);
     }
 
-    protected function assertViewContent($view,$expected){
+    protected function assertViewContent($view, $expected)
+    {
         $content = $this->app[ 'view' ]->make($view)->render();
         $this->assertEquals($expected, $content);
     }
+
     public function testCascade()
     {
         /**
@@ -48,7 +50,6 @@ class CascadingPathsTest extends TestCase
         $this->assertEquals('frontend/example', $themes->getActive()->getSlug());
         $this->assertEquals('frontend/default', $themes->getDefault()->getSlug());
         $this->assertEquals('frontend/parent', $themes->getActive()->getParentTheme()->getSlug());
-
 
 
         #$themes->addNamespace('nstest', 'nstest');
