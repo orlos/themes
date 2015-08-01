@@ -7,6 +7,7 @@
  */
 namespace Caffeinated\Tests\Themes;
 
+use Illuminate\Filesystem\Filesystem;
 use Mockery as m;
 
 /**
@@ -35,7 +36,13 @@ class CascadingPathsTest extends TestCase
         $this->assertEquals($expected, $content);
     }
 
-    public function testCascade()
+    protected function assertAssetContent($key, $expected)
+    {
+        $content = with(new Filesystem())->get($this->app[ 'themes' ]->assetPath($key));
+        $this->assertEquals($expected, trim($content));
+    }
+
+    public function testDefinedThemes()
     {
         /**
          * @var \Caffeinated\Themes\ThemeFactory $themes
@@ -50,9 +57,21 @@ class CascadingPathsTest extends TestCase
         $this->assertEquals('frontend/example', $themes->getActive()->getSlug());
         $this->assertEquals('frontend/default', $themes->getDefault()->getSlug());
         $this->assertEquals('frontend/parent', $themes->getActive()->getParentTheme()->getSlug());
+    }
+
+    public function testViews()
+    {
+
+        /**
+         * @var \Caffeinated\Themes\ThemeFactory $themes
+         */
+        $themes = $this->app[ 'themes' ];
+        /**
+         * @var \Illuminate\View\Factory $view
+         */
+        $view = $this->app[ 'view' ];
 
 
-        #$themes->addNamespace('nstest', 'nstest');
         $view->addNamespace('nstest', $themes->getPath('namespaces') . '/nstest');
         $this->assertViewContent('index', 'index of frontend/example');
         $this->assertViewContent('nstest::index', 'index of frontend/example::nstest');
@@ -66,7 +85,33 @@ class CascadingPathsTest extends TestCase
         $this->assertViewContent('default-fallback', 'default-fallback content');
         $this->assertViewContent('nstest::default-fallback', 'nstest default-fallback content');
         $this->assertViewContent('testvendor/testpkg::default-fallback', 'testvendor/testpkg default-fallback content');
+    }
 
+    public function testAsset()
+    {
+
+        /**
+         * @var \Caffeinated\Themes\ThemeFactory $themes
+         */
+        $themes = $this->app[ 'themes' ];
+        /**
+         * @var \Illuminate\View\Factory $view
+         */
+        $view = $this->app[ 'view' ];
+
+
+        $view->addNamespace('nstest', $themes->getPath('namespaces') . '/nstest');
+        $this->assertAssetContent('scriptfix.js', 'example');
+        $this->assertAssetContent('nstest::scriptfix.js', 'scriptnstest');
+        $this->assertAssetContent('testvendor/testpkg::scriptfix.js', 'testpkgscrit');
+
+        $this->assertAssetContent('parent-fallback.js', 'parent-fallback content');
+        $this->assertAssetContent('nstest::parent-fallback.js', 'nstest parent-fallback content');
+        $this->assertAssetContent('testvendor/testpkg::parent-fallback.js', 'testvendor/testpkg parent-fallback content');
+
+        $this->assertAssetContent('default-fallback.js', 'default-fallback content');
+        $this->assertAssetContent('nstest::default-fallback.js', 'nstest default-fallback content');
+        $this->assertAssetContent('testvendor/testpkg::default-fallback.js', 'testvendor/testpkg default-fallback content');
 
         #$themes->addNamespace('nstestaa', 'nstest');
 

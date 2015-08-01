@@ -45,6 +45,8 @@ class ThemeTest extends TestCase
     public function testDefaultConstruct()
     {
         $theme = $this->_getTheme();
+        $this->assertTrue(is_array($theme->getConfig()));
+        $this->assertInstanceOf(get_class($this->factory), $theme->getThemes());
         $this->assertEquals('Frontend example', $theme->getName());
         $this->assertEquals('frontend/example', $theme->getSlug());
         $this->assertEquals('example', $theme->getSlugKey());

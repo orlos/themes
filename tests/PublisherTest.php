@@ -60,9 +60,11 @@ class PublisherTest extends TestCase
         $sourcePath  = __DIR__ . '/fixture/public/themes/frontend/default';
         $destination = 'public/themes/frontend/default/namespaces/' . $name;
         $this->theme->shouldReceive('getCascadedPath')->once()->with(m::mustBe('namespaces'), m::mustBe($name))->andReturn($destination);
-        $this->fs->shouldReceive('exists')->once()->with(m::mustBe($destination))->andReturn(true);
+        $this->fs->shouldReceive('exists')->once()->with(m::mustBe($destination))->andReturn(false);
+        $this->fs->shouldReceive('makeDirectory')->once()->andReturn();
         $this->fs->shouldReceive('copyDirectory')->once()->with(m::mustBe($sourcePath), m::mustBe($destination))->andReturn();
-        $this->publisher
+        Publisher::create($this->fs)
+            ->toTheme($this->theme)
             ->asNamespace($name)
             ->from($sourcePath)
             ->publish();

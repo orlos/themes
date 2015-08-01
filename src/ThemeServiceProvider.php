@@ -37,6 +37,8 @@ class ThemeServiceProvider extends ServiceProvider
         \Caffeinated\Themes\Console\ThemePublishersCommand::class,
     ];
 
+    protected $provides = ['themes'];
+
     /**
      * Register the service provider.
      *
