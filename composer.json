@@ -26,8 +26,6 @@
             "email": "shea.lewis89@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
         "php": ">=5.5.9",
         "illuminate/support": "~5.1",
@@ -39,7 +37,7 @@
         "laravelcollective/html": "~5.1"
     },
     "require-dev": {
-        "laradic/dev": "dev-master"
+        "laradic/dev": "dev-master@dev"
     },
     "autoload": {
         "psr-4": {
@@ -50,8 +48,5 @@
         "psr-4": {
             "Caffeinated\\Tests\\Themes\\": "tests/"
         }
-    },
-    "config": {
-        "preferred-install": "dist"
     }
 }
