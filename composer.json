@@ -32,8 +32,8 @@
         "php": ">=5.5.9",
         "illuminate/support": "~5.1",
         "illuminate/view": "~5.1",
-        "laradic/support": "^1.2.8",
-        "laradic/console": "1.0.*",
+        "laradic/support": "~2.0",
+        "laradic/console": "~2.0",
         "kriswallsmith/assetic": "~1.2",
         "vierbergenlars/php-semver": "3.0.*",
         "laravelcollective/html": "~5.1"
@@ -50,5 +50,8 @@
         "psr-4": {
             "Caffeinated\\Tests\\Themes\\": "tests/"
         }
+    },
+    "config": {
+        "preferred-install": "dist"
     }
 }
