@@ -25,6 +25,6 @@ class Themes extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'themes';
+        return 'caffeinated.themes';
     }
 }

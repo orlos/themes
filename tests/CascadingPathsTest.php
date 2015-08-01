@@ -38,7 +38,7 @@ class CascadingPathsTest extends TestCase
 
     protected function assertAssetContent($key, $expected)
     {
-        $content = with(new Filesystem())->get($this->app[ 'themes' ]->assetPath($key));
+        $content = with(new Filesystem())->get($this->app[ 'caffeinated.themes' ]->assetPath($key));
         $this->assertEquals($expected, trim($content));
     }
 
@@ -47,7 +47,7 @@ class CascadingPathsTest extends TestCase
         /**
          * @var \Caffeinated\Themes\ThemeFactory $themes
          */
-        $themes = $this->app[ 'themes' ];
+        $themes = $this->app[ 'caffeinated.themes' ];
 
         /**
          * @var \Illuminate\View\Factory $view
@@ -65,7 +65,7 @@ class CascadingPathsTest extends TestCase
         /**
          * @var \Caffeinated\Themes\ThemeFactory $themes
          */
-        $themes = $this->app[ 'themes' ];
+        $themes = $this->app[ 'caffeinated.themes' ];
         /**
          * @var \Illuminate\View\Factory $view
          */
@@ -93,7 +93,7 @@ class CascadingPathsTest extends TestCase
         /**
          * @var \Caffeinated\Themes\ThemeFactory $themes
          */
-        $themes = $this->app[ 'themes' ];
+        $themes = $this->app[ 'caffeinated.themes' ];
         /**
          * @var \Illuminate\View\Factory $view
          */

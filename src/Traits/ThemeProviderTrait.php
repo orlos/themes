@@ -25,7 +25,7 @@ trait ThemeProviderTrait
      */
     protected function addPackagePublisher($package, $path)
     {
-        app('themes')->addPackagePublisher($package, $path);
+        app('caffeinated.themes')->addPackagePublisher($package, $path);
     }
 
     /**
@@ -36,7 +36,7 @@ trait ThemeProviderTrait
      */
     protected function addNamespacePublisher($namespace, $path)
     {
-        app('themes')->addNamespacePublisher($namespace, $path);
+        app('caffeinated.themes')->addNamespacePublisher($namespace, $path);
     }
 
     protected function addThemePublisher($directory)

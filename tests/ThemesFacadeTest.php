@@ -40,7 +40,7 @@ class ThemesFacadeTest extends TestCase
      */
     protected function getFacadeAccessor()
     {
-        return 'themes';
+        return 'caffeinated.themes';
     }
 
     /**

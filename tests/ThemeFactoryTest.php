@@ -170,7 +170,7 @@ class ThemeFactoryTest extends TestCase
     public function testGettersSetters(){
         $this->app->register(\Caffeinated\Themes\ThemeServiceProvider::class);
         /** @var \Caffeinated\Themes\ThemeFactory $themes */
-        $themes = $this->app['themes'];
+        $themes = $this->app['caffeinated.themes'];
 
         $this->assertInstanceOf(\Caffeinated\Themes\Contracts\ThemeViewFinder::class, $themes->getFinder());
         $this->assertTrue(is_array($themes->getPublishers()));

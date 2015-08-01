@@ -37,7 +37,7 @@ class ThemeServiceProvider extends ServiceProvider
         \Caffeinated\Themes\Console\ThemePublishersCommand::class,
     ];
 
-    protected $provides = ['themes'];
+    protected $provides = ['caffeinated.themes'];
 
     /**
      * Register the service provider.
@@ -56,7 +56,7 @@ class ThemeServiceProvider extends ServiceProvider
 
         $app->make('events')->listen('creating: *', function (\Illuminate\Contracts\View\View $view) use ($app)
         {
-            $app->make('themes')->boot();
+            $app->make('caffeinated.themes')->boot();
         });
     }
 
@@ -65,7 +65,7 @@ class ThemeServiceProvider extends ServiceProvider
      */
     protected function linkConfig()
     {
-        $configPath = realpath(__DIR__ . '/../resources/config/config.php');
+        $configPath = realpath(__DIR__ . '/../config/config.php');
         $this->mergeConfigFrom($configPath, 'caffeinated.themes');
         $this->publishes([ $configPath => config_path('caffeinated.themes.php') ], 'config');
     }
@@ -75,7 +75,7 @@ class ThemeServiceProvider extends ServiceProvider
      */
     protected function registerThemes()
     {
-        $this->app->singleton('themes', function (Application $app)
+        $this->app->singleton('caffeinated.themes', function (Application $app)
         {
             $themeFactory = new ThemeFactory($app->make('files'), $app->make('events'), $app->make('url'));
             $themeFactory->setPaths(config('caffeinated.themes.paths'));
@@ -85,7 +85,7 @@ class ThemeServiceProvider extends ServiceProvider
 
             return $themeFactory;
         });
-        $this->app->alias('themes', 'Caffeinated\Themes\Contracts\ThemeFactory');
+        $this->app->alias('caffeinated.themes', 'Caffeinated\Themes\Contracts\ThemeFactory');
     }
 
     /**
@@ -106,8 +106,8 @@ class ThemeServiceProvider extends ServiceProvider
             );
 
             $themesViewFinder = new ThemeViewFinder($app[ 'files' ], $paths, $oldViewFinder->getExtensions());
-            $themesViewFinder->setThemes($app[ 'themes' ]);
-            $app[ 'themes' ]->setFinder($themesViewFinder);
+            $themesViewFinder->setThemes($app[ 'caffeinated.themes' ]);
+            $app[ 'caffeinated.themes' ]->setFinder($themesViewFinder);
 
             foreach ( $oldViewFinder->getPaths() as $location )
             {
