@@ -75,32 +75,6 @@ class ThemeViewFinderTest extends TestCase
         );
     }
 
-    // todo: more tests
-    public function testFindNotInTheme()
-    {/*
-        $findStr  = 'laradic/testfinder::path.to.view';
-        $dir      = 'themedir/vendor/name/packages/laradic/testfinder/views';
-        $filePath = 'path/to/view.blade.php';
-
-        $tf = $this->tfMock->shouldReceive('getCascadedPaths')->once()
-            ->withArgs([ 'packages', 'laradic/testfinder', 'views' ])
-            ->andReturn([ $dir ])
-            ->getMock();
-
-        $fs = $this->fsMock->shouldReceive('exists')->once()
-            ->andReturn(false)->getMock()
-            ->shouldReceive('exists')->once()
-            ->andReturn(true)->getMock()
-            ->shouldReceive('exists')->once()
-            ->andReturn(false)->getMock();
-            //->andThrow(new \InvalidArgumentException('View not found.'))->getMock();
-        //->with($dir . '/' . $filePath)->andReturn(true)->getMock();
-
-        $finder   = $this->getThemeFinder($fs, $tf);
-        $viewPath = $finder->find($findStr);
-        $this->assertEquals($dir . '/' . $filePath, $viewPath);*/
-    }
-
     protected function doTest($findStr, $withArgs, $dir, $filePath)
     {
         $tf = $this->tfMock->shouldReceive('getCascadedPaths')->once()
