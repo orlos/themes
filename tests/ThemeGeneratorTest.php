@@ -13,11 +13,9 @@ use Mockery as m;
  * This is the ThemeGeneratorTest.
  *
  * @package        Caffeinated\Tests
- * @version        1.0.0
- * @author         Robin Radic
- * @license        MIT License
- * @copyright      2015, Robin Radic
- * @link           https://github.com/robinradic
+ * @author         Caffeinated Dev Team
+ * @copyright      Copyright (c) 2015, Caffeinated
+ * @license        https://tldrlegal.com/license/mit-license MIT License
  */
 class ThemeGeneratorTest extends TestCase
 {

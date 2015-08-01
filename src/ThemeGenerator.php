@@ -6,6 +6,7 @@
  */
 namespace Caffeinated\Themes;
 
+use Illuminate\View\Compilers\BladeCompiler;
 use Laradic\Support\Path;
 use Laradic\Support\StubGenerator;
 
@@ -19,11 +20,31 @@ use Laradic\Support\StubGenerator;
  */
 class ThemeGenerator extends StubGenerator
 {
+    /** @var string Path to stubs */
+    public $themeStubPath;
 
-    public $themeStubPath = __DIR__ . '/../resources/stubs';
-
+    /** @var string Path do dir */
     public $themeDirPath;
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __construct(BladeCompiler $compiler)
+    {
+        parent::__construct($compiler);
+        $this->themeStubPath = __DIR__ . '/../resources/stubs';
+    }
+
+    /**
+     * generateTheme
+     *
+     * @param      $slug
+     * @param      $name
+     * @param null $parent
+     * @param null $viewFile
+     * @return bool
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     */
     public function generateTheme($slug, $name, $parent = null, $viewFile = null)
     {
         $path = Path::join($this->getThemeDirPath(), $slug);
@@ -47,11 +68,21 @@ class ThemeGenerator extends StubGenerator
         return true;
     }
 
+    /**
+     * getThemeDirPath
+     *
+     * @return mixed|string
+     */
     protected function getThemeDirPath()
     {
         return isset($this->themeDirPath) ? $this->themeDirPath : head(config('laradic.themes.paths.themes'));
     }
 
+    /**
+     * generateDirStruct
+     *
+     * @param $path
+     */
     protected function generateDirStruct($path)
     {
         $this->files->makeDirectory($path, 0775, true);
