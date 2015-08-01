@@ -171,6 +171,7 @@ class ThemeFactoryTest extends TestCase
         $this->app->register(\Caffeinated\Themes\ThemeServiceProvider::class);
         /** @var \Caffeinated\Themes\ThemeFactory $themes */
         $themes = $this->app['themes'];
+
         $this->assertInstanceOf(\Caffeinated\Themes\Contracts\ThemeViewFinder::class, $themes->getFinder());
         $this->assertTrue(is_array($themes->getPublishers()));
         $themes->setThemeClass(\Caffeinated\Themes\Theme::class);

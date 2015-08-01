@@ -71,7 +71,6 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      */
     protected $dispatcher;
 
-
     /**
      * Filesystem paths to directories where themes are installed
      *
@@ -89,7 +88,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /** @var \Illuminate\Contracts\Routing\UrlGenerator */
     protected $url;
 
-
+    /** @var string The theme class name */
     protected $themeClass;
 
     /**
@@ -155,7 +154,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     {
         if ( ! isset($this->default) )
         {
-            return;
+            return null;
         }
 
         return $this->default;
@@ -222,6 +221,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * Get a theme with the provided slug, equal to resolveTheme
      *
+     * @param $slug
      * @return \Caffeinated\Themes\Theme
      */
     public function get($slug)
@@ -239,7 +239,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     {
         $this->resolveTheme($slug);
 
-        return in_array($slug, array_keys($this->themes));
+        return in_array($slug, array_keys($this->themes), true);
     }
 
     /**
@@ -257,6 +257,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      *
      * @param string $name
      * @param string $dirName
+     * @return $this
      */
     public function addNamespace($name, $dirName)
     {
@@ -358,6 +359,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      * @param string      $package    Package name
      * @param string      $sourcePath Path to the theme
      * @param string|null $theme      Exclude to a specific theme using tthis slug
+     * @return $this
      */
     public function addPackagePublisher($package, $sourcePath, $theme = null)
     {
@@ -377,6 +379,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      * @param string      $namespace  Name
      * @param string      $sourcePath Path to the theme
      * @param string|null $theme      Exclude to a specific theme using tthis slug
+     * @return $this
      */
     public function addNamespacePublisher($namespace, $sourcePath, $theme = null)
     {
@@ -394,6 +397,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      * Publish an namespace or package
      *
      * @param null $namespaceOrPackage
+     * @param null $theme
      */
     public function publish($namespaceOrPackage = null, $theme = null)
     {
@@ -434,11 +438,6 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     {
         return $this->publishers;
     }
-
-
-    //
-    /* ASSET */
-    //
 
     /**
      * getPath
@@ -481,6 +480,8 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
             $paths = $this->getCascadedPaths(null, null, 'assets');
         }
 
+        $file = null;
+
         foreach ( $paths as $path )
         {
             $file = rtrim($path, '/') . '/' . $relativePath . '.' . $extension;
@@ -494,11 +495,23 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
         return $file;
     }
 
+    /**
+     * assetUrl
+     *
+     * @param null $key
+     * @return string
+     */
     public function assetUrl($key = null)
     {
         return $this->url->to($this->assetUri($key));
     }
 
+    /**
+     * assetUri
+     *
+     * @param null $key
+     * @return string
+     */
     public function assetUri($key = null)
     {
         $path = String::create($this->assetPath($key));
@@ -514,15 +527,11 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
         return (string)$path;
     }
 
-
-    //
-    /* EVENTS */
-    //
-
     /**
      * Boot the active theme
      *
      * @param bool $bootParent
+     * @param bool $bootDefault
      */
     public function boot($bootParent = true, $bootDefault = false)
     {
@@ -536,10 +545,6 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
             $this->getDefault()->boot();
         }
     }
-
-    //
-    /* GETTERS AND SETTERS */
-    //
 
     /**
      * Get the theme view finder instance
@@ -646,11 +651,6 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     {
         return new ArrayIterator($this->themes);
     }
-
-
-
-
-
 
     /**
      * get themeClass value
