@@ -1,0 +1,54 @@
+{
+    "name": "caffeinated/themes",
+    "description": "Laravel 5 package providing multi-theme inherited cascading support for views and assets.",
+    "homepage": "https://github.com/caffeinated/themes",
+    "keywords": [
+        "extension",
+        "extensions",
+        "blade",
+        "laravel",
+        "theme",
+        "themes",
+        "twig",
+        "template",
+        "templates",
+        "caffeinated",
+        "smarty"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin Radic",
+            "email": "robin@radic.nl"
+        },
+        {
+            "name": "Shea Lewis",
+            "email": "shea.lewis89@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "^5.0",
+        "illuminate/view": "^5.0",
+        "laradic/support": "^1.2.8",
+        "laradic/console": "1.0.*",
+        "kriswallsmith/assetic": "~1.2",
+        "vierbergenlars/php-semver": "3.0.*",
+        "laravelcollective/html": "~5.1"
+    },
+    "require-dev": {
+        "laradic/dev": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Caffeinated\\Themes\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Caffeinated\\Tests\\Themes\\": "tests/"
+        }
+    }
+}
