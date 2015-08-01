@@ -7,11 +7,8 @@
  */
 namespace Caffeinated\Themes\Console;
 
-use Laradic\Console\Command;
-use Laradic\Console\Traits\SlugPackageTrait;
-use Laradic\Support\Path;
 use Caffeinated\Themes\ThemeGenerator;
-use Symfony\Component\Console\Input\InputArgument;
+use Laradic\Console\Command;
 
 /**
  * This is the ThemePublishCommand class.
@@ -33,17 +30,17 @@ class ThemeInitCommand extends Command
     public function fire()
     {
         $themes = [
-            ['example/default', 'Example Default Theme', null, 'layout.blade.php'],
-            ['example/main', 'Example Main Theme', null, 'index.blade.php'],
-            ['example/other', 'Example Other Theme', 'example/main', 'something.blade.php'],
-            ['another-example/admin', 'Another Example Admin Theme', null, 'admin.blade.php']
+            [ 'example/default', 'Example Default Theme', null, 'layout.blade.php' ],
+            [ 'example/main', 'Example Main Theme', null, 'index.blade.php' ],
+            [ 'example/other', 'Example Other Theme', 'example/main', 'something.blade.php' ],
+            [ 'another-example/admin', 'Another Example Admin Theme', null, 'admin.blade.php' ]
         ];
 
         $gen = new ThemeGenerator(app('blade.compiler'));
 
-        foreach($themes as $theme)
+        foreach ( $themes as $theme )
         {
-            $success = $gen->generateTheme($theme[0], $theme[1], $theme[2], $theme[3]);
+            $success = $gen->generateTheme($theme[ 0 ], $theme[ 1 ], $theme[ 2 ], $theme[ 3 ]);
 
             if ( ! $success )
             {

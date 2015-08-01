@@ -7,12 +7,9 @@
  */
 namespace Caffeinated\Themes;
 
-use Closure;
-use File;
 use Caffeinated\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
+use Closure;
 use Illuminate\Contracts\Events\Dispatcher;
-use Caffeinated\Themes\Exceptions\ThemesConfigurationException;
-use Stringy\Stringy;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use vierbergenlars\SemVer\Internal\SemVer;
 
@@ -80,18 +77,18 @@ class Theme
 
         $this->config = $this->themes->getFiles()->getRequire($path . '/theme.php');
 
-        $this->name       = $this->config['name'];
-        $this->slug       = $this->config['slug'];
-        $this->parentSlug = $this->config['parent'];
+        $this->name       = $this->config[ 'name' ];
+        $this->slug       = $this->config[ 'slug' ];
+        $this->parentSlug = $this->config[ 'parent' ];
         if ( isset($this->parentSlug) )
         {
             $this->parentTheme = $this->themes->resolveTheme($this->parentSlug);
         }
 
 
-        if ( isset($this->config['register']) && $this->config['register'] instanceof Closure )
+        if ( isset($this->config[ 'register' ]) && $this->config[ 'register' ] instanceof Closure )
         {
-            $this->config['register'](app(), $this);
+            $this->config[ 'register' ](app(), $this);
         }
     }
 
@@ -107,7 +104,7 @@ class Theme
     {
         $path = $this->path;
 
-        if(!is_null($cascadeType))
+        if ( ! is_null($cascadeType) )
         {
             $path .= '/' . $this->themes->getPath($cascadeType);
         }
@@ -144,11 +141,11 @@ class Theme
             return;
         }
 
-        $this->dispatcher->fire('booting theme: ', [$this]);
+        $this->dispatcher->fire('booting theme: ', [ $this ]);
 
-        if ( isset($this->config['boot']) && $this->config['boot'] instanceof Closure )
+        if ( isset($this->config[ 'boot' ]) && $this->config[ 'boot' ] instanceof Closure )
         {
-            $this->config['boot'](app(), $this);
+            $this->config[ 'boot' ](app(), $this);
         }
 
 
@@ -198,18 +195,20 @@ class Theme
     {
         return $this->themes->getActive() instanceof $this;
     }
+
     public function isDefault()
     {
         return $this->themes->getDefault() instanceof $this;
     }
+
     public function getSlugProvider()
     {
-        return explode('/', $this->slug)[0];
+        return explode('/', $this->slug)[ 0 ];
     }
 
     public function getSlugKey()
     {
-        return explode('/', $this->slug)[1];
+        return explode('/', $this->slug)[ 1 ];
     }
 
     public function isBooted()
@@ -224,7 +223,7 @@ class Theme
      */
     public function getVersion()
     {
-        return new SemVer($this->config['version']);
+        return new SemVer($this->config[ 'version' ]);
     }
 
 }

@@ -9,7 +9,6 @@ namespace Caffeinated\Themes;
 
 use Laradic\Support\Path;
 use Laradic\Support\StubGenerator;
-use Symfony\Component\VarDumper\VarDumper;
 
 /**
  * This is the ThemeGenerator.
@@ -37,7 +36,6 @@ class ThemeGenerator extends StubGenerator
             return false;
         }
 
-        #VarDumper::dump($path);
         $this->generateDirStruct($path);
         $themeStub        = $this->files->get(realpath(Path::join($this->themeStubPath, 'theme.php.stub')));
         $themeFileContent = "<?php \n" . $this->render($themeStub, compact('slug', 'name', 'parent'));
@@ -45,10 +43,8 @@ class ThemeGenerator extends StubGenerator
         if ( ! is_null($viewFile) )
         {
             $from = Path::join($this->themeStubPath, $viewFile);
-            $to = Path::join($path, config('laradic.themes.paths.views'),$viewFile);
-            #VarDumper::dump(compact('from', 'to'));
+            $to   = Path::join($path, config('laradic.themes.paths.views'), $viewFile);
             $this->files->copy($from, $to);
-
         }
 
         return true;

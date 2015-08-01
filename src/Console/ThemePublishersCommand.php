@@ -30,7 +30,7 @@ class ThemePublishersCommand extends Command
     {
         $publishers = array_keys(app('themes')->getPublishers());
         $this->comment('Available publishers:');
-        foreach($publishers as $publisher)
+        foreach ( $publishers as $publisher )
         {
             $this->line($publisher);
         }

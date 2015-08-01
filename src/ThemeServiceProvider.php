@@ -26,17 +26,9 @@ class ThemeServiceProvider extends ServiceProvider
     protected $providers = [
         \Caffeinated\Themes\Providers\BusServiceProvider::class,
         \Caffeinated\Themes\Providers\EventServiceProvider::class,
-      #  \Caffeinated\Themes\Providers\ConsoleServiceProvider::class,
         \Collective\Html\HtmlServiceProvider::class
     ];
 
-
-    public function boot()
-    {
-        /** @var \Illuminate\Foundation\Application $app */
-        $app = parent::boot();
-
-    }
 
     /**
      * Register the service provider.
@@ -57,7 +49,6 @@ class ThemeServiceProvider extends ServiceProvider
         {
             $app->make('themes')->boot();
         });
-
     }
 
     protected function linkConfig()
@@ -76,6 +67,7 @@ class ThemeServiceProvider extends ServiceProvider
             $themeFactory->setThemeClass(config('caffeinated.themes.themeClass'));
             $themeFactory->setActive(config('caffeinated.themes.active'));
             $themeFactory->setDefault(config('caffeinated.themes.default'));
+
             return $themeFactory;
         });
         $this->app->alias('themes', 'Caffeinated\Themes\Contracts\ThemeFactory');

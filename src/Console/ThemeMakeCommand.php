@@ -7,10 +7,9 @@
  */
 namespace Caffeinated\Themes\Console;
 
+use Caffeinated\Themes\ThemeGenerator;
 use Laradic\Console\Command;
 use Laradic\Console\Traits\SlugPackageTrait;
-use Laradic\Support\Path;
-use Caffeinated\Themes\ThemeGenerator;
 use Symfony\Component\Console\Input\InputArgument;
 
 /**
@@ -45,10 +44,10 @@ class ThemeMakeCommand extends Command
             return $this->error('Invalid slug');
         }
 
-        $gen = new ThemeGenerator(app('blade.compiler'));
+        $gen     = new ThemeGenerator(app('blade.compiler'));
         $success = $gen->generateTheme($slug, $slug . ' Theme');
 
-        if(!$success)
+        if ( ! $success )
         {
             return $this->error('theme already exists');
         }
@@ -59,7 +58,7 @@ class ThemeMakeCommand extends Command
     public function getArguments()
     {
         return [
-            ['slug', InputArgument::REQUIRED, 'The slug of the theme']
+            [ 'slug', InputArgument::REQUIRED, 'The slug of the theme' ]
         ];
     }
 }

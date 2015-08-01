@@ -31,23 +31,23 @@ class ThemePublishCommand extends Command
     public function fire()
     {
         $publisher = $this->argument('publisher');
-        $theme = $this->option('theme');
+        $theme     = $this->option('theme');
 
         app('themes')->publish($publisher, $theme);
-        $this->info('Published ' . (!is_null($publisher) ? $publisher : 'all') . (!is_null($theme) ? " to theme $theme" : null));
+        $this->info('Published ' . (! is_null($publisher) ? $publisher : 'all') . (! is_null($theme) ? " to theme $theme" : null));
     }
 
     public function getArguments()
     {
         return [
-            ['publisher', InputArgument::OPTIONAL, 'The namespace or package to publish. If not provided, everything will be published. Check themes:publishers for available options']
+            [ 'publisher', InputArgument::OPTIONAL, 'The namespace or package to publish. If not provided, everything will be published. Check themes:publishers for available options' ]
         ];
     }
 
     public function getOptions()
     {
         return [
-            ['theme', 't', InputOption::VALUE_OPTIONAL, 'The theme you want to publish to', null]
+            [ 'theme', 't', InputOption::VALUE_OPTIONAL, 'The theme you want to publish to', null ]
         ];
     }
 }

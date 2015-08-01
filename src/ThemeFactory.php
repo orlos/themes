@@ -6,10 +6,8 @@
  */
 namespace Caffeinated\Themes;
 
-
 use ArrayAccess;
 use ArrayIterator;
-use Caffeinated\Themes\Contracts\NavigationFactory;
 use Caffeinated\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
 use Countable;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -265,7 +263,6 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     public function addNamespace($name, $dirName)
     {
         $location = $this->getPath('namespaces') . '/' . $dirName;
-        //$view     = app('view');
 
         app('view')->addLocation($location);
         app('view')->addNamespace($name, $location);
@@ -318,7 +315,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
             $current = $parent;
         }
 
-        if ( $default = $this->getDefault() and ! in_array($default, $looped) )
+        if ( $default = $this->getDefault() && ! in_array($default, $looped) )
         {
             $paths[] = $default->getCascadedPath($cascadeType, $cascadeName, $pathType);
         }
@@ -459,7 +456,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
             return $this->getActive()->getPath('assets');
         }
 
-        if ( $relativePath === null or strlen($relativePath) === 0 )
+        if ( $relativePath === null || strlen($relativePath) === 0 )
         {
             if ( array_key_exists($section, $this->finder->getHints()) )
             {
@@ -531,7 +528,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     public function boot($bootParent = true, $bootDefault = false)
     {
         $this->getActive()->boot();
-        if ( $bootParent and $this->getActive()->hasParent() )
+        if ( $bootParent && $this->getActive()->hasParent() )
         {
             $this->getActive()->getParentTheme()->boot();
         }

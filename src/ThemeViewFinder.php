@@ -7,11 +7,11 @@
  */
 namespace Caffeinated\Themes;
 
+use Caffeinated\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
+use Caffeinated\Themes\Contracts\ThemeViewFinder as ThemeViewFinderContract;
 use Illuminate\Support\NamespacedItemResolver;
 use Illuminate\View\FileViewFinder;
 use InvalidArgumentException;
-use Caffeinated\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
-use Caffeinated\Themes\Contracts\ThemeViewFinder as ThemeViewFinderContract;
 
 /**
  * This is the ThemeViewFinder class.
@@ -57,7 +57,6 @@ class ThemeViewFinder extends FileViewFinder implements ThemeViewFinderContract
                 {
                     $sectionType = 'packages';
                     $paths       = $this->themes->getCascadedPaths('packages', $area, 'views');
-                    # $paths       = $this->themes->getCascadedPackageViewPaths($area);
                 }
 
                 $view = $this->findInPaths($view, $paths);
@@ -77,7 +76,6 @@ class ThemeViewFinder extends FileViewFinder implements ThemeViewFinderContract
             catch (InvalidArgumentException $e)
             {
                 $active   = $this->themes->getActive();
-                $fallback = $this->themes->getDefault();
 
                 if ( isset($area) )
                 {
