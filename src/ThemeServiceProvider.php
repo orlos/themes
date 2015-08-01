@@ -1,9 +1,8 @@
 <?php
 /**
- * Part of the Robin Radic's PHP packages.
+ * Part of the Caffeinated PHP packages.
  *
- * MIT License and copyright information bundled with this package
- * in the LICENSE file or visit http://radic.mit-license.com
+ * MIT License and copyright information bundled with this package in the LICENSE file
  */
 namespace Caffeinated\Themes;
 
@@ -12,23 +11,31 @@ use Illuminate\View\FileViewFinder;
 use Laradic\Support\ServiceProvider;
 
 /**
- * This is the ThemeServiceProvider class.
+ * This is the ThemeServiceProvider.
  *
  * @package        Caffeinated\Themes
- * @version        1.0.0
- * @author         Robin Radic
- * @license        MIT License
- * @copyright      2015, Robin Radic
- * @link           https://github.com/robinradic
+ * @author         Caffeinated Dev Team
+ * @copyright      Copyright (c) 2015, Caffeinated
+ * @license        https://tldrlegal.com/license/mit-license MIT License
  */
 class ThemeServiceProvider extends ServiceProvider
 {
+    /**
+     * @var array
+     */
     protected $providers = [
-        \Caffeinated\Themes\Providers\BusServiceProvider::class,
-        \Caffeinated\Themes\Providers\EventServiceProvider::class,
         \Collective\Html\HtmlServiceProvider::class
     ];
 
+    /**
+     * @var array
+     */
+    protected $commands = [
+        \Caffeinated\Themes\Console\ThemeInitCommand::class,
+        \Caffeinated\Themes\Console\ThemeMakeCommand::class,
+        \Caffeinated\Themes\Console\ThemePublishCommand::class,
+        \Caffeinated\Themes\Console\ThemePublishersCommand::class,
+    ];
 
     /**
      * Register the service provider.
@@ -51,6 +58,9 @@ class ThemeServiceProvider extends ServiceProvider
         });
     }
 
+    /**
+     * linkConfig
+     */
     protected function linkConfig()
     {
         $configPath = realpath(__DIR__ . '/../resources/config/config.php');
@@ -58,6 +68,9 @@ class ThemeServiceProvider extends ServiceProvider
         $this->publishes([ $configPath => config_path('caffeinated.themes.php') ], 'config');
     }
 
+    /**
+     * registerThemes
+     */
     protected function registerThemes()
     {
         $this->app->singleton('themes', function (Application $app)
@@ -73,7 +86,9 @@ class ThemeServiceProvider extends ServiceProvider
         $this->app->alias('themes', 'Caffeinated\Themes\Contracts\ThemeFactory');
     }
 
-
+    /**
+     * registerViewFinder
+     */
     protected function registerViewFinder()
     {
         /**

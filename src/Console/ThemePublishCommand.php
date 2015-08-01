@@ -1,9 +1,8 @@
 <?php
 /**
- * Part of the Robin Radic's PHP packages.
+ * Part of the Caffeinated PHP packages.
  *
- * MIT License and copyright information bundled with this package
- * in the LICENSE file or visit http://radic.mit-license.com
+ * MIT License and copyright information bundled with this package in the LICENSE file
  */
 namespace Caffeinated\Themes\Console;
 
@@ -12,14 +11,12 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
 /**
- * This is the ThemePublishCommand class.
+ * This is the ThemePublishCommand.
  *
  * @package        Caffeinated\Themes
- * @version        1.0.0
- * @author         Robin Radic
- * @license        MIT License
- * @copyright      2015, Robin Radic
- * @link           https://github.com/robinradic
+ * @author         Caffeinated Dev Team
+ * @copyright      Copyright (c) 2015, Caffeinated
+ * @license        https://tldrlegal.com/license/mit-license MIT License
  */
 class ThemePublishCommand extends Command
 {

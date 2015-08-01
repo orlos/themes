@@ -1,9 +1,8 @@
 <?php
 /**
- * Part of the Robin Radic's PHP packages.
+ * Part of the Caffeinated PHP packages.
  *
- * MIT License and copyright information bundled with this package
- * in the LICENSE file or visit http://radic.mit-license.com
+ * MIT License and copyright information bundled with this package in the LICENSE file
  */
 namespace Caffeinated\Themes;
 
@@ -14,14 +13,12 @@ use Illuminate\View\FileViewFinder;
 use InvalidArgumentException;
 
 /**
- * This is the ThemeViewFinder class.
+ * This is the ThemeViewFinder.
  *
- * @package        Themes
- * @version        1.0.0
- * @author         Robin Radic
- * @license        MIT License
- * @copyright      2015, Robin Radic
- * @link           https://github.com/robinradic
+ * @package        Caffeinated\Themes
+ * @author         Caffeinated Dev Team
+ * @copyright      Copyright (c) 2015, Caffeinated
+ * @license        https://tldrlegal.com/license/mit-license MIT License
  */
 class ThemeViewFinder extends FileViewFinder implements ThemeViewFinderContract
 {
@@ -75,7 +72,7 @@ class ThemeViewFinder extends FileViewFinder implements ThemeViewFinderContract
             }
             catch (InvalidArgumentException $e)
             {
-                $active   = $this->themes->getActive();
+                $active = $this->themes->getActive();
 
                 if ( isset($area) )
                 {

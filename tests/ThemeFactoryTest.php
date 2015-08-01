@@ -176,22 +176,7 @@ class ThemeFactoryTest extends TestCase
 
 
     }
-    public function testFactory()
-    {
 
-        //$fsm = m::mock('Illuminate\Filesystem\Filesystem');
-        #$factory = $this->factory($fs);
-        #list($area, $key) = with(new NamespacedItemResolver)->parseKey($slug);
-        #$themePath = $factory->getThemePath(public_path('themes'), $key, $area);
-        //call_user_func_array([$factory, 'getThemePath'], );
-        /** @var \Illuminate\Foundation\Application $app */
-        $app = $this->app;
-        $app->register('Caffeinated\Themes\ThemeServiceProvider');
-        $f = $app->make('themes');
-        #$f->boot();
-        VarDumper::dump($f->getThemeClass());
-        $p = $f->count();
-        $this->assertTrue(true);
-    }
+
 
 }

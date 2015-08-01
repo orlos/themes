@@ -1,23 +1,20 @@
 <?php
 /**
- * Part of the Robin Radic's PHP packages.
+ * Part of the Caffeinated PHP packages.
  *
- * MIT License and copyright information bundled with this package
- * in the LICENSE file or visit http://radic.mit-license.com
+ * MIT License and copyright information bundled with this package in the LICENSE file
  */
 namespace Caffeinated\Themes;
 
 use Illuminate\Filesystem\Filesystem;
 
 /**
- * This is the Publisher class.
+ * This is the Publisher.
  *
  * @package        Caffeinated\Themes
- * @version        1.0.0
- * @author         Robin Radic
- * @license        MIT License
- * @copyright      2015, Robin Radic
- * @link           https://github.com/robinradic
+ * @author         Caffeinated Dev Team
+ * @copyright      Copyright (c) 2015, Caffeinated
+ * @license        https://tldrlegal.com/license/mit-license MIT License
  */
 class Publisher
 {
@@ -36,8 +33,8 @@ class Publisher
     protected $files;
 
     /**
- * Instanciates the class
- */
+     * Instanciates the class
+     */
     public function __construct(Filesystem $files)
     {
         $this->files = $files;
@@ -50,7 +47,7 @@ class Publisher
             $this->type === 'namespace' ? $this->namespace : $this->package
         );
 
-        if(!$this->files->exists($destination))
+        if ( ! $this->files->exists($destination) )
         {
             $this->files->makeDirectory($destination, 0755, true);
         }
@@ -65,27 +62,31 @@ class Publisher
 
     public function asNamespace($namespace)
     {
-        $this->type = 'namespace';
+        $this->type      = 'namespace';
         $this->namespace = $namespace;
+
         return $this;
     }
 
     public function asPackage($package)
     {
-        $this->type = 'package';
+        $this->type    = 'package';
         $this->package = $package;
+
         return $this;
     }
 
     public function toTheme(Theme $theme)
     {
         $this->theme = $theme;
+
         return $this;
     }
 
     public function from($sourcePath)
     {
         $this->sourcePath = $sourcePath;
+
         return $this;
     }
 
