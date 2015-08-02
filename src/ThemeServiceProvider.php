@@ -8,7 +8,7 @@ namespace Caffeinated\Themes;
 
 use Illuminate\Foundation\Application;
 use Illuminate\View\FileViewFinder;
-use Laradic\Support\ServiceProvider;
+use Caffeinated\Beverage\ServiceProvider;
 
 /**
  * This is the ThemeServiceProvider.

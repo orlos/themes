@@ -7,7 +7,7 @@
 namespace Caffeinated\Themes;
 
 use Illuminate\View\Compilers\BladeCompiler;
-use Laradic\Support\Path;
+use Caffeinated\Beverage\Path;
 use Laradic\Support\StubGenerator;
 
 /**

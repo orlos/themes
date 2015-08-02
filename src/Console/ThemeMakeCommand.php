@@ -29,7 +29,7 @@ class ThemeMakeCommand extends Command
     protected $description = 'Publish ';
 
     /**
-     * @var \Laradic\Support\Filesystem
+     * @var \Caffeinated\Beverage\Filesystem
      */
     protected $files;
 

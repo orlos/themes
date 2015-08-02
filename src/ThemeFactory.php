@@ -8,15 +8,15 @@ namespace Caffeinated\Themes;
 
 use ArrayAccess;
 use ArrayIterator;
-use Caffeinated\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
 use Countable;
+use IteratorAggregate;
+use RuntimeException;
+use Caffeinated\Beverage\Str;
+use Caffeinated\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\NamespacedItemResolver;
-use IteratorAggregate;
-use Laradic\Support\String;
-use RuntimeException;
 
 /**
  * This is the ThemeFactory.
@@ -514,7 +514,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      */
     public function assetUri($key = null)
     {
-        $path = String::create($this->assetPath($key));
+        $path = Str::create($this->assetPath($key));
         if ( $path->startsWith(public_path()) )
         {
             $path = $path->removeLeft(public_path() . '/');

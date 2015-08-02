@@ -34,7 +34,8 @@
         "laradic/console": "~2.0",
         "kriswallsmith/assetic": "~1.2",
         "vierbergenlars/php-semver": "3.0.*",
-        "laravelcollective/html": "~5.1"
+        "laravelcollective/html": "~5.1",
+        "caffeinated/beverage": "dev-master@dev"
     },
     "require-dev": {
         "laradic/dev": "dev-master@dev"
