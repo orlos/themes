@@ -7,7 +7,7 @@
 namespace Caffeinated\Themes\Console;
 
 use Caffeinated\Themes\ThemeGenerator;
-use Laradic\Console\Command;
+use Caffeinated\Beverage\Command;
 
 /**
  * This is the ThemeInitCommand.
@@ -20,7 +20,7 @@ use Laradic\Console\Command;
 class ThemeInitCommand extends Command
 {
 
-    protected $name = 'themes:init';
+    protected $signature = 'themes:init';
 
     protected $description = 'Create some initial theme files and dir structure. It will place it all in the first configured theme folder (laradic.themes.paths.themes) ';
 

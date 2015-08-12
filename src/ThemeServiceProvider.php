@@ -8,7 +8,7 @@ namespace Caffeinated\Themes;
 
 use Illuminate\Foundation\Application;
 use Illuminate\View\FileViewFinder;
-use Laradic\Support\ServiceProvider;
+use Caffeinated\Beverage\ServiceProvider;
 
 /**
  * This is the ThemeServiceProvider.
@@ -20,21 +20,23 @@ use Laradic\Support\ServiceProvider;
  */
 class ThemeServiceProvider extends ServiceProvider
 {
+
     /**
-     * @var array
+     * @var string
      */
-    protected $providers = [
-        \Collective\Html\HtmlServiceProvider::class
-    ];
+    protected $dir = __DIR__;
 
     /**
      * @var array
      */
-    protected $commands = [
-        \Caffeinated\Themes\Console\ThemeInitCommand::class,
-        \Caffeinated\Themes\Console\ThemeMakeCommand::class,
-        \Caffeinated\Themes\Console\ThemePublishCommand::class,
-        \Caffeinated\Themes\Console\ThemePublishersCommand::class,
+    protected $configFiles = ['caffeinated.themes'];
+
+    /**
+     * @var array
+     */
+    protected $providers = [
+        \Collective\Html\HtmlServiceProvider::class,
+        \Caffeinated\Themes\Providers\ConsoleServiceProvider::class
     ];
 
     protected $provides = ['caffeinated.themes'];
@@ -49,8 +51,6 @@ class ThemeServiceProvider extends ServiceProvider
         /** @var \Illuminate\Foundation\Application $app */
         $app = parent::register();
 
-        $this->linkConfig();
-
         $this->registerThemes();
         $this->registerViewFinder();
 
@@ -58,16 +58,6 @@ class ThemeServiceProvider extends ServiceProvider
         {
             $app->make('caffeinated.themes')->boot();
         });
-    }
-
-    /**
-     * linkConfig
-     */
-    protected function linkConfig()
-    {
-        $configPath = realpath(__DIR__ . '/../config/config.php');
-        $this->mergeConfigFrom($configPath, 'caffeinated.themes');
-        $this->publishes([ $configPath => config_path('caffeinated.themes.php') ], 'config');
     }
 
     /**

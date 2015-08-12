@@ -6,7 +6,7 @@
  */
 namespace Caffeinated\Themes\Console;
 
-use Laradic\Console\Command;
+use Caffeinated\Beverage\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -21,11 +21,13 @@ use Symfony\Component\Console\Input\InputOption;
 class ThemePublishCommand extends Command
 {
 
-    protected $name = 'themes:publish';
+    protected $signature = 'themes:publish
+                            {publisher: The namespace or package to publish. If not provided, everything will be published. Check themes:publishers for available options}
+                            {--theme=null: The theme you want to publish to}';
 
     protected $description = 'Publish ';
 
-    public function fire()
+    public function handle()
     {
         $publisher = $this->argument('publisher');
         $theme     = $this->option('theme');
@@ -34,17 +36,4 @@ class ThemePublishCommand extends Command
         $this->info('Published ' . (! is_null($publisher) ? $publisher : 'all') . (! is_null($theme) ? " to theme $theme" : null));
     }
 
-    public function getArguments()
-    {
-        return [
-            [ 'publisher', InputArgument::OPTIONAL, 'The namespace or package to publish. If not provided, everything will be published. Check themes:publishers for available options' ]
-        ];
-    }
-
-    public function getOptions()
-    {
-        return [
-            [ 'theme', 't', InputOption::VALUE_OPTIONAL, 'The theme you want to publish to', null ]
-        ];
-    }
 }

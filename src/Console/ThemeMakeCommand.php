@@ -7,8 +7,8 @@
 namespace Caffeinated\Themes\Console;
 
 use Caffeinated\Themes\ThemeGenerator;
-use Laradic\Console\Command;
-use Laradic\Console\Traits\SlugPackageTrait;
+use Caffeinated\Beverage\Command;
+use Caffeinated\Beverage\Traits\SlugPackageTrait;
 use Symfony\Component\Console\Input\InputArgument;
 
 /**
@@ -24,16 +24,16 @@ class ThemeMakeCommand extends Command
 
     use SlugPackageTrait;
 
-    protected $name = 'themes:make';
+    protected $signature = 'themes:make {slug: The slug of the theme}';
 
     protected $description = 'Publish ';
 
     /**
-     * @var \Laradic\Support\Filesystem
+     * @var \Caffeinated\Beverage\Filesystem
      */
     protected $files;
 
-    public function fire()
+    public function handle()
     {
 
         if ( ! $this->validateSlug($slug = $this->argument('slug')) )
@@ -52,10 +52,5 @@ class ThemeMakeCommand extends Command
         $this->info('Successfully created theme');
     }
 
-    public function getArguments()
-    {
-        return [
-            [ 'slug', InputArgument::REQUIRED, 'The slug of the theme' ]
-        ];
-    }
+
 }

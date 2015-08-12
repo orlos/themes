@@ -7,7 +7,7 @@
 
 namespace Caffeinated\Themes\Console;
 
-use Laradic\Console\Command;
+use Caffeinated\Beverage\Command;
 
 /**
  * This is the ThemePublishersCommand.
@@ -20,11 +20,11 @@ use Laradic\Console\Command;
 class ThemePublishersCommand extends Command
 {
 
-    protected $name = 'themes:publishers';
+    protected $signature = 'themes:publishers';
 
     protected $description = 'List all available publishers.';
 
-    public function fire()
+    public function handle()
     {
         $publishers = array_keys(app('themes')->getPublishers());
         $this->comment('Available publishers:');
