@@ -3,7 +3,7 @@
 
 namespace Caffeinated\Tests\Themes;
 
-use Laradic\Dev\AbstractTestCase;
+use Caffeinated\Dev\Testing\AbstractTestCase;
 use Mockery as m;
 
 /**

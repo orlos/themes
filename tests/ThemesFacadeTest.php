@@ -10,7 +10,7 @@
  */
 namespace Caffeinated\Tests\Themes;
 
-use Laradic\Dev\Traits\FacadeTestCaseTrait;
+use Caffeinated\Dev\Testing\Traits\FacadeTester;
 
 /**
  * Class StrTest
@@ -19,7 +19,7 @@ use Laradic\Dev\Traits\FacadeTestCaseTrait;
  */
 class ThemesFacadeTest extends TestCase
 {
-    use FacadeTestCaseTrait;
+    use FacadeTester;
 
     public function setUp()
     {

@@ -10,7 +10,7 @@
  */
 namespace Caffeinated\Tests\Themes;
 
-use Laradic\Dev\Traits\ServiceProviderTestCaseTrait;
+use Caffeinated\Dev\Testing\Traits\ServiceProviderTester;
 
 /**
  * Class StrTest
@@ -19,10 +19,10 @@ use Laradic\Dev\Traits\ServiceProviderTestCaseTrait;
  */
 class ThemeSupportServiceProviderTest extends TestCase
 {
-    use ServiceProviderTestCaseTrait;
+    use ServiceProviderTester;
 
     protected function getServiceProviderClass($app)
     {
-        return 'Caffeinated\Themes\ThemeServiceProvider';
+        return \Caffeinated\Themes\ThemeServiceProvider::class;
     }
 }

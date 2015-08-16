@@ -6,9 +6,9 @@
  */
 namespace Caffeinated\Themes\Console;
 
+use Caffeinated\Beverage\Traits\NamespacedPackageTrait;
 use Caffeinated\Themes\ThemeGenerator;
 use Caffeinated\Beverage\Command;
-use Caffeinated\Beverage\Traits\SlugPackageTrait;
 use Symfony\Component\Console\Input\InputArgument;
 
 /**
@@ -22,7 +22,7 @@ use Symfony\Component\Console\Input\InputArgument;
 class ThemeMakeCommand extends Command
 {
 
-    use SlugPackageTrait;
+    use NamespacedPackageTrait;
 
     protected $signature = 'themes:make {slug: The slug of the theme}';
 
