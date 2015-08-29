@@ -14,8 +14,6 @@ use Illuminate\Support\NamespacedItemResolver;
 use Caffeinated\Themes\ThemeFactory;
 use Mockery as m;
 
-
-
 /**
  * Class StrTest
  *
@@ -41,13 +39,15 @@ class ThemeFactoryTest extends TestCase
         m::close();
     }
 
-    protected function _resolveTheme($slug = 'frontend/example', array $config = []){
+    protected function _resolveTheme($slug = 'frontend/example', array $config = [])
+    {
         $config['slug'] = $slug;
         $this->fs->shouldReceive('getRequire')->andReturn($this->_getThemeConfig($config));
         return $this->factory->resolveTheme($slug);
     }
 
-    protected function _getThemePath($slug = 'frontend/example'){
+    protected function _getThemePath($slug = 'frontend/example')
+    {
         list($area, $key) = with(new NamespacedItemResolver)->parseKey($slug);
         return $this->factory->getThemePath(public_path('themes'), $key, $area);
     }
@@ -108,7 +108,8 @@ class ThemeFactoryTest extends TestCase
         $this->assertNull($this->_resolveTheme());
     }
 
-    public function testArrayAccess(){
+    public function testArrayAccess()
+    {
         $this->fs->shouldReceive('isDirectory')->once()->andReturn(true);
         $this->fs->shouldReceive('exists')->once()->andReturn(true);
         $this->_resolveTheme();
@@ -167,7 +168,8 @@ class ThemeFactoryTest extends TestCase
         $this->factory->boot(true, true);
     }
 
-    public function testGettersSetters(){
+    public function testGettersSetters()
+    {
         $this->app->register(\Caffeinated\Themes\ThemeServiceProvider::class);
         /** @var \Caffeinated\Themes\ThemeFactory $themes */
         $themes = $this->app['caffeinated.themes'];
@@ -193,6 +195,4 @@ class ThemeFactoryTest extends TestCase
         $publishers = $this->factory->getPublishers();
         $this->assertTrue(is_array($publishers) && count($publishers) == 2);
     }
-
-
 }

@@ -54,8 +54,8 @@ class ThemeServiceProvider extends ServiceProvider
         $this->registerThemes();
         $this->registerViewFinder();
 
-        $app->make('events')->listen('creating: *', function (\Illuminate\Contracts\View\View $view) use ($app)
-        {
+        $app->make('events')->listen('creating: *', function (\Illuminate\Contracts\View\View $view) use ($app) {
+        
             $app->make('caffeinated.themes')->boot();
         });
     }
@@ -65,8 +65,8 @@ class ThemeServiceProvider extends ServiceProvider
      */
     protected function registerThemes()
     {
-        $this->app->singleton('caffeinated.themes', function (Application $app)
-        {
+        $this->app->singleton('caffeinated.themes', function (Application $app) {
+        
             $themeFactory = new ThemeFactory($app->make('files'), $app->make('events'), $app->make('url'));
             $themeFactory->setPaths(config('caffeinated.themes.paths'));
             $themeFactory->setThemeClass(config('caffeinated.themes.themeClass'));
@@ -88,8 +88,8 @@ class ThemeServiceProvider extends ServiceProvider
          */
         $oldViewFinder = $this->app[ 'view.finder' ];
 
-        $this->app->bind('view.finder', function ($app) use ($oldViewFinder)
-        {
+        $this->app->bind('view.finder', function ($app) use ($oldViewFinder) {
+        
             $paths = array_merge(
                 $app[ 'config' ][ 'view.paths' ],
                 $oldViewFinder->getPaths()
@@ -99,13 +99,11 @@ class ThemeServiceProvider extends ServiceProvider
             $themesViewFinder->setThemes($app[ 'caffeinated.themes' ]);
             $app[ 'caffeinated.themes' ]->setFinder($themesViewFinder);
 
-            foreach ( $oldViewFinder->getPaths() as $location )
-            {
+            foreach ($oldViewFinder->getPaths() as $location) {
                 $themesViewFinder->addLocation($location);
             }
 
-            foreach ( $oldViewFinder->getHints() as $namespace => $hints )
-            {
+            foreach ($oldViewFinder->getHints() as $namespace => $hints) {
                 $themesViewFinder->addNamespace($namespace, $hints);
             }
 
@@ -114,5 +112,4 @@ class ThemeServiceProvider extends ServiceProvider
 
         $this->app[ 'view' ]->setFinder($this->app[ 'view.finder' ]);
     }
-
 }

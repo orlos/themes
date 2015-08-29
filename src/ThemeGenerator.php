@@ -49,8 +49,7 @@ class ThemeGenerator extends StubGenerator
     {
         $path = Path::join($this->getThemeDirPath(), $slug);
 
-        if ( $this->files->exists($path) )
-        {
+        if ($this->files->exists($path)) {
             return false;
         }
 
@@ -58,8 +57,7 @@ class ThemeGenerator extends StubGenerator
         $themeStub        = $this->files->get(realpath(Path::join($this->themeStubPath, 'theme.php.stub')));
         $themeFileContent = "<?php \n" . $this->render($themeStub, compact('slug', 'name', 'parent'));
         $this->files->put(Path::join($path, 'theme.php'), $themeFileContent);
-        if ( ! is_null($viewFile) )
-        {
+        if (! is_null($viewFile)) {
             $from = Path::join($this->themeStubPath, $viewFile);
             $to   = Path::join($path, config('laradic.themes.paths.views'), $viewFile);
             $this->files->copy($from, $to);
@@ -88,8 +86,7 @@ class ThemeGenerator extends StubGenerator
         $this->files->makeDirectory($path, 0775, true);
         $types = [ 'assets', 'namespaces', 'packages', 'views' ];
 
-        foreach ( $types as $pathType )
-        {
+        foreach ($types as $pathType) {
             $this->files->makeDirectory(Path::join($path, config('laradic.themes.paths.' . $pathType)), 0775, true);
         }
     }

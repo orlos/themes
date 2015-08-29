@@ -36,21 +36,17 @@ class ThemeMakeCommand extends Command
     public function handle()
     {
 
-        if ( ! $this->validateSlug($slug = $this->argument('slug')) )
-        {
+        if (! $this->validateSlug($slug = $this->argument('slug'))) {
             return $this->error('Invalid slug');
         }
 
         $gen     = new ThemeGenerator(app('blade.compiler'));
         $success = $gen->generateTheme($slug, $slug . ' Theme');
 
-        if ( ! $success )
-        {
+        if (! $success) {
             return $this->error('theme already exists');
         }
 
         $this->info('Successfully created theme');
     }
-
-
 }

@@ -47,8 +47,7 @@ class Publisher
             $this->type === 'namespace' ? $this->namespace : $this->package
         );
 
-        if ( ! $this->files->exists($destination) )
-        {
+        if (! $this->files->exists($destination)) {
             $this->files->makeDirectory($destination, 0755, true);
         }
 
@@ -89,5 +88,4 @@ class Publisher
 
         return $this;
     }
-
 }

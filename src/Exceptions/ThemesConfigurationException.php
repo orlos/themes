@@ -8,7 +8,6 @@ namespace Caffeinated\Themes\Exceptions;
 
 use Exception;
 
-
 /**
  * This is the ThemesConfigurationException.
  *

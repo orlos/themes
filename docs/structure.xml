@@ -1,0 +1,2295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="API Documentation" version="v2.8.5">
+  <partials/>
+  <file path="Traits/ThemeProviderTrait.php" generated-path="Traits.ThemeProviderTrait.html" hash="27cf50b9f93f0f59b025a855e961276f" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <trait namespace="Caffeinated\Themes\Traits" line="17" package="Caffeinated\Themes">
+      <name>ThemeProviderTrait</name>
+      <full_name>\Caffeinated\Themes\Traits\ThemeProviderTrait</full_name>
+      <docblock line="17">
+        <description>This is the ThemeProviderTrait.</description>
+        <long-description></long-description>
+        <tag name="package" line="17" description="Caffeinated\Themes"/>
+        <tag name="author" line="17" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="17" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="17" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Caffeinated\Themes\Traits" line="26" package="Caffeinated\Themes">
+        <name>addPackagePublisher</name>
+        <full_name>\Caffeinated\Themes\Traits\ThemeProviderTrait::addPackagePublisher()</full_name>
+        <docblock line="26">
+          <description>addPackagePublisher</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="" type="" variable="$package"/>
+          <tag name="param" line="26" description="" type="" variable="$path"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$package</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Caffeinated\Themes\Traits" line="37" package="Caffeinated\Themes">
+        <name>addNamespacePublisher</name>
+        <full_name>\Caffeinated\Themes\Traits\ThemeProviderTrait::addNamespacePublisher()</full_name>
+        <docblock line="37">
+          <description>addNamespacePublisher</description>
+          <long-description></long-description>
+          <tag name="param" line="37" description="" type="" variable="$namespace"/>
+          <tag name="param" line="37" description="" type="" variable="$path"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$namespace</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Caffeinated\Themes\Traits" line="42" package="Caffeinated\Themes">
+        <name>addThemePublisher</name>
+        <full_name>\Caffeinated\Themes\Traits\ThemeProviderTrait::addThemePublisher()</full_name>
+        <docblock line="42">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$directory</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </trait>
+    <parse_markers>
+      <error line="42" code="PPC:ERR-50015">Argument $directory is missing from the Docblock of addThemePublisher</error>
+      <error line="42" code="PPC:ERR-50008">No summary for method addThemePublisher()</error>
+    </parse_markers>
+    <source>eJydklFrwjAUhd/zKy5sYCtqt8Fe5tgGTpjgpLA++hLbtAlrm5JeHSL+96VpY3UWJoZCaXrud+85yfNrwQvi9fsE+uBThSBjQM5gQuOYiZwii8D/8KGg4TdNWDnSwkr7OQtgLkKWlwxoHkEoi60SCUcQeSxVRlHIHFbrPEo14Ucg11hRWo5WmTbz2WS6+JpCLFKmsR7JacZKLTqZYBlwpreXgaICyzGxAwcVUT8VyUh8JTciYsoI7ahvtmezzsFGRdfIpYIOFbyzDQSMZkbXOq11h08ndOHh7v5xcFxrStImqGZxxKJ88jxMI5WyhKajUGZeI/IygUNbcJSySQcrXx1WyY6QimxyqVYfaBT5tW9/vUpFyZlqflmFzkXRDG6beM63kTd7nnkXSiILqzzidR6a8+1o4ljeoEa4pnZHrHlaFE4vbAMaoTmCnjt8uYQ2NqB9l92FvTr/GT7csSstnzdyWuZVti8inljvnqy+GS0jEkqLpNr+HefGzNPOkDD0dQ/HbXrsyS9vqkGg</source>
+  </file>
+  <file path="Providers/ConsoleServiceProvider.php" generated-path="Providers.ConsoleServiceProvider.html" hash="14a4a0800cd069e59ed6d08b024767c4" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="BaseConsoleProvider">\Caffeinated\Beverage\ConsoleServiceProvider</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes\Providers" line="19" package="Caffeinated\Themes">
+      <extends>\Caffeinated\Beverage\ConsoleServiceProvider</extends>
+      <name>ConsoleServiceProvider</name>
+      <full_name>\Caffeinated\Themes\Providers\ConsoleServiceProvider</full_name>
+      <docblock line="19">
+        <description>This is the ConsoleServiceProvider.</description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="Caffeinated\Themes"/>
+        <tag name="author" line="19" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="19" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="19" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Providers" line="27" package="Caffeinated\Themes">
+        <name>$namespace</name>
+        <full_name>\Caffeinated\Themes\Providers\ConsoleServiceProvider::namespace</full_name>
+        <default>'Caffeinated\\Themes\\Console'</default>
+        <docblock line="27">
+          <description>The namespace where the commands are</description>
+          <long-description></long-description>
+          <tag name="var" line="27" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Providers" line="34" package="Caffeinated\Themes">
+        <name>$commands</name>
+        <full_name>\Caffeinated\Themes\Providers\ConsoleServiceProvider::commands</full_name>
+        <default>array('init' =&gt; 'ThemeInit', 'make' =&gt; 'ThemeMake', 'publish' =&gt; 'ThemePublish', 'publishers' =&gt; 'ThemePublishers')</default>
+        <docblock line="34">
+          <description>The commands to be registered.</description>
+          <long-description></long-description>
+          <tag name="var" line="34" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Providers" line="44" package="Caffeinated\Themes">
+        <name>$prefix</name>
+        <full_name>\Caffeinated\Themes\Providers\ConsoleServiceProvider::prefix</full_name>
+        <default>'caffeinated.themes.'</default>
+        <docblock line="44">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="44" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+    </class>
+    <parse_markers>
+      <error line="44" code="PPC:ERR-50007">No summary for property $prefix</error>
+    </parse_markers>
+    <source>eJyNklFr2zAUhd/1K+7DwFto7W6wl7XpStPCAu0wNG/LHm7sa1vUloykuC1j/32SJsUucaEiEHT13aNzj3zxvW96li0WDBaQozIgKzANwQqrirhAQyXkP3LosXjEmnRqQcferzdwxwsSmgBFCYXsXxSvGwNcVFJ1aLgUsNuLsrUKT9w0VpbrqGMpf83denX78+EWKt6Slc2YwI60hV452G4asuVtruTAS1L6nLG9fo1c00DKKm9XUmjZ0gOpwfqLLYAarlFTOI1lKxSG3zh39ueHn5WIo1/FGcI6Nuop3JtGKpih4IYG2BB2nhuT+88dth+LT/Dl7PPXk2mvb2lD8GE1xvT6W5aZtlQt1dimheyyAGUdN6exYfJqPu2iRa3fGBfo2ZAoZ2NjfxhzN/vs3HL5EYyP99SQIp+ltdKhk0FFgY0tVwMq0EZxUYdS5v97JQ0VLqgPo+ISkmnQ8ZOIz52czzo63G4k7AgU1Vwba61M57ygUvjylpWD1BJ+sRh9wgU3CSwvIfGG1m57Mh53+EiT43u3nRz3+13LdTMh8lA5huxnf8y5oid/H8//jnh7RRV/dtkWY7ap8dGmNtK/7B/cA0OB</source>
+  </file>
+  <file path="Facades/Themes.php" generated-path="Facades.Themes.html" hash="5d723e5702857be5f0fed8db8c1ff2b2" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Facade">\Illuminate\Support\Facades\Facade</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes\Facades" line="19" package="Caffeinated\Themes">
+      <extends>\Illuminate\Support\Facades\Facade</extends>
+      <name>Themes</name>
+      <full_name>\Caffeinated\Themes\Facades\Themes</full_name>
+      <docblock line="19">
+        <description>This is the Themes.</description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="Caffeinated\Themes"/>
+        <tag name="author" line="19" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="19" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="19" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Caffeinated\Themes\Facades" line="26" package="Caffeinated\Themes">
+        <name>getFacadeAccessor</name>
+        <full_name>\Caffeinated\Themes\Facades\Themes::getFacadeAccessor()</full_name>
+        <docblock line="26">
+          <description>getFacadeAccessor</description>
+          <long-description></long-description>
+          <tag name="return" line="26" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJxtkd9LwzAQx9/zV9zbtqKrCr44wcmcOJgyWB/3EtNrG0yTklz9gex/N01TN5lHITT3ue/37nJ711QNS5OEQQIbbglMAVQhLHhRoNScMIfN0wYaLt54iW7qwY59XmWwlgK1Q+A6B2GaLyvLikDqwtiakzQaXludK6/wIanystINOp4KNuvVYvmyXUIhFXrZlGleo/PQnw52WYX+evfIBc/RzRhrve1KqbYOwG7bNo2xNADx9FycLOus/ddZ9lrDHPOhoRinroHiLVXGwj8UPOA7ZMjrwB3W0HO/v2MxgauLy+uz49pQouIWY1REjbtJU1K5VVhyNRWmTiOU1pLOh4KjJwirE4o7F8cD/CTUuYN+E+ybddphG10kUCL1qXsh0DljY2LIzy1SazU4slKX8TYNZ2MNoehGd+SfWUDRahGe+0R0PAkVvXsXUXUkDkuYUuh4NAvQnu3ZD1CZzfU=</source>
+  </file>
+  <file path="Console/ThemePublishersCommand.php" generated-path="Console.ThemePublishersCommand.html" hash="e51aa5b01e22c4c4cde3c997c0bf3cea" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Command">\Caffeinated\Beverage\Command</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes\Console" line="20" package="Caffeinated\Themes">
+      <extends>\Caffeinated\Beverage\Command</extends>
+      <name>ThemePublishersCommand</name>
+      <full_name>\Caffeinated\Themes\Console\ThemePublishersCommand</full_name>
+      <docblock line="20">
+        <description>This is the ThemePublishersCommand.</description>
+        <long-description></long-description>
+        <tag name="package" line="20" description="Caffeinated\Themes"/>
+        <tag name="author" line="20" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="20" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="20" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Console" line="23" package="Caffeinated\Themes">
+        <name>$signature</name>
+        <full_name>\Caffeinated\Themes\Console\ThemePublishersCommand::signature</full_name>
+        <default>'themes:publishers'</default>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Console" line="25" package="Caffeinated\Themes">
+        <name>$description</name>
+        <full_name>\Caffeinated\Themes\Console\ThemePublishersCommand::description</full_name>
+        <default>'List all available publishers.'</default>
+        <docblock line="25">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes\Console" line="27" package="Caffeinated\Themes">
+        <name>handle</name>
+        <full_name>\Caffeinated\Themes\Console\ThemePublishersCommand::handle()</full_name>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="27" code="PPC:ERR-50008">No summary for method handle()</error>
+      <error line="23" code="PPC:ERR-50007">No summary for property $signature</error>
+      <error line="25" code="PPC:ERR-50007">No summary for property $description</error>
+    </parse_markers>
+    <source>eJx1kl9r2zAUxd/1Ke5DwXZY4m2wl6Tr/mSFFbISWB4L5Ua+tkRlWUhytlD63SepTuzSThiD5N8599xrXX4xwrByNmMz2KL10NXgBcEa65qkRk8VbH9uwSB/wIbcgkXy180ONpKTdgSoK+CdOVrZCA9S151t0ctOw77XlQr6P9KLYCrdySVQqcjmZn19+/saaqmIwaxkTGNLLlAvAtztBIXju3WnXadoxVjvXgLf6UA2GAekbUOggMSWYAa7WDY8sVyy2fZ7JZ0g6wZ2EbBIfj2FG9brAInC3ovOwhsU/KAD7AjbxI0jeebO25wX8PH9h0/vptokUcNEhyW8N25Zll5VVlGDasG7thygspV+fhJMfkcaI1fo3H/aBfrrSVcOhj17ZCxWM7bzxGMbF042IVRvCT5D5lPrS3P2yVavBBU5bqVJPz1INtJ5QKUADygV7hXBKF+c9fGIQ91rnoQC423Ji/TxkZ2mcDFKgzdai8f7Bzq6HI3Jh3RZMb9qyI+95kWxGh3i1ZtfheG1pH2efXsj1TKbCMINJuQC8mltdJMoxSTgpISSmiaiieUTe34/sX+7qBjU</source>
+  </file>
+  <file path="Console/ThemeInitCommand.php" generated-path="Console.ThemeInitCommand.html" hash="1c91aba4199580504ad7946b70df5367" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="ThemeGenerator">\Caffeinated\Themes\ThemeGenerator</namespace-alias>
+    <namespace-alias name="Command">\Caffeinated\Beverage\Command</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes\Console" line="20" package="Caffeinated\Themes">
+      <extends>\Caffeinated\Beverage\Command</extends>
+      <name>ThemeInitCommand</name>
+      <full_name>\Caffeinated\Themes\Console\ThemeInitCommand</full_name>
+      <docblock line="20">
+        <description>This is the ThemeInitCommand.</description>
+        <long-description></long-description>
+        <tag name="package" line="20" description="Caffeinated\Themes"/>
+        <tag name="author" line="20" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="20" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="20" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Console" line="23" package="Caffeinated\Themes">
+        <name>$signature</name>
+        <full_name>\Caffeinated\Themes\Console\ThemeInitCommand::signature</full_name>
+        <default>'themes:init'</default>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Console" line="25" package="Caffeinated\Themes">
+        <name>$description</name>
+        <full_name>\Caffeinated\Themes\Console\ThemeInitCommand::description</full_name>
+        <default>'Create some initial theme files and dir structure. It will place it all in the first configured theme folder (laradic.themes.paths.themes) '</default>
+        <docblock line="25">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes\Console" line="27" package="Caffeinated\Themes">
+        <name>fire</name>
+        <full_name>\Caffeinated\Themes\Console\ThemeInitCommand::fire()</full_name>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="27" code="PPC:ERR-50008">No summary for method fire()</error>
+      <error line="23" code="PPC:ERR-50007">No summary for property $signature</error>
+      <error line="25" code="PPC:ERR-50007">No summary for property $description</error>
+    </parse_markers>
+    <source>eJyNVF1P2zAUfc+vuJOQkiKaANNeYGNjHdoqwYZE34AHY98k1hwnsh2gQvz3XTsfhJZNsyq11z73nPvZj5+bsomy3d0IduGSGQd1Dq5EWLA8R6mZQwGXPy6hYfw3K9CmBPTYi+UKziVHbRGYFsDrZm1kUTqQOq9NxZysNdy1WihieJCuJFppBx5CBZnz5eLs59UZ5FIh0WaRZhVaAr2K4GZVIl3fLGpta4XHUdTaNwHh6ztqNMzV5ngL9hXv6alAYqoqCpuY+txXPjj6+KACy1JL16OGnL8MwfdnO4CAYq0rawNvoOAb3sMKWRVwLyXrcKOZ8Bkc7h982Jv6BhfVV7w/pXONPcoyp4RRWDCV8rrKelBWSTcfHCbtCmXmilm7lSjgo0MtLPR29BRFXqcxtUPuE9ixsqBwWoPwCWIXkj6SxBAfb0EFWm5kEwaBwAuDlAfYuvLdl04yBYEgNN+GKRLSgHWm5V4hhaWjyVEKGuUHQjpgZPSTk0tjHY2dzmVBYDFw1UqggUQxw4TkaRdi2jBX2t6YwRhse0cFgrzVPERJnJjMwtNTNBR5p/OiFK7HO3+uIcZHVjUKM4E5a5WL9yA+666o0+GqKzE96FYpelZsXbcuvVNMYEqrF8Pt3t9YKyb1lPKC7E0+qQU+/h9dTXmYKd8vfzESbsn6RtHK6uLf9EwH4vngzkTV+Z92DzDInfqHzfgD+pXAyH/bNyn0oEA/Qxof4PWKJ6xpkrjzp9lvaJJMPJtNXOnPCBkvIRn6yGzf0tmkyUHEtpyj9Z32evOTolPBINn7X8M+FQEG42BqHE6N93A7DcMfmUPybpTZlO9nTdr5CRpDqXXrRTNPCYg17aa0zsZEOvV4jl5+RRs0/p84ia86uZwKvgYellCEBew2ZmR8jp6jP6HL3sE=</source>
+  </file>
+  <file path="Console/ThemePublishCommand.php" generated-path="Console.ThemePublishCommand.html" hash="414c0a70ce25b287d63deabfb4a1253b" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Command">\Caffeinated\Beverage\Command</namespace-alias>
+    <namespace-alias name="InputArgument">\Symfony\Component\Console\Input\InputArgument</namespace-alias>
+    <namespace-alias name="InputOption">\Symfony\Component\Console\Input\InputOption</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes\Console" line="21" package="Caffeinated\Themes">
+      <extends>\Caffeinated\Beverage\Command</extends>
+      <name>ThemePublishCommand</name>
+      <full_name>\Caffeinated\Themes\Console\ThemePublishCommand</full_name>
+      <docblock line="21">
+        <description>This is the ThemePublishCommand.</description>
+        <long-description></long-description>
+        <tag name="package" line="21" description="Caffeinated\Themes"/>
+        <tag name="author" line="21" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="21" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="21" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Console" line="24" package="Caffeinated\Themes">
+        <name>$signature</name>
+        <full_name>\Caffeinated\Themes\Console\ThemePublishCommand::signature</full_name>
+        <default>'themes:publish
+                            {publisher: The namespace or package to publish. If not provided, everything will be published. Check themes:publishers for available options}
+                            {--theme=null: The theme you want to publish to}'</default>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Console" line="28" package="Caffeinated\Themes">
+        <name>$description</name>
+        <full_name>\Caffeinated\Themes\Console\ThemePublishCommand::description</full_name>
+        <default>'Publish '</default>
+        <docblock line="28">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes\Console" line="30" package="Caffeinated\Themes">
+        <name>handle</name>
+        <full_name>\Caffeinated\Themes\Console\ThemePublishCommand::handle()</full_name>
+        <docblock line="30">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="30" code="PPC:ERR-50008">No summary for method handle()</error>
+      <error line="24" code="PPC:ERR-50007">No summary for property $signature</error>
+      <error line="28" code="PPC:ERR-50007">No summary for property $description</error>
+    </parse_markers>
+    <source>eJyVVO9r2zAQ/e6/4lYCtkN+bIN9SdZ2W1ZYoNsCzcfAUOyzLSpLxpLThZD/vSdZdpK1FCZCiKR37967O+XzbVVUwXQ4DGAIK1YbUBmYAmHBsgy5ZAZTWP1YQcWSR5ajnhDQYn8u13DPE5QagckUElXta54XBrjMVF0yw5WEbSNTQQxP3BREy3XHQyiX5n65uPv1cAcZF0i000CyEjWBLhRs1gXS8WahpFYC50HQ6EvAN9xhTbwEKUvSM3eIh32ZKbm3h5WSKE3HsFnKqjHt99c6b0q6+4+Q35V1RzJ84dbWGX2sIyd11WwF14UX09XsS2fer5cOHYo1plA1vIKC77iDNbLS4U4lb3H9Nkpi+Pj+w6fReawLEb5jfhXGVHo2nRqR1gJzJiaJKqceNC25GXcBZ+12bUoE0/o1r4B/DcpUg98HhyCwqapaGUysh4HmOSlqaoRrCI3zPatakgDeWAcPwnpmM8NpVKhaXWmNAg+bwDIDqYxNveMppiOwQ7KnMZQ5TaQQsMUOjOkEFgUmj3ApCGsNNM7AdowLthWUy/VeH9+WOh47nmvZCNGqdXvYqwaemDRnOunnMZy/qFKKOqm5S2br5KsMPdLuE8gamThIwexLi2J3eejFDXofRDKwL3B8w/zAR2F/GcbzU0ir1K4+pDUdtd2y4B7Nqsof6zAe33jG6JR35AkvM1hS+0cRdcbIcggTiN7RO/pjq3ZGEcPtuZEZhEyIMP4H3mYh6JUtbmuiPbyiEIuJvYZjcAyeASx1lko=</source>
+  </file>
+  <file path="Console/ThemeMakeCommand.php" generated-path="Console.ThemeMakeCommand.html" hash="91fe18e1fdf565ac4b30edbd3d405d77" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="NamespacedPackageTrait">\Caffeinated\Beverage\Traits\NamespacedPackageTrait</namespace-alias>
+    <namespace-alias name="ThemeGenerator">\Caffeinated\Themes\ThemeGenerator</namespace-alias>
+    <namespace-alias name="Command">\Caffeinated\Beverage\Command</namespace-alias>
+    <namespace-alias name="InputArgument">\Symfony\Component\Console\Input\InputArgument</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes\Console" line="22" package="Caffeinated\Themes">
+      <extends>\Caffeinated\Beverage\Command</extends>
+      <name>ThemeMakeCommand</name>
+      <full_name>\Caffeinated\Themes\Console\ThemeMakeCommand</full_name>
+      <docblock line="22">
+        <description>This is the ThemeMakeCommand.</description>
+        <long-description></long-description>
+        <tag name="package" line="22" description="Caffeinated\Themes"/>
+        <tag name="author" line="22" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="22" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="22" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Console" line="27" package="Caffeinated\Themes">
+        <name>$signature</name>
+        <full_name>\Caffeinated\Themes\Console\ThemeMakeCommand::signature</full_name>
+        <default>'themes:make {slug: The slug of the theme}'</default>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Console" line="29" package="Caffeinated\Themes">
+        <name>$description</name>
+        <full_name>\Caffeinated\Themes\Console\ThemeMakeCommand::description</full_name>
+        <default>'Publish '</default>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes\Console" line="34" package="Caffeinated\Themes">
+        <name>$files</name>
+        <full_name>\Caffeinated\Themes\Console\ThemeMakeCommand::files</full_name>
+        <default></default>
+        <docblock line="34">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="34" description="" type="\Caffeinated\Beverage\Filesystem" variable="">
+            <type>\Caffeinated\Beverage\Filesystem</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes\Console" line="36" package="Caffeinated\Themes">
+        <name>handle</name>
+        <full_name>\Caffeinated\Themes\Console\ThemeMakeCommand::handle()</full_name>
+        <docblock line="36">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="36" code="PPC:ERR-50008">No summary for method handle()</error>
+      <error line="27" code="PPC:ERR-50007">No summary for property $signature</error>
+      <error line="29" code="PPC:ERR-50007">No summary for property $description</error>
+      <error line="34" code="PPC:ERR-50007">No summary for property $files</error>
+    </parse_markers>
+    <source>eJyNVO9P2zAQ/Z6/4iZVSooo2SbtC13Zj45tlQBVaj/2i+tcEgvHjmynrEL875ztBCgFaVbVJva79+7dnfv1W1u3SX5yksAJLJlxoEtwNcKclSUKxRwWsPy7hJbxW1ahPSOgx14v1nAlOCqLwFQBXLd7I6ragVClNg1zQivYdqqQxHAnXE20wg48hAoyV4v55c3qEkohkWjzRLEGLYEOMtisa6TtzVwrqyVOk6Szh4CfuENDvJu1YcLZzc1AUyyjYNifHsX1xOHnDyricNocw57o57ppyG5ErPZNqdXeb7ZaoXJDgpuFajsXv3+YqmvojJLuy7z2daCP9x+Er9kt9sRDeb8PderXcc4BxTpXawNvoOAX7mCNrAm45+5E3NNrxsfw+eOnL6cvY0OI7Jvbr9q51p7nuZOFkVgxecZ1k/egvBFuMgS8mIzQUS6ZtUdGAf85VIWF/j25TxKv4+v6XvMCoDXaIfcOR1ZUlG9nEGaQulCV84Yk4N7Krjr3muCfhpkOkIf0mKhAy41ow8gS1bLbSmFrGJChb35RWXbMwObN0fhNI2z31mHTg/PXMn7I7aDuNTiUneJBtmb+pmTjcNjXwi9RQvYBRv7uTC52TIqCVFdkKhsFa7PhjPVzlqV+Px2Px0QDL5ZBKpUa4GiMNlm6UIETYsz0KeDhOYNRhSo8zEDhHRxelYy1bZZuJSvQD0RLDg1pPxONbMc50gDMAtHkooqhGHiiiVOIXs4gjfQ+k9cV6Hn+y1VoNDBpkBV7mjRhnX3PXQz0f1pZuooaZSflHjhF+7a5IaMY+ZA8AmqkpAQ=</source>
+  </file>
+  <file path="ThemeServiceProvider.php" generated-path="ThemeServiceProvider.html" hash="e92705287c33bd2987d01e3346a44a08" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Application">\Illuminate\Foundation\Application</namespace-alias>
+    <namespace-alias name="FileViewFinder">\Illuminate\View\FileViewFinder</namespace-alias>
+    <namespace-alias name="ServiceProvider">\Caffeinated\Beverage\ServiceProvider</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes" line="21" package="Caffeinated\Themes">
+      <extends>\Caffeinated\Beverage\ServiceProvider</extends>
+      <name>ThemeServiceProvider</name>
+      <full_name>\Caffeinated\Themes\ThemeServiceProvider</full_name>
+      <docblock line="21">
+        <description>This is the ThemeServiceProvider.</description>
+        <long-description></long-description>
+        <tag name="package" line="21" description="Caffeinated\Themes"/>
+        <tag name="author" line="21" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="21" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="21" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="27" package="Caffeinated\Themes">
+        <name>$dir</name>
+        <full_name>\Caffeinated\Themes\ThemeServiceProvider::dir</full_name>
+        <default>__DIR__</default>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="27" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="32" package="Caffeinated\Themes">
+        <name>$configFiles</name>
+        <full_name>\Caffeinated\Themes\ThemeServiceProvider::configFiles</full_name>
+        <default>array('caffeinated.themes')</default>
+        <docblock line="32">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="32" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="37" package="Caffeinated\Themes">
+        <name>$providers</name>
+        <full_name>\Caffeinated\Themes\ThemeServiceProvider::providers</full_name>
+        <default>array(\Collective\Html\HtmlServiceProvider::class, \Caffeinated\Themes\Providers\ConsoleServiceProvider::class)</default>
+        <docblock line="37">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="37" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="42" package="Caffeinated\Themes">
+        <name>$provides</name>
+        <full_name>\Caffeinated\Themes\ThemeServiceProvider::provides</full_name>
+        <default>array('caffeinated.themes')</default>
+        <docblock line="42">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="49" package="Caffeinated\Themes">
+        <name>register</name>
+        <full_name>\Caffeinated\Themes\ThemeServiceProvider::register()</full_name>
+        <docblock line="49">
+          <description>Register the service provider.</description>
+          <long-description></long-description>
+          <tag name="return" line="49" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Caffeinated\Themes" line="66" package="Caffeinated\Themes">
+        <name>registerThemes</name>
+        <full_name>\Caffeinated\Themes\ThemeServiceProvider::registerThemes()</full_name>
+        <docblock line="66">
+          <description>registerThemes</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Caffeinated\Themes" line="84" package="Caffeinated\Themes">
+        <name>registerViewFinder</name>
+        <full_name>\Caffeinated\Themes\ThemeServiceProvider::registerViewFinder()</full_name>
+        <docblock line="84">
+          <description>registerViewFinder</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="27" code="PPC:ERR-50007">No summary for property $dir</error>
+      <error line="32" code="PPC:ERR-50007">No summary for property $configFiles</error>
+      <error line="37" code="PPC:ERR-50007">No summary for property $providers</error>
+      <error line="42" code="PPC:ERR-50007">No summary for property $provides</error>
+    </parse_markers>
+    <source>eJydVttu4zYQfddX8MGA5MCXtkBfnMbtNhckQLowdo2+rAKDkSiJWIoUSMrbYJF/75C6URd73QqBI4tnzsycuVi//V5khbe+uvLQFdphqZFIkM4IusVJQijHmsRo97hDBY6+4pSoFQAN9q+nPXqmEeGKIMxjFIniTdI004jyRMgcayo4ei15zIDhG9UZ0FLV8ADKunl+ur3/+PkeJZQRoF17HOdEAagXQbjPCDy+9rwS3D0xVub2IHwQ4MC6Cj8UBaORvb8ewv6m5Fv4AC7MzQPlMZEVxvXxJzkSCaGFn4k8QmY7KY7UIht99iYB+DOB24gGyEabP5ok62uciUXhUmdCogkUuiNHtCc4t7hO2grXfg2iOfrlp59/Xbi21oTVlamvTOtCbdZrzWLJSIrZKhL5ugatc6qXjYFTVluOiGGlJpNF5B9NeKzQ4Ln33fOMT6uZuSCcI5ZIaUl5Wj9a2/+FFJpEJt9ZTCW6QYfD3dOnw+F6mgFLid9OEUSCJzQ1NVZA9MWPOkVW2mruv/wf3qJOy7J6jaDhrWAMEPRIwkedM/sxEGKzseItHKNRH4QNWAEjV4INVa5JLEcT/zi6/5LyJ5JSpaF+potV5Q0VXQdbVKuPJLqUHB0FjfsKla/QMigpeWQHXdaswdwef2+TBs+VyuEPxxbNcFE0Dsxlv9/AypCE682m81FnZTFmqyy3zVklq0GcAHQboE8DrpbbHH8lgQ97gGvlz5dbZkx44EeSQIQ83aArf9ElHbg5Qf20xJFW1bYxH2h2hM85MpsmMB7mjjDtzdD9RBkhlFchtJvWe33/PipwX4oTfT0qXCPcoHy1ejY8BQowogWfjNHVZVjU03lb4weQTcg3KDUH0fbOo8AVxvxGgBaLyWL1n5aS+XNHrZEvyIboHdaZCqrNMZXTqjCAC4hsyLdmUM+x6RZ1AeUHu1zO0WGLuIDqjiS4ZPocV1xBLFmPrZ7/Hum4CYedghnF6kSX+BNbsJsdt/j+D1u8G+ZL29wd//Gm6lKvl9ZMsLgzQf1XCAft7Ky+xY2jyxfkm32wSuyR3+7zoXqvcB70oO5sVfNUrZSer9NDZtsYQrE/dIecyJQEPYRFVRFWTQLBNdFWM4BeFmOLnvvlNm0mat6DDluq6iXVE6mde6c+dUDV1IP/Oo/FlN978y6iQB9wPjkPyjVoJlY1PiYaFb0Mec5ALWUT9tDfMH94OyY4yoblc/VDWKEZE9UGdet6Jikcx8+1RdDZ9nN4vzySRwprtY6keye/2aJZZk4uD+pjYxx0PIuG5Wx4vd2j3Ff31mDiTaAbtHFhTg1iu2jevX8BfSzvEg==</source>
+  </file>
+  <file path="ThemeGenerator.php" generated-path="ThemeGenerator.html" hash="34951830390d3f62d1692343a29bf62d" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="BladeCompiler">\Illuminate\View\Compilers\BladeCompiler</namespace-alias>
+    <namespace-alias name="Path">\Caffeinated\Beverage\Path</namespace-alias>
+    <namespace-alias name="StubGenerator">\Caffeinated\Beverage\StubGenerator</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes" line="21" package="Caffeinated\Themes">
+      <extends>\Caffeinated\Beverage\StubGenerator</extends>
+      <name>ThemeGenerator</name>
+      <full_name>\Caffeinated\Themes\ThemeGenerator</full_name>
+      <docblock line="21">
+        <description>This is the ThemeGenerator.</description>
+        <long-description></long-description>
+        <tag name="package" line="21" description="Caffeinated\Themes"/>
+        <tag name="author" line="21" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="21" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="21" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="Caffeinated\Themes" line="24" package="Caffeinated\Themes">
+        <name>$themeStubPath</name>
+        <full_name>\Caffeinated\Themes\ThemeGenerator::themeStubPath</full_name>
+        <default></default>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="24" description="&lt;p&gt;Path to stubs&lt;/p&gt;" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="Caffeinated\Themes" line="27" package="Caffeinated\Themes">
+        <name>$themeDirPath</name>
+        <full_name>\Caffeinated\Themes\ThemeGenerator::themeDirPath</full_name>
+        <default></default>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="27" description="&lt;p&gt;Path do dir&lt;/p&gt;" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="32" package="Caffeinated\Themes">
+        <name>__construct</name>
+        <full_name>\Caffeinated\Themes\ThemeGenerator::__construct()</full_name>
+        <docblock line="32">
+          <description>{@inheritDoc}</description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$compiler</name>
+          <default></default>
+          <type>\Illuminate\View\Compilers\BladeCompiler</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="48" package="Caffeinated\Themes">
+        <name>generateTheme</name>
+        <full_name>\Caffeinated\Themes\ThemeGenerator::generateTheme()</full_name>
+        <docblock line="48">
+          <description>generateTheme</description>
+          <long-description></long-description>
+          <tag name="param" line="48" description="" type="" variable="$slug"/>
+          <tag name="param" line="48" description="" type="" variable="$name"/>
+          <tag name="param" line="48" description="" type="null|string" variable="$parent">
+            <type>null</type>
+            <type>string</type>
+          </tag>
+          <tag name="param" line="48" description="" type="null|string" variable="$viewFile">
+            <type>null</type>
+            <type>string</type>
+          </tag>
+          <tag name="return" line="48" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+          <tag name="throws" line="48" description="" type="\Illuminate\Contracts\Filesystem\FileNotFoundException">
+            <type>\Illuminate\Contracts\Filesystem\FileNotFoundException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$slug</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$parent</name>
+          <default>null</default>
+          <type>null|string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$viewFile</name>
+          <default>null</default>
+          <type>null|string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Caffeinated\Themes" line="74" package="Caffeinated\Themes">
+        <name>getThemeDirPath</name>
+        <full_name>\Caffeinated\Themes\ThemeGenerator::getThemeDirPath()</full_name>
+        <docblock line="74">
+          <description>getThemeDirPath</description>
+          <long-description></long-description>
+          <tag name="return" line="74" description="" type="mixed|string">
+            <type>mixed</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Caffeinated\Themes" line="84" package="Caffeinated\Themes">
+        <name>generateDirStruct</name>
+        <full_name>\Caffeinated\Themes\ThemeGenerator::generateDirStruct()</full_name>
+        <docblock line="84">
+          <description>generateDirStruct</description>
+          <long-description></long-description>
+          <tag name="param" line="84" description="" type="" variable="$path"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="32" code="PPC:ERR-50015">Argument $compiler is missing from the Docblock of __construct</error>
+    </parse_markers>
+    <source>eJyVVm1v2zYQ/u5fcSsMSApcuRswFHDaNWiSrgG6IliMfZmHgJFOFldJFEgqL+j833dHUbYkvwwTDFgk7557e+6odx/qvJ7Mz84mcAa3QltQGdgc4VJkGcpKWEzh9vMt1CL5JtZoYhJk2d9ulvBFJlgZBFGlkKj6Rct1bkFWmdKlsFJV8NBUaUEIT9LmBCtNh0NSzsyXm8vrr3fXkMkCCXY+qUSJhoQGHqyWOdL2+WTSkLmbomhKd7D6Q+LT6lKVNalrs/pYiBS75bkT7qN8xEfUZHx1K2x+4vjONg+/YkULqwimS8+S/acf++0c2sp0SbnoovPPfghOSjQ2VxoOSMEVPsISRenkdjlt5bbLMIngpzc//jzr6zqVwpfEP7m1tVnM57ZIdYFrUcSJKudeaF5K+7pT6NXT1SEphDGjMAGfLVapgUGCJt8nbIqSBBePQoOxWlZr4ByDVbRsHgwjslDdPJBBmFrGZZS2EscBUgWp1AfVr6Qeart/SsL3C1nlqKW9UsnGbw70s6ZKHD3v7xNVkbkmseGAOzBN/FvkFNsQHYTQWNnFoq+6Ez7fyk2Z7a9/GQQK78ni1c3v9/cQQzCP47lGoxqdoJm7NAWt/mYvpHWbbHT18JvdGZFOi9JbNUWzPnjAfTU6qJqi+Mcne9rGdUrikXrtk2tTL6PRNpp6XKliu2dzrZ4MrHo9eqkqq0VizYq1zYuxWLrXr8p+UjQgrp8TrLkeJ2s1SEHoAp21Yc067ym/7PFs56vfGReR5F01uCiLxd9KVqGv1xrtskeuMJq1OY08zfiRGXTiPLboD5+lsSZ0sFHUM8SPT1MmCoM7fmwmY6p0AZLpO88rhzfglGdTt/Meho6Q+6FGUbBiuB/dgI0zCNw6phsgZvoFUbRnjJPIBWyz++odXxewql4RgT0mJT5FHe58mwG3AxU8DDhzAdnhKvF/W6Yg2u8T73/d2IHb9cjPgOsxdqyHxqX5gWb0PVc93NJgrybTTKvyIAFGKdpBnA8BaLLBCKB1lsZCJtdhUFAHpTKJHaCJ+dDEjGZcEEdx++ngCyB0vnLYKjpIH88vogweHx8DVo8HiEco5TOmvt2HraiVxYSvp143jvpk1GEeUhpDjOyn1itE8AEObMMCchRpeDKJ7WLLouPTcttJhyemK9h/B3q4K8cTZVC3UnxjBYJS+qUjxpu3b+nC5jIN6P9SoyEi/QmB4GSZrl/cR5Bpu6b99OL3lkDwV28c0dcWiiTnmeSwhGkjW9Jqj/cn3PyfVA54BGztREfi2/gSbSb/Av3jJ3c=</source>
+  </file>
+  <file path="Exceptions/ThemesConfigurationException.php" generated-path="Exceptions.ThemesConfigurationException.html" hash="902c84b1aba9b7f8e0c7fd991239423c" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Exception">\Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes\Exceptions" line="19" package="Caffeinated\Themes">
+      <extends>\Exception</extends>
+      <name>ThemesConfigurationException</name>
+      <full_name>\Caffeinated\Themes\Exceptions\ThemesConfigurationException</full_name>
+      <docblock line="19">
+        <description>This is the ThemesConfigurationException.</description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="Caffeinated\Themes"/>
+        <tag name="author" line="19" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="19" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="19" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+    </class>
+    <source>eJx9kU1LxDAQhu/5FXPUohsVvKigUAsurFKwx73EdNIE0yQkqa6I/9002+6uKA65zPC873zk5tZJR2hRECigZj6CFRAlQsmEQGVYxBbqhxoc46+sw7BI4Mg+LhtYKY4mIDDTArfuw6tORlBGWN+zqKyBl8G0Ojm8qyiTrQqzT6Jym9WyrJ6eKxBKY7KlxLAeQ4J+TLBuJKbyutpwdKNxuCZkSJ13hZRPSzRjl/RG962stEaobvB5pJ1iXuRunmiK320zxYYorYc/KLjHN2iQ9Znb32HL7dIjfgwXZ+eXJ4faLNHTGaeQMbpwRWnUrdfYMb3gtqcTRHsVT2fBwR/k23HNQvh3acBNRNOG/eHIJyFf5BsFdamR</source>
+  </file>
+  <file path="Publisher.php" generated-path="Publisher.html" hash="2785e7dc232f67b7cc65c5247bfaf3d3" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Filesystem">\Illuminate\Filesystem\Filesystem</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes" line="19" package="Caffeinated\Themes">
+      <extends/>
+      <name>Publisher</name>
+      <full_name>\Caffeinated\Themes\Publisher</full_name>
+      <docblock line="19">
+        <description>This is the Publisher.</description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="Caffeinated\Themes"/>
+        <tag name="author" line="19" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="19" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="19" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="21" package="Caffeinated\Themes">
+        <name>$type</name>
+        <full_name>\Caffeinated\Themes\Publisher::type</full_name>
+        <default></default>
+        <docblock line="21">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="23" package="Caffeinated\Themes">
+        <name>$namespace</name>
+        <full_name>\Caffeinated\Themes\Publisher::namespace</full_name>
+        <default></default>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="25" package="Caffeinated\Themes">
+        <name>$package</name>
+        <full_name>\Caffeinated\Themes\Publisher::package</full_name>
+        <default></default>
+        <docblock line="25">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="28" package="Caffeinated\Themes">
+        <name>$theme</name>
+        <full_name>\Caffeinated\Themes\Publisher::theme</full_name>
+        <default></default>
+        <docblock line="28">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="28" description="" type="\Caffeinated\Themes\Theme" variable="">
+            <type>\Caffeinated\Themes\Theme</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="30" package="Caffeinated\Themes">
+        <name>$sourcePath</name>
+        <full_name>\Caffeinated\Themes\Publisher::sourcePath</full_name>
+        <default></default>
+        <docblock line="30">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="33" package="Caffeinated\Themes">
+        <name>$files</name>
+        <full_name>\Caffeinated\Themes\Publisher::files</full_name>
+        <default></default>
+        <docblock line="33">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="33" description="" type="\Illuminate\Filesystem\Filesystem" variable="">
+            <type>\Illuminate\Filesystem\Filesystem</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="38" package="Caffeinated\Themes">
+        <name>__construct</name>
+        <full_name>\Caffeinated\Themes\Publisher::__construct()</full_name>
+        <docblock line="38">
+          <description>Instanciates the class</description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$files</name>
+          <default></default>
+          <type>\Illuminate\Filesystem\Filesystem</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="43" package="Caffeinated\Themes">
+        <name>publish</name>
+        <full_name>\Caffeinated\Themes\Publisher::publish()</full_name>
+        <docblock line="43">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Caffeinated\Themes" line="57" package="Caffeinated\Themes">
+        <name>create</name>
+        <full_name>\Caffeinated\Themes\Publisher::create()</full_name>
+        <docblock line="57">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$files</name>
+          <default></default>
+          <type>\Illuminate\Filesystem\Filesystem</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="62" package="Caffeinated\Themes">
+        <name>asNamespace</name>
+        <full_name>\Caffeinated\Themes\Publisher::asNamespace()</full_name>
+        <docblock line="62">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$namespace</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="70" package="Caffeinated\Themes">
+        <name>asPackage</name>
+        <full_name>\Caffeinated\Themes\Publisher::asPackage()</full_name>
+        <docblock line="70">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$package</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="78" package="Caffeinated\Themes">
+        <name>toTheme</name>
+        <full_name>\Caffeinated\Themes\Publisher::toTheme()</full_name>
+        <docblock line="78">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$theme</name>
+          <default></default>
+          <type>\Caffeinated\Themes\Theme</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="85" package="Caffeinated\Themes">
+        <name>from</name>
+        <full_name>\Caffeinated\Themes\Publisher::from()</full_name>
+        <docblock line="85">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$sourcePath</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="38" code="PPC:ERR-50015">Argument $files is missing from the Docblock of __construct</error>
+      <error line="43" code="PPC:ERR-50008">No summary for method publish()</error>
+      <error line="57" code="PPC:ERR-50015">Argument $files is missing from the Docblock of create</error>
+      <error line="57" code="PPC:ERR-50008">No summary for method create()</error>
+      <error line="62" code="PPC:ERR-50015">Argument $namespace is missing from the Docblock of asNamespace</error>
+      <error line="62" code="PPC:ERR-50008">No summary for method asNamespace()</error>
+      <error line="70" code="PPC:ERR-50015">Argument $package is missing from the Docblock of asPackage</error>
+      <error line="70" code="PPC:ERR-50008">No summary for method asPackage()</error>
+      <error line="78" code="PPC:ERR-50015">Argument $theme is missing from the Docblock of toTheme</error>
+      <error line="78" code="PPC:ERR-50008">No summary for method toTheme()</error>
+      <error line="85" code="PPC:ERR-50015">Argument $sourcePath is missing from the Docblock of from</error>
+      <error line="85" code="PPC:ERR-50008">No summary for method from()</error>
+      <error line="21" code="PPC:ERR-50007">No summary for property $type</error>
+      <error line="23" code="PPC:ERR-50007">No summary for property $namespace</error>
+      <error line="25" code="PPC:ERR-50007">No summary for property $package</error>
+      <error line="28" code="PPC:ERR-50007">No summary for property $theme</error>
+      <error line="30" code="PPC:ERR-50007">No summary for property $sourcePath</error>
+      <error line="33" code="PPC:ERR-50007">No summary for property $files</error>
+    </parse_markers>
+    <source>eJyVVG1r2zAQ/u5fcYNC7JDE3aAMmjktpB0LdMWwfAwUVT7Hon5DktuF0f9eSZZfEicLFYEkuueeu3vudD9uyqR0/PHYgTGEhEsoYpAJwpLEMbKcSIwg/BVCSegL2aKYKaDG/l6t4YFRzAUCySOgRbnjbJtIYHlc8IxIVuTwXOVRqhjemEwULRMNj0KZMA+r5f3jn3uIWYqK1ndykqFQoL0MNusE1fXccSoVbpWmVWYMm5/KTeyExKz3U8FsQWsdUX10pLB6TplIkDcV3Dap2DOMZ1CkkknB4QgK7vAV1kgyg+sEqHHtX5d68O3y69Wk72tcUqufPYmUpbj2fZlGPMUtSWe0yHwL8jMmp41DT3wjGk2JEF2Fzj9H85W8kEh1ohdyV6KS5eC21XpostpYg5ITbl8Jh81QpPpLZ3EYU98PmUVRcYohkcmA/FxjjwTRcyM6IvOtpF3lQpKcMkVVd98oZK2WRKtFIa5yakb16YkWyotXVLq9kHUEz7jUsupzoWd5ujA2CNo0tOndOUpf1s1xB0wRCqlr1qCgITbaTRdblEsiKIkw0oK5rVcvB91amMFIjCYnzUEQwKjt9ghuGmv32q6bK9v5lsuz6urDYnC/7BU/XeBfJqRw+3V4Xq/AQ7mmi4y84B3jqoMF3+05TuDy+5V6KKoL6M1binfnqPDThX5zPaba1g3YZE9d71h/1JjIfpsoRzUz5weAo6x4Djm+WQrX4v47BEQ8NoK73es7MVymc+bsNW9+iOt6GAyfdC9XAz+TXlg3323e/5nUVGIWOEyr2a7B4TL5VEqyMOvFrZdMvVNOJWUgwf7i+VSwmBeZ21tQJwJ1AB1tsM9OhXx3PgBuJTjO</source>
+  </file>
+  <file path="ThemeViewFinder.php" generated-path="ThemeViewFinder.html" hash="00e220f7f6d2c8bd0e4e404677ae3158" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="ThemeFactoryContract">\Caffeinated\Themes\Contracts\ThemeFactory</namespace-alias>
+    <namespace-alias name="ThemeViewFinderContract">\Caffeinated\Themes\Contracts\ThemeViewFinder</namespace-alias>
+    <namespace-alias name="NamespacedItemResolver">\Illuminate\Support\NamespacedItemResolver</namespace-alias>
+    <namespace-alias name="FileViewFinder">\Illuminate\View\FileViewFinder</namespace-alias>
+    <namespace-alias name="InvalidArgumentException">\InvalidArgumentException</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes" line="23" package="Caffeinated\Themes">
+      <extends>\Illuminate\View\FileViewFinder</extends>
+      <implements>\Caffeinated\Themes\Contracts\ThemeViewFinder</implements>
+      <name>ThemeViewFinder</name>
+      <full_name>\Caffeinated\Themes\ThemeViewFinder</full_name>
+      <docblock line="23">
+        <description>This is the ThemeViewFinder.</description>
+        <long-description></long-description>
+        <tag name="package" line="23" description="Caffeinated\Themes"/>
+        <tag name="author" line="23" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="23" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="23" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="29" package="Caffeinated\Themes">
+        <name>$themes</name>
+        <full_name>\Caffeinated\Themes\ThemeViewFinder::themes</full_name>
+        <default></default>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="29" description="&lt;p&gt;\Caffeinated\Themes\ThemeFactory&lt;/p&gt;" type="" variable="$themes"/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="32" package="Caffeinated\Themes">
+        <name>find</name>
+        <full_name>\Caffeinated\Themes\ThemeViewFinder::find()</full_name>
+        <docblock line="32">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inheritdoc" line="32" description=""/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="79" package="Caffeinated\Themes">
+        <name>getThemes</name>
+        <full_name>\Caffeinated\Themes\ThemeViewFinder::getThemes()</full_name>
+        <docblock line="79">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inheritdoc" line="79" description=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="85" package="Caffeinated\Themes">
+        <name>setThemes</name>
+        <full_name>\Caffeinated\Themes\ThemeViewFinder::setThemes()</full_name>
+        <docblock line="85">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inheritdoc" line="85" description=""/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$themes</name>
+          <default></default>
+          <type>\Caffeinated\Themes\Contracts\ThemeFactory</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="32" code="PPC:ERR-50015">Argument $name is missing from the Docblock of find</error>
+      <error line="32" code="PPC:ERR-50008">No summary for method find()</error>
+      <error line="79" code="PPC:ERR-50008">No summary for method getThemes()</error>
+      <error line="85" code="PPC:ERR-50015">Argument $themes is missing from the Docblock of setThemes</error>
+      <error line="85" code="PPC:ERR-50008">No summary for method setThemes()</error>
+    </parse_markers>
+    <source>eJytVtFu2zgQfNdXbAEXkgMnuh7Ql7hNW/gSnHFtETRG+1AXB0ZaWcRJlEBSTowi/94lRcqyZQNOcUQQWdLucHY4S+rNuzqvg/jsLIAzuGVSQ5WBzhFmLMuQC6Yxhdu/b6FmyX9sheqCAk3sp/kCPvIEhUJgIoWkqjeSr3INXGSVLJnmlYD7RqQFITxwnRMsVx6Houw0H+ez689315DxAgk2DgQrUVHQDoPlIkd6PA2CRh16sZxVQkuWaNU+uKGfldwAU9C/91HTE2G+cny44SJF2SFtH+2CzYuiKS3Y8q6p60rq5WdfSTrXWH5BVRVrlINwg7i8ofK30C5GrFnB0w9y1ZQo9PVjgrURlVRw67UwgtKfEXKPnV+m915vN4ZF2yjW6LyScCAK/sI1LJCVNm67ym1cdxslY/jzj1evJ/1cm1I4k7iRa12ryzjWRSoLXLHiIqnK2AXFJdfnPqHnMOuMpGBqsAqAjxpFqmBXQeBlXaCR7ei6BT+DwBCyWppBXNdMwkhbWWB5wB99M7mk2F5rWWlMjFwufdqBw3sucpRcp1XShTf3VCVkjUhsm2TELBoZ64/t+5+Bl8s+hLegtPxXYl2QnaLwIpxAGNO/NsXNZQbPIHpBllCoo5Hpt/Orls943AM1Q6JupKB2lCTS5WWPwbSLe9oCj6TzL3ER+ADHzO3jC66IAYEzYrkm8ceU2IGcX9G8Cv/BTTQoQVPf7lI1RbmSDOCglL2Ytuyc09p/B5sBPw7m2LoU2iVYbGojc9htPyqcHk6omc6Vu3kLOyKfX61Qz5hKWIrprYmL+oATcIKERhAVjoczPAEWZP3TuPot+X9i2sGdwjMYPLKrvJ3HGGouWmj7auII7aEdrdjRP4H4UZYtpd/gtO0AiGP4hnS6NUUqQm071e63FrpRXKygaqR5VJrfaqOoH7r8hOkkh+jYVg4j3Dfm0P5mnNKtLd/nz2iVoj2Nr/Gg2h/sq6jfo36c0pkWnrCUOYVoI6sldWYWhTMjKYjKaWr1/P5S/TBfBvZKHyLm6re5yY7/J56ypXhXNKto/Ox+OsDqa0cj6fjdI2QVfch4Zj1GJ3EY6qZzWT3YffTYOkWe3HFrbmGdO6yl2/CnZx0/xL494KL948cj903xOzOoboZD32P+0Bwcfv1pW2/2ztZ9fp7XU/ALJgspWQ==</source>
+  </file>
+  <file path="Contracts/ThemeViewFinder.php" generated-path="Contracts.ThemeViewFinder.html" hash="11d4fe9703e881d054752bc1c313b5e3" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <interface namespace="Caffeinated\Themes\Contracts" line="17" package="Caffeinated\Themes">
+      <name>ThemeViewFinder</name>
+      <full_name>\Caffeinated\Themes\Contracts\ThemeViewFinder</full_name>
+      <docblock line="17">
+        <description>Interface ThemeViewFinder</description>
+        <long-description></long-description>
+        <tag name="package" line="17" description="Caffeinated\Themes"/>
+        <tag name="author" line="17" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="17" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="17" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes\Contracts" line="20" package="Caffeinated\Themes">
+        <name>getHints</name>
+        <full_name>\Caffeinated\Themes\Contracts\ThemeViewFinder::getHints()</full_name>
+        <docblock line="20">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes\Contracts" line="28" package="Caffeinated\Themes">
+        <name>find</name>
+        <full_name>\Caffeinated\Themes\Contracts\ThemeViewFinder::find()</full_name>
+        <docblock line="28">
+          <description>Find the key</description>
+          <long-description></long-description>
+          <tag name="param" line="28" description="" type="" variable="$key"/>
+          <tag name="return" line="28" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes\Contracts" line="31" package="Caffeinated\Themes">
+        <name>getThemes</name>
+        <full_name>\Caffeinated\Themes\Contracts\ThemeViewFinder::getThemes()</full_name>
+        <docblock line="31">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="31" description="" type="\Caffeinated\Themes\Contracts\ThemeFactory">
+            <type>\Caffeinated\Themes\Contracts\ThemeFactory</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes\Contracts" line="37" package="Caffeinated\Themes">
+        <name>setThemes</name>
+        <full_name>\Caffeinated\Themes\Contracts\ThemeViewFinder::setThemes()</full_name>
+        <docblock line="37">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="37" description="" type="\Caffeinated\Themes\Contracts\ThemeFactory" variable="$themes">
+            <type>\Caffeinated\Themes\Contracts\ThemeFactory</type>
+          </tag>
+          <tag name="return" line="37" description="" type="\Caffeinated\Themes\Contracts\ThemeViewFinder">
+            <type>\Caffeinated\Themes\Contracts\ThemeViewFinder</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$themes</name>
+          <default></default>
+          <type>\Caffeinated\Themes\Contracts\ThemeFactory</type>
+        </argument>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="20" code="PPC:ERR-50008">No summary for method getHints()</error>
+      <error line="31" code="PPC:ERR-50008">No summary for method getThemes()</error>
+      <error line="37" code="PPC:ERR-50008">No summary for method setThemes()</error>
+    </parse_markers>
+    <source>eJx9UktPwkAQvvdXzIEDEKVq4kVMJEEIJGhIJJ64rO1su6HdbXanIjH+d3eXLY9YnFtnv9fM9PGpyqso7vcj6MOSaQLFgXKEMeMchWSEKSxnS6hYsmEZmoEFOuzLfAULkaA0CEymkKhqp0WWEwjJlS4ZCSXho5ZpYRW2gnIrK0yjY1HeZjEfT17fJsBFgVY2jiQr0VjQWYL1KkfbXo+VJM0SMsOoyTyXhJo7vMe8C9xOhUxRh5yjxjDUX1WPYjXlSkMLCp7xE1bISo87jrnHHT67SQ/ubm7vr065nlKELYXKiSrzEMdUpLrAjBWDRJVxAMWloOuGcLJivxpxcdTvKHLSVf1hucBrmfjtZ0gzSzLd3nAP8Dtz1QfH9BfY4C70mie7Ms1K6BxfYKSRai2hFF9uKt+MWz251e066onnge5zT+0Bld5dErCh93dpSx2inel0KJzxPGrH/W7/RjUHpzY96/4T/QKDDvRc</source>
+  </file>
+  <file path="Contracts/ThemeFactory.php" generated-path="Contracts.ThemeFactory.html" hash="c70141ccf07bcfc3d61a9032a1b60b68" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <interface namespace="Caffeinated\Themes\Contracts" line="17" package="Caffeinated\Themes">
+      <name>ThemeFactory</name>
+      <full_name>\Caffeinated\Themes\Contracts\ThemeFactory</full_name>
+      <docblock line="17">
+        <description>Interface ThemeFactory</description>
+        <long-description></long-description>
+        <tag name="package" line="17" description="Caffeinated\Themes"/>
+        <tag name="author" line="17" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="17" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="17" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes\Contracts" line="21" package="Caffeinated\Themes">
+        <name>getFinder</name>
+        <full_name>\Caffeinated\Themes\Contracts\ThemeFactory::getFinder()</full_name>
+        <docblock line="21">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="21" description="" type="\Caffeinated\Themes\Contracts\ThemeViewFinder">
+            <type>\Caffeinated\Themes\Contracts\ThemeViewFinder</type>
+          </tag>
+        </docblock>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="21" code="PPC:ERR-50008">No summary for method getFinder()</error>
+    </parse_markers>
+    <source>eJxtkdFLwzAQxt/zV9zjVnRVwRcnOKgbFqYULD7tJUsvTbBNSnp1DPF/N01bnbi8Jff7vrv7cv/QqIbFUcQggow7AiuBFELCpURtOGEB2VMGDRfvvMR24cGefU5z2GqBpkXgpgBhm6PTpSLQRlpXc9LWwL4zReUdDpqUt9Xt5OOp0GabJuuX1zVIXaG3jZnhNbYe+jPBLlfon3eJNeS4oHbJpplTQ+hkzwdm46vWHcchV1O38fy3DBTvSFkHZyh4xA/IkdeB+91x4H6uMzGHm6vr24tTbZBUY0TjUURNexfHVBWuwpJXC2HreITiWtPlJDjJN+Siz+/5yVjv68OAlUPqnBnqbxoPG20KdL24R5pu771BdkaErymRBmA2X7Iv9g284KXv</source>
+  </file>
+  <file path="Theme.php" generated-path="Theme.html" hash="5e3b352f31e2110bedcde8edca25fd9e" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="ThemeFactoryContract">\Caffeinated\Themes\Contracts\ThemeFactory</namespace-alias>
+    <namespace-alias name="Closure">\Closure</namespace-alias>
+    <namespace-alias name="Dispatcher">\Illuminate\Contracts\Events\Dispatcher</namespace-alias>
+    <namespace-alias name="FileNotFoundException">\Symfony\Component\Filesystem\Exception\FileNotFoundException</namespace-alias>
+    <namespace-alias name="SemVer">\vierbergenlars\SemVer\Internal\SemVer</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes" line="23" package="Caffeinated\Themes">
+      <extends/>
+      <name>Theme</name>
+      <full_name>\Caffeinated\Themes\Theme</full_name>
+      <docblock line="23">
+        <description>This is the Theme.</description>
+        <long-description></long-description>
+        <tag name="package" line="23" description="Caffeinated\Themes"/>
+        <tag name="author" line="23" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="23" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="23" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="28" package="Caffeinated\Themes">
+        <name>$themes</name>
+        <full_name>\Caffeinated\Themes\Theme::themes</full_name>
+        <default></default>
+        <docblock line="28">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="28" description="" type="\Caffeinated\Themes\ThemeFactory" variable="">
+            <type>\Caffeinated\Themes\ThemeFactory</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="33" package="Caffeinated\Themes">
+        <name>$path</name>
+        <full_name>\Caffeinated\Themes\Theme::path</full_name>
+        <default></default>
+        <docblock line="33">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="33" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="38" package="Caffeinated\Themes">
+        <name>$parentSlug</name>
+        <full_name>\Caffeinated\Themes\Theme::parentSlug</full_name>
+        <default></default>
+        <docblock line="38">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="38" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="43" package="Caffeinated\Themes">
+        <name>$parentTheme</name>
+        <full_name>\Caffeinated\Themes\Theme::parentTheme</full_name>
+        <default></default>
+        <docblock line="43">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="43" description="" type="\Caffeinated\Themes\Theme" variable="">
+            <type>\Caffeinated\Themes\Theme</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="48" package="Caffeinated\Themes">
+        <name>$config</name>
+        <full_name>\Caffeinated\Themes\Theme::config</full_name>
+        <default></default>
+        <docblock line="48">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="48" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="53" package="Caffeinated\Themes">
+        <name>$name</name>
+        <full_name>\Caffeinated\Themes\Theme::name</full_name>
+        <default></default>
+        <docblock line="53">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="53" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="58" package="Caffeinated\Themes">
+        <name>$slug</name>
+        <full_name>\Caffeinated\Themes\Theme::slug</full_name>
+        <default></default>
+        <docblock line="58">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="58" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="63" package="Caffeinated\Themes">
+        <name>$dispatcher</name>
+        <full_name>\Caffeinated\Themes\Theme::dispatcher</full_name>
+        <default></default>
+        <docblock line="63">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="63" description="" type="" variable=""/>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="68" package="Caffeinated\Themes">
+        <name>$booted</name>
+        <full_name>\Caffeinated\Themes\Theme::booted</full_name>
+        <default>false</default>
+        <docblock line="68">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="68" description="&lt;p&gt;Is booted&lt;/p&gt;" type="boolean" variable="">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="76" package="Caffeinated\Themes">
+        <name>__construct</name>
+        <full_name>\Caffeinated\Themes\Theme::__construct()</full_name>
+        <docblock line="76">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="76" description="" type="\Caffeinated\Themes\Contracts\ThemeFactory" variable="$themes">
+            <type>\Caffeinated\Themes\Contracts\ThemeFactory</type>
+          </tag>
+          <tag name="param" line="76" description="" type="\Illuminate\Contracts\Events\Dispatcher" variable="$dispatcher">
+            <type>\Illuminate\Contracts\Events\Dispatcher</type>
+          </tag>
+          <tag name="param" line="76" description="" type="" variable="$path"/>
+          <tag name="throws" line="76" description="" type="\Illuminate\Contracts\Filesystem\FileNotFoundException">
+            <type>\Illuminate\Contracts\Filesystem\FileNotFoundException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$themes</name>
+          <default></default>
+          <type>\Caffeinated\Themes\Contracts\ThemeFactory</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$dispatcher</name>
+          <default></default>
+          <type>\Illuminate\Contracts\Events\Dispatcher</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="109" package="Caffeinated\Themes">
+        <name>getCascadedPath</name>
+        <full_name>\Caffeinated\Themes\Theme::getCascadedPath()</full_name>
+        <docblock line="109">
+          <description>getCascadedPath</description>
+          <long-description></long-description>
+          <tag name="param" line="109" description="&lt;p&gt;namespaces, packages or null&lt;/p&gt;" type="string|null" variable="$cascadeType">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="param" line="109" description="&lt;p&gt;the namespace, package or nulll&lt;/p&gt;" type="string|null" variable="$cascadeName">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="param" line="109" description="&lt;p&gt;views, assets or null&lt;/p&gt;" type="string|null" variable="$pathType">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="109" description="the path" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$cascadeType</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$cascadeName</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$pathType</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="133" package="Caffeinated\Themes">
+        <name>getPath</name>
+        <full_name>\Caffeinated\Themes\Theme::getPath()</full_name>
+        <docblock line="133">
+          <description>getPath</description>
+          <long-description></long-description>
+          <tag name="param" line="133" description="" type="null" variable="$for">
+            <type>null</type>
+          </tag>
+          <tag name="return" line="133" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$for</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="145" package="Caffeinated\Themes">
+        <name>boot</name>
+        <full_name>\Caffeinated\Themes\Theme::boot()</full_name>
+        <docblock line="145">
+          <description>boot</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="166" package="Caffeinated\Themes">
+        <name>getConfig</name>
+        <full_name>\Caffeinated\Themes\Theme::getConfig()</full_name>
+        <docblock line="166">
+          <description>getConfig</description>
+          <long-description></long-description>
+          <tag name="return" line="166" description="" type="array|mixed">
+            <type>array</type>
+            <type>mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="176" package="Caffeinated\Themes">
+        <name>getParentTheme</name>
+        <full_name>\Caffeinated\Themes\Theme::getParentTheme()</full_name>
+        <docblock line="176">
+          <description>getParentTheme</description>
+          <long-description></long-description>
+          <tag name="return" line="176" description="" type="\Caffeinated\Themes\Theme">
+            <type>\Caffeinated\Themes\Theme</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="186" package="Caffeinated\Themes">
+        <name>getParentSlug</name>
+        <full_name>\Caffeinated\Themes\Theme::getParentSlug()</full_name>
+        <docblock line="186">
+          <description>getParentSlug</description>
+          <long-description></long-description>
+          <tag name="return" line="186" description="" type="array|mixed|string">
+            <type>array</type>
+            <type>mixed</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="196" package="Caffeinated\Themes">
+        <name>getThemes</name>
+        <full_name>\Caffeinated\Themes\Theme::getThemes()</full_name>
+        <docblock line="196">
+          <description>getThemes</description>
+          <long-description></long-description>
+          <tag name="return" line="196" description="" type="\Caffeinated\Themes\Contracts\ThemeFactory|\Caffeinated\Themes\ThemeFactory">
+            <type>\Caffeinated\Themes\Contracts\ThemeFactory</type>
+            <type>\Caffeinated\Themes\ThemeFactory</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="206" package="Caffeinated\Themes">
+        <name>getName</name>
+        <full_name>\Caffeinated\Themes\Theme::getName()</full_name>
+        <docblock line="206">
+          <description>getName</description>
+          <long-description></long-description>
+          <tag name="return" line="206" description="" type="array|mixed|string">
+            <type>array</type>
+            <type>mixed</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="216" package="Caffeinated\Themes">
+        <name>getSlug</name>
+        <full_name>\Caffeinated\Themes\Theme::getSlug()</full_name>
+        <docblock line="216">
+          <description>getSlug</description>
+          <long-description></long-description>
+          <tag name="return" line="216" description="" type="array|mixed|string">
+            <type>array</type>
+            <type>mixed</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="226" package="Caffeinated\Themes">
+        <name>hasParent</name>
+        <full_name>\Caffeinated\Themes\Theme::hasParent()</full_name>
+        <docblock line="226">
+          <description>hasParent</description>
+          <long-description></long-description>
+          <tag name="return" line="226" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="236" package="Caffeinated\Themes">
+        <name>isActive</name>
+        <full_name>\Caffeinated\Themes\Theme::isActive()</full_name>
+        <docblock line="236">
+          <description>isActive</description>
+          <long-description></long-description>
+          <tag name="return" line="236" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="246" package="Caffeinated\Themes">
+        <name>isDefault</name>
+        <full_name>\Caffeinated\Themes\Theme::isDefault()</full_name>
+        <docblock line="246">
+          <description>isDefault</description>
+          <long-description></long-description>
+          <tag name="return" line="246" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="256" package="Caffeinated\Themes">
+        <name>getSlugProvider</name>
+        <full_name>\Caffeinated\Themes\Theme::getSlugProvider()</full_name>
+        <docblock line="256">
+          <description>getSlugProvider</description>
+          <long-description></long-description>
+          <tag name="return" line="256" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="266" package="Caffeinated\Themes">
+        <name>getSlugKey</name>
+        <full_name>\Caffeinated\Themes\Theme::getSlugKey()</full_name>
+        <docblock line="266">
+          <description>getSlugKey</description>
+          <long-description></long-description>
+          <tag name="return" line="266" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="276" package="Caffeinated\Themes">
+        <name>isBooted</name>
+        <full_name>\Caffeinated\Themes\Theme::isBooted()</full_name>
+        <docblock line="276">
+          <description>isBooted</description>
+          <long-description></long-description>
+          <tag name="return" line="276" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="286" package="Caffeinated\Themes">
+        <name>getVersion</name>
+        <full_name>\Caffeinated\Themes\Theme::getVersion()</full_name>
+        <docblock line="286">
+          <description>getVersion</description>
+          <long-description></long-description>
+          <tag name="return" line="286" description="" type="\vierbergenlars\SemVer\Internal\SemVer">
+            <type>\vierbergenlars\SemVer\Internal\SemVer</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="76" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="28" code="PPC:ERR-50007">No summary for property $themes</error>
+      <error line="33" code="PPC:ERR-50007">No summary for property $path</error>
+      <error line="38" code="PPC:ERR-50007">No summary for property $parentSlug</error>
+      <error line="43" code="PPC:ERR-50007">No summary for property $parentTheme</error>
+      <error line="48" code="PPC:ERR-50007">No summary for property $config</error>
+      <error line="53" code="PPC:ERR-50007">No summary for property $name</error>
+      <error line="58" code="PPC:ERR-50007">No summary for property $slug</error>
+      <error line="63" code="PPC:ERR-50007">No summary for property $dispatcher</error>
+    </parse_markers>
+    <source>eJytWG1v2zYQ/u5fwRVDbQdO3A7Yl2bOXpIUC9YFxmL0SzwEjExZwiRSIyknRpP/viOpF0oiLdWrEMCxePfccy88Hv3Tz1mUjeYnJyN0gpaYS8RCJCOCLnEYkphiSTZo+fsSZTj4B2+JOANBJfvnzQp9igNCBUGYblDAsj2Pt5FEMQ0ZT7GMGUWPOd0kgPAUywhgY1HigJQ28+nm8vr27hqFcUIAdj6iOCUChBoM1quIwOvz0SgXroX1JaOS40AK8+Ij/Mv4HmGB7O+l1LmBSZjIOTFfbpIkTzWmhXW9IxQ+rmIgJIOIcCN7t09DRvcgmGaMgsj6I7AXeyFJur5+DkimfNcvb5n8yCAG1VuDsIsJfyR8S2iCuVjfkfQz4esbKgmnOCm+g7dFXlYqcPCnAqb9KZPwSxnN4ulGRkvhXEaMI4cUuiI7tCI41XJ1Do1c9XUSTNEP797/OLN1tUpSlEDxRFJm4sN8LpMNT8gWJ2cBS+eF0DyN5WmpYNWPznuQYFFka/RlpLC08+oBMzvM0dqRdzu7hfBcf2acSRIoD7+XZe24QIXkMd36VCHt0ZGKHOriLsm3HnXj6EFtLeJRx5xjr8MBo2HsM3yYt9p9RykKr6s+jY21q5wGHxlL0I1Qn7ra3DBmFS1QiBPh4g7BxKmzeDxNoyiYNsCwDqF0LNdaIF/x6Nqr1GXE2ZPwkLC6j7PnNEOXP8IWRGFOA92hHx6gXCC3eSAnrl5ZhmOGLCctD2eG6VSDm42r6atmf3phdPWbRb0TW0JKv3izKPdcS6S2p0Q6paOeOEST75p2Ty+2ROroTKanF+Q5FlJMtAF0hsZzLXQG5994OrWoq0fHG1HyhJwRnby55hw66lMEqyhheANbA2m8GZyEebJBlEk41OBg/KINvtbW3kxr915HbU/N5jXR8nkC//9F/s1jTtzenHdQ1b6uQ2xbukdjtThGf3eCrva0V0ktupTqzudQMosNNZW2WAgiJx2ATlYaErpYu3HiRLBkR/SqA7IRej+JijEnW6gawoHzFL192/HIWoeRRkhMAwITVDFbeBxwaU9wlk2mMyPSoGnVidXXoAYusQjwhmyWdado9RvTs19oniRwLBjx1T4jqJqyYF+Xkx2CglaSAzBuVTmpaaTCqWBKlIMwqmg1D3hgFnoCFliFv8uBE5lzWmhrk1ZfdHe0VmQmDccXGn7W9KR6WfEybzpNTW+2hd23Og0oFg9KtWG1W8hm1y5g245h83a3eod4pyL8FpVLvRYtWWc3akGXgTnWk0rfaaxIstX6nfXur3NTVXDtcNdNX7kYjqDuybtpD0UoQKwThdIBuy4qPyspAgNKr6Lu5YdCqez3twc1Fh10WwlMXI4Wds1c5Xb00PlVn82nF6E6ocYKqToeP6DxDN0bYWip50N6sALw9d9i7YjeW2j6+27HtWrUhGmJHKjTS22iXalFqvXk/pLGz+2R1tHFNE4nSc2aKYd9L5tlfVp6KHkvVv37poLuYdm40fRQVed0f/Behm7tEnIQQ3Nj8xJc2TeDIWF0XzFevu4q2/XKqPR4ZE/bTm9U8/9mgVZgPYQoPpj9b5r3ARkXB3IdYWEqx0NI3U0PUqgAfCQcM6/O6tRHKRa/AvTOl7FeRqX+oKrR500pbzdXLeWneEVCnCdHR60CGE6yUhjMsqiOJWe7eFNd0dtcB3VoG8dHmTxnCdvAOTgfz+zSm96jd+VFyEvyD7L/v/wA4ghq7/3UYvGb/YvMEUk2+j05Nqftgfh8JlzUv250uvGg31j7AljY8FFVPxAYoM7QsjOaYz3kGB9eR/8BWl2uig==</source>
+  </file>
+  <file path="ThemeFactory.php" generated-path="ThemeFactory.html" hash="ad8adfa4ff261f52312ea84e2d558b06" package="Default">
+    <docblock line="0">
+      <description>Part of the Caffeinated PHP packages.</description>
+      <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="ArrayAccess">\ArrayAccess</namespace-alias>
+    <namespace-alias name="ArrayIterator">\ArrayIterator</namespace-alias>
+    <namespace-alias name="Str">\Caffeinated\Beverage\Str</namespace-alias>
+    <namespace-alias name="ThemeFactoryContract">\Caffeinated\Themes\Contracts\ThemeFactory</namespace-alias>
+    <namespace-alias name="Countable">\Countable</namespace-alias>
+    <namespace-alias name="Dispatcher">\Illuminate\Contracts\Events\Dispatcher</namespace-alias>
+    <namespace-alias name="UrlGenerator">\Illuminate\Contracts\Routing\UrlGenerator</namespace-alias>
+    <namespace-alias name="Filesystem">\Illuminate\Filesystem\Filesystem</namespace-alias>
+    <namespace-alias name="NamespacedItemResolver">\Illuminate\Support\NamespacedItemResolver</namespace-alias>
+    <namespace-alias name="IteratorAggregate">\IteratorAggregate</namespace-alias>
+    <namespace-alias name="RuntimeException">\RuntimeException</namespace-alias>
+    <class final="false" abstract="false" namespace="Caffeinated\Themes" line="29" package="Caffeinated\Themes">
+      <extends/>
+      <implements>\ArrayAccess</implements>
+      <implements>\Countable</implements>
+      <implements>\IteratorAggregate</implements>
+      <implements>\Caffeinated\Themes\Contracts\ThemeFactory</implements>
+      <name>ThemeFactory</name>
+      <full_name>\Caffeinated\Themes\ThemeFactory</full_name>
+      <docblock line="29">
+        <description>This is the ThemeFactory.</description>
+        <long-description></long-description>
+        <tag name="package" line="29" description="Caffeinated\Themes"/>
+        <tag name="author" line="29" description="Caffeinated Dev Team"/>
+        <tag name="copyright" line="29" description="Copyright (c) 2015, Caffeinated"/>
+        <tag name="license" line="29" description="MIT License" link="https://tldrlegal.com/license/mit-license"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="37" package="Caffeinated\Themes">
+        <name>$themes</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::themes</full_name>
+        <default>array()</default>
+        <docblock line="37">
+          <description>Contains all the resolved theme instances using slug =&gt; Class instance association</description>
+          <long-description></long-description>
+          <tag name="var" line="37" description="" type="array&lt;mixed,\Caffeinated\Themes\Theme&gt;" variable="">
+            <type>array&lt;mixed,\Caffeinated\Themes\Theme&gt;</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="44" package="Caffeinated\Themes">
+        <name>$active</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::active</full_name>
+        <default></default>
+        <docblock line="44">
+          <description>The active theme instance</description>
+          <long-description></long-description>
+          <tag name="var" line="44" description="" type="\Caffeinated\Themes\Theme" variable="">
+            <type>\Caffeinated\Themes\Theme</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="51" package="Caffeinated\Themes">
+        <name>$default</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::default</full_name>
+        <default></default>
+        <docblock line="51">
+          <description>The default theme instance</description>
+          <long-description></long-description>
+          <tag name="var" line="51" description="" type="\Caffeinated\Themes\Theme" variable="">
+            <type>\Caffeinated\Themes\Theme</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="58" package="Caffeinated\Themes">
+        <name>$files</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::files</full_name>
+        <default></default>
+        <docblock line="58">
+          <description>The filesystem object</description>
+          <long-description></long-description>
+          <tag name="var" line="58" description="" type="\Illuminate\Filesystem\Filesystem" variable="">
+            <type>\Illuminate\Filesystem\Filesystem</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="65" package="Caffeinated\Themes">
+        <name>$finder</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::finder</full_name>
+        <default></default>
+        <docblock line="65">
+          <description>The theme package's view finder to locate theme views</description>
+          <long-description></long-description>
+          <tag name="var" line="65" description="" type="\Caffeinated\Themes\ThemeViewFinder" variable="">
+            <type>\Caffeinated\Themes\ThemeViewFinder</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="72" package="Caffeinated\Themes">
+        <name>$dispatcher</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::dispatcher</full_name>
+        <default></default>
+        <docblock line="72">
+          <description>The event dispatcher</description>
+          <long-description></long-description>
+          <tag name="var" line="72" description="" type="\Illuminate\Contracts\Events\Dispatcher" variable="">
+            <type>\Illuminate\Contracts\Events\Dispatcher</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="79" package="Caffeinated\Themes">
+        <name>$paths</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::paths</full_name>
+        <default>array()</default>
+        <docblock line="79">
+          <description>Filesystem paths to directories where themes are installed</description>
+          <long-description></long-description>
+          <tag name="var" line="79" description="&lt;p&gt;array&lt;/p&gt;" type="" variable="$paths"/>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="86" package="Caffeinated\Themes">
+        <name>$publishers</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::publishers</full_name>
+        <default>array()</default>
+        <docblock line="86">
+          <description>Collection of all theme publishers that have been added</description>
+          <long-description></long-description>
+          <tag name="var" line="86" description="" type="array&lt;mixed,\Caffeinated\Themes\Publisher&gt;" variable="">
+            <type>array&lt;mixed,\Caffeinated\Themes\Publisher&gt;</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="89" package="Caffeinated\Themes">
+        <name>$url</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::url</full_name>
+        <default></default>
+        <docblock line="89">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="89" description="" type="\Illuminate\Contracts\Routing\UrlGenerator" variable="">
+            <type>\Illuminate\Contracts\Routing\UrlGenerator</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Caffeinated\Themes" line="92" package="Caffeinated\Themes">
+        <name>$themeClass</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::themeClass</full_name>
+        <default></default>
+        <docblock line="92">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="92" description="&lt;p&gt;The theme class name&lt;/p&gt;" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="101" package="Caffeinated\Themes">
+        <name>__construct</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::__construct()</full_name>
+        <docblock line="101">
+          <description>Instantiates the class</description>
+          <long-description></long-description>
+          <tag name="param" line="101" description="" type="\Illuminate\Filesystem\Filesystem" variable="$files">
+            <type>\Illuminate\Filesystem\Filesystem</type>
+          </tag>
+          <tag name="param" line="101" description="" type="\Illuminate\Contracts\Events\Dispatcher" variable="$events">
+            <type>\Illuminate\Contracts\Events\Dispatcher</type>
+          </tag>
+          <tag name="param" line="101" description="" type="\Illuminate\Contracts\Routing\UrlGenerator" variable="$url">
+            <type>\Illuminate\Contracts\Routing\UrlGenerator</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$files</name>
+          <default></default>
+          <type>\Illuminate\Filesystem\Filesystem</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$events</name>
+          <default></default>
+          <type>\Illuminate\Contracts\Events\Dispatcher</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>\Illuminate\Contracts\Routing\UrlGenerator</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="114" package="Caffeinated\Themes">
+        <name>setActive</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::setActive()</full_name>
+        <docblock line="114">
+          <description>Set the active theme that should be used</description>
+          <long-description></long-description>
+          <tag name="param" line="114" description="&lt;p&gt;The slug or Theme instance&lt;/p&gt;" type="string|\Caffeinated\Themes\Theme" variable="$theme">
+            <type>string</type>
+            <type>\Caffeinated\Themes\Theme</type>
+          </tag>
+          <tag name="return" line="114" description="" type="\Caffeinated\Themes\ThemeFactory">
+            <type>\Caffeinated\Themes\ThemeFactory</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$theme</name>
+          <default></default>
+          <type>string|\Caffeinated\Themes\Theme</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="134" package="Caffeinated\Themes">
+        <name>getActive</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::getActive()</full_name>
+        <docblock line="134">
+          <description>Get the activated theme</description>
+          <long-description></long-description>
+          <tag name="return" line="134" description="" type="\Caffeinated\Themes\Theme">
+            <type>\Caffeinated\Themes\Theme</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="148" package="Caffeinated\Themes">
+        <name>getDefault</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::getDefault()</full_name>
+        <docblock line="148">
+          <description>Get the default theme</description>
+          <long-description></long-description>
+          <tag name="return" line="148" description="" type="\Caffeinated\Themes\Theme">
+            <type>\Caffeinated\Themes\Theme</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="162" package="Caffeinated\Themes">
+        <name>setDefault</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::setDefault()</full_name>
+        <docblock line="162">
+          <description>Set the default theme</description>
+          <long-description></long-description>
+          <tag name="param" line="162" description="&lt;p&gt;The slug or Theme instance&lt;/p&gt;" type="string|\Caffeinated\Themes\Theme" variable="$theme">
+            <type>string</type>
+            <type>\Caffeinated\Themes\Theme</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$theme</name>
+          <default></default>
+          <type>string|\Caffeinated\Themes\Theme</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="181" package="Caffeinated\Themes">
+        <name>resolveTheme</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::resolveTheme()</full_name>
+        <docblock line="181">
+          <description>Resolve a theme using it's slug. It will check all theme paths for the required theme.</description>
+          <long-description>It will instantiate the theme, register it with the factory and return it.</long-description>
+          <tag name="param" line="181" description="&lt;p&gt;The theme slug&lt;/p&gt;" type="string" variable="$slug">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="181" description="" type="\Caffeinated\Themes\Theme">
+            <type>\Caffeinated\Themes\Theme</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$slug</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="203" package="Caffeinated\Themes">
+        <name>all</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::all()</full_name>
+        <docblock line="203">
+          <description>Returns all resolved theme slugs</description>
+          <long-description></long-description>
+          <tag name="return" line="203" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="214" package="Caffeinated\Themes">
+        <name>get</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::get()</full_name>
+        <docblock line="214">
+          <description>Get a theme with the provided slug, equal to resolveTheme</description>
+          <long-description></long-description>
+          <tag name="param" line="214" description="" type="" variable="$slug"/>
+          <tag name="return" line="214" description="" type="\Caffeinated\Themes\Theme">
+            <type>\Caffeinated\Themes\Theme</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$slug</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="225" package="Caffeinated\Themes">
+        <name>has</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::has()</full_name>
+        <docblock line="225">
+          <description>Check if a theme is present</description>
+          <long-description></long-description>
+          <tag name="param" line="225" description="" type="" variable="$slug"/>
+          <tag name="return" line="225" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$slug</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="237" package="Caffeinated\Themes">
+        <name>count</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::count()</full_name>
+        <docblock line="237">
+          <description>Get the number of themes</description>
+          <long-description></long-description>
+          <tag name="return" line="237" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="249" package="Caffeinated\Themes">
+        <name>addNamespace</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::addNamespace()</full_name>
+        <docblock line="249">
+          <description>Add a namespace to the theme</description>
+          <long-description></long-description>
+          <tag name="param" line="249" description="" type="string" variable="$name">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="249" description="" type="string" variable="$dirName">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="249" description="" type="\Caffeinated\Themes\ThemeFactory">
+            <type>\Caffeinated\Themes\ThemeFactory</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$dirName</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="265" package="Caffeinated\Themes">
+        <name>getPath</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::getPath()</full_name>
+        <docblock line="265">
+          <description>Get a path by type, as configured in config.</description>
+          <long-description></long-description>
+          <tag name="param" line="265" description="&lt;p&gt;views, assets, namespaces or packages&lt;/p&gt;" type="string" variable="$type">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="265" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$type</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="279" package="Caffeinated\Themes">
+        <name>getCascadedPaths</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::getCascadedPaths()</full_name>
+        <docblock line="279">
+          <description>Get paths cascadingly for the defined options.</description>
+          <long-description></long-description>
+          <tag name="param" line="279" description="&lt;p&gt;The type, either namespaces, packages&lt;/p&gt;" type="string" variable="$cascadeType">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="279" description="&lt;p&gt;The namespaced or package name&lt;/p&gt;" type="null|string" variable="$cascadeName">
+            <type>null</type>
+            <type>string</type>
+          </tag>
+          <tag name="param" line="279" description="&lt;p&gt;The path type like views or assets&lt;/p&gt;" type="null|string" variable="$pathType">
+            <type>null</type>
+            <type>string</type>
+          </tag>
+          <tag name="param" line="279" description="" type="null|string" variable="$theme">
+            <type>null</type>
+            <type>string</type>
+          </tag>
+          <tag name="return" line="279" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$cascadeType</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$cascadeName</name>
+          <default>null</default>
+          <type>null|string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$pathType</name>
+          <default>null</default>
+          <type>null|string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$theme</name>
+          <default>null</default>
+          <type>null|string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="317" package="Caffeinated\Themes">
+        <name>getThemePath</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::getThemePath()</full_name>
+        <docblock line="317">
+          <description>Get the path tot the theme</description>
+          <long-description></long-description>
+          <tag name="param" line="317" description="" type="" variable="$path"/>
+          <tag name="param" line="317" description="" type="" variable="$key"/>
+          <tag name="param" line="317" description="" type="null" variable="$area">
+            <type>null</type>
+          </tag>
+          <tag name="return" line="317" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$area</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="344" package="Caffeinated\Themes">
+        <name>addPackagePublisher</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::addPackagePublisher()</full_name>
+        <docblock line="344">
+          <description>Register/add a theme publisher that publishes as a package</description>
+          <long-description></long-description>
+          <tag name="param" line="344" description="&lt;p&gt;Package name&lt;/p&gt;" type="string" variable="$package">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="344" description="&lt;p&gt;Path to the theme&lt;/p&gt;" type="string" variable="$sourcePath">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="344" description="&lt;p&gt;Exclude to a specific theme using tthis slug&lt;/p&gt;" type="string|null" variable="$theme">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="344" description="" type="\Caffeinated\Themes\ThemeFactory">
+            <type>\Caffeinated\Themes\ThemeFactory</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$package</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$sourcePath</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$theme</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="364" package="Caffeinated\Themes">
+        <name>addNamespacePublisher</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::addNamespacePublisher()</full_name>
+        <docblock line="364">
+          <description>Register/add a theme publisher that publishes as a namespace</description>
+          <long-description></long-description>
+          <tag name="param" line="364" description="&lt;p&gt;Name&lt;/p&gt;" type="string" variable="$namespace">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="364" description="&lt;p&gt;Path to the theme&lt;/p&gt;" type="string" variable="$sourcePath">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="364" description="&lt;p&gt;Exclude to a specific theme using tthis slug&lt;/p&gt;" type="string|null" variable="$theme">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="364" description="" type="\Caffeinated\Themes\ThemeFactory">
+            <type>\Caffeinated\Themes\ThemeFactory</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$namespace</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$sourcePath</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$theme</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="382" package="Caffeinated\Themes">
+        <name>publish</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::publish()</full_name>
+        <docblock line="382">
+          <description>Publish an namespace or package</description>
+          <long-description></long-description>
+          <tag name="param" line="382" description="" type="null" variable="$namespaceOrPackage">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="382" description="" type="null" variable="$theme">
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$namespaceOrPackage</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$theme</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="408" package="Caffeinated\Themes">
+        <name>getPublishers</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::getPublishers()</full_name>
+        <docblock line="408">
+          <description>Get the value of publishers</description>
+          <long-description></long-description>
+          <tag name="return" line="408" description="" type="array&lt;mixed,\Caffeinated\Themes\Publisher&gt;">
+            <type>array&lt;mixed,\Caffeinated\Themes\Publisher&gt;</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="419" package="Caffeinated\Themes">
+        <name>assetPath</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::assetPath()</full_name>
+        <docblock line="419">
+          <description>getPath</description>
+          <long-description></long-description>
+          <tag name="param" line="419" description="" type="null" variable="$key">
+            <type>null</type>
+          </tag>
+          <tag name="return" line="419" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="464" package="Caffeinated\Themes">
+        <name>assetUrl</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::assetUrl()</full_name>
+        <docblock line="464">
+          <description>assetUrl</description>
+          <long-description></long-description>
+          <tag name="param" line="464" description="" type="null" variable="$key">
+            <type>null</type>
+          </tag>
+          <tag name="return" line="464" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="475" package="Caffeinated\Themes">
+        <name>assetUri</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::assetUri()</full_name>
+        <docblock line="475">
+          <description>assetUri</description>
+          <long-description></long-description>
+          <tag name="param" line="475" description="" type="null" variable="$key">
+            <type>null</type>
+          </tag>
+          <tag name="return" line="475" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="494" package="Caffeinated\Themes">
+        <name>boot</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::boot()</full_name>
+        <docblock line="494">
+          <description>Boot the active theme</description>
+          <long-description></long-description>
+          <tag name="param" line="494" description="" type="boolean" variable="$bootParent">
+            <type>boolean</type>
+          </tag>
+          <tag name="param" line="494" description="" type="boolean" variable="$bootDefault">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$bootParent</name>
+          <default>true</default>
+          <type>boolean</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$bootDefault</name>
+          <default>false</default>
+          <type>boolean</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="510" package="Caffeinated\Themes">
+        <name>getFinder</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::getFinder()</full_name>
+        <docblock line="510">
+          <description>Get the theme view finder instance</description>
+          <long-description></long-description>
+          <tag name="return" line="510" description="" type="\Caffeinated\Themes\ThemeViewFinder">
+            <type>\Caffeinated\Themes\ThemeViewFinder</type>
+          </tag>
+          <tag name="inherited_from" description="\Caffeinated\Themes\Contracts\ThemeFactory::getFinder()" refers="\Caffeinated\Themes\Contracts\ThemeFactory::getFinder()" link="/classes/Caffeinated.Themes.Contracts.ThemeFactory.html#method_getFinder"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="521" package="Caffeinated\Themes">
+        <name>setFinder</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::setFinder()</full_name>
+        <docblock line="521">
+          <description>setFinder</description>
+          <long-description></long-description>
+          <tag name="param" line="521" description="" type="\Caffeinated\Themes\ThemeViewFinder" variable="$finder">
+            <type>\Caffeinated\Themes\ThemeViewFinder</type>
+          </tag>
+          <tag name="return" line="521" description="" type="\Caffeinated\Themes\ThemeFactory">
+            <type>\Caffeinated\Themes\ThemeFactory</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$finder</name>
+          <default></default>
+          <type>\Caffeinated\Themes\ThemeViewFinder</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="533" package="Caffeinated\Themes">
+        <name>getFiles</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::getFiles()</full_name>
+        <docblock line="533">
+          <description>Get the filesystem object</description>
+          <long-description></long-description>
+          <tag name="return" line="533" description="" type="\Illuminate\Filesystem\Filesystem">
+            <type>\Illuminate\Filesystem\Filesystem</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="544" package="Caffeinated\Themes">
+        <name>setFiles</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::setFiles()</full_name>
+        <docblock line="544">
+          <description>Set the filesystem object</description>
+          <long-description></long-description>
+          <tag name="param" line="544" description="" type="" variable="$files"/>
+          <tag name="return" line="544" description="" type="\Caffeinated\Themes\ThemeFactory">
+            <type>\Caffeinated\Themes\ThemeFactory</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$files</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="557" package="Caffeinated\Themes">
+        <name>offsetExists</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::offsetExists()</full_name>
+        <docblock line="557">
+          <description>offsetExists</description>
+          <long-description></long-description>
+          <tag name="param" line="557" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="557" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="568" package="Caffeinated\Themes">
+        <name>offsetGet</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::offsetGet()</full_name>
+        <docblock line="568">
+          <description>offsetGet</description>
+          <long-description></long-description>
+          <tag name="param" line="568" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="568" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="579" package="Caffeinated\Themes">
+        <name>offsetSet</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::offsetSet()</full_name>
+        <docblock line="579">
+          <description>offsetSet</description>
+          <long-description></long-description>
+          <tag name="param" line="579" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="579" description="" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="593" package="Caffeinated\Themes">
+        <name>offsetUnset</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::offsetUnset()</full_name>
+        <docblock line="593">
+          <description>offsetUnset</description>
+          <long-description></long-description>
+          <tag name="param" line="593" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="603" package="Caffeinated\Themes">
+        <name>getIterator</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::getIterator()</full_name>
+        <docblock line="603">
+          <description>getIterator</description>
+          <long-description></long-description>
+          <tag name="return" line="603" description="" type="\ArrayIterator">
+            <type>\ArrayIterator</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="613" package="Caffeinated\Themes">
+        <name>getThemeClass</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::getThemeClass()</full_name>
+        <docblock line="613">
+          <description>get themeClass value</description>
+          <long-description></long-description>
+          <tag name="return" line="613" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="624" package="Caffeinated\Themes">
+        <name>setThemeClass</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::setThemeClass()</full_name>
+        <docblock line="624">
+          <description>Set the themeClass value</description>
+          <long-description></long-description>
+          <tag name="param" line="624" description="" type="mixed" variable="$themeClass">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="624" description="" type="\Caffeinated\Themes\ThemeFactory">
+            <type>\Caffeinated\Themes\ThemeFactory</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$themeClass</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Caffeinated\Themes" line="637" package="Caffeinated\Themes">
+        <name>setPaths</name>
+        <full_name>\Caffeinated\Themes\ThemeFactory::setPaths()</full_name>
+        <docblock line="637">
+          <description>Set the paths value</description>
+          <long-description></long-description>
+          <tag name="param" line="637" description="" type="array" variable="$paths">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="637" description="" type="\Caffeinated\Themes\ThemeFactory">
+            <type>\Caffeinated\Themes\ThemeFactory</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$paths</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="89" code="PPC:ERR-50007">No summary for property $url</error>
+    </parse_markers>
+    <source>eJztG9tu2zj2PV/BKYKxXDjxtMC+tOtMO+llgu12gybdfUiCQJFoW1tZ8khU0qDNv+85hxdREinJnc5gsVijaCyRPPcrSf/15+16uzd//HiPPWanYSFYvmRizdlxuFzyJAsFj9npr6dsG0afwhUvD2Eizv37yTl7l0Q8KzkLs5hF+fa+SFZrwZJsmRebUCR5xm6qLE4Bwl0i1gA2KTUcmEVo3p0cv35/9potk5QD2PleFm54CZMaFFyerzm8fr63VwG6l0UR3r+MIl7CG/PiRPAiFHkhX9mLf+G3MLTil2fCMSpBXx7nmSjCSJTyxRv4mhf3LCyZ/axnKTB5lYnwJuXy8SRNqw1BtaC9vuUZ/HmVAFMiWvOiZ+6HvBJJtrr8WKRveWazY01/A5Iq70vBN9bXzqyzarvNC3H5XoszBvlsPvAyT28NDUpiL1ergq9glXz9AZhKNvz154hvUYkgdWUf56hA+IeKs6WibeKFVq76dMVMs8JKrPOCOWaxV/yWnfNwQ/Nqk5LzzGMQTdnTn578ZWavpSWpskj1WQuxLZ/N5yKNixRYTA+jfDNXk+abRBzoBZY5kxlGaVg2Vc+SzTaFR9CmbYGz2gpmXYnOnNaz92VvD8kjseLnMcOhMMlKFqYpybeQqorxYYPuUoowA4SsKsFEWJlWK7Y4YsdEpx4Fcy3zKCHfU5A1ghe3YSGJubhS7+b0d1vkgkco/H1CVbIFu2BXzzskwmIGxCe3vEWTC9Olw8Xojw+3hOzGGvNlWKXij0CrQLvxLo1/sfzm37DCiXLIN32oCbobsWRUedOkZLcJvwNqspgXTOQszSPApmbhWLmTLP4JK94QMD9pOOqmjWNAY7GJZ0My6QmFXqVYwbJNQi1XkI9YlyiPOCk4OlgCxnsHq5RowJkKZS5pigGiS+i+hBGiP/uokVM8TnGcA+iIch0kTuW8qLvqJk1KoAWjZSjYOgS3ueE8Y2Ecu2k51Uv8DmpBbdHTJ3dXWnEAr4q0Da8UBQab2iRlWMQc7QsfFJC6cjohpxUQmrjMHwSpLYZtWISbYY9i5iOdqGd9j/XRerLmcQCcYkSpNbWFKorYssqkVVxfRznwXlSRCCwOJOEzZpGjaJmxDoIpQf6yZ7jGSurgiEDINwsTTlpzalfCORJDZxKg0G8Wyg7w+0NHi2ecgnAzDZB9l+u8SmOwcMhPXfOWYpXW9NUbl5QFkblRfstVxmqHfPai4KIqMkl/r/hLLl4SsYEE3hZlsmTBDxqxRgOeTHin1kQlLpy20HJTOZrmavi1cB8YT6GyaIKQ+CjeXH/i99f8c1KKUi0+OFpxcQacB9OZxiEj2bRNiqU9OeOCdWCwK0kqvH3eWPxQ07jXtgWl2nqhmWDL3Gcgb20DoYpOWNm3rb6R2bql0pVRqVuZSQlKDxrsdMQn1kV+xzLIqu1qN5gckyVnuUBMTVO/4VGIJbKgJJOU2eUEZmT3WKEkGY8ntvrdktMkDUmwUfN8b/m9ksDHCFDR0ZGgIiGr0nQEz6bMcjN9Nobp7xxEvPFCC+f/AcN87IDRAqZV1lzYVbFqPVmoXEm2MYmA6hbVdAi9E7tLoH6CXBV9sispKr+WoEbZFv1WQbWn4sqhKS/U4qQuM2g6zZrBqhVIDXJgIvRWBFT3usXPYm2tiTjsszq2TxZVl0P42HbKYQdsWgHCcBlZV+U4c0jNTbczmia6r5yOCgUl2DpUyiHABnRTUCXKKMDo6N4+mB4cgVhK/jd+r+i30gRoiofRmukAQvq7YBNJywRsLCxlUe32llMYqT0GbPNcvw1olaQS/keSbcRacHZ1dHCUlK9Ud3Af1Aic7tErOyAJBWIPUqkr0c269dbM4mfa704ub0FS5G5AaycAyekUzop0Rx/Tsj0A2In69mI0uDJo2lhfqtLubLwK+oHbBDocJq0V3DVMsUezjd7tY/sub/rmFOd2rKaKHY7o4/WYohKYl2YYtzJhPdTTO3Bzk+f93cI6LN2E91Hc5i7JrkmXOmJ4FTtj0JfwXv2iSrNqcwOxU24Mb7jP+BIjCjdvEe6T+YxPDo6zu5dxDGqoN4rBukys7w/fuMYzFCfFe3t0dIcB/byJkgFhmBloHS3Szg2usgMcxbaJ4aecTNkhm8wn8L8GZCk53G6DCW76TCAMA/J3CmRggFvRpj25S6m1aOdKP6TkzG7umbjfAjAI7NDsLpNVhRk6ydTTQE7FtXIXCyFAAQZ/a2Fg/abPHtrKkRCGIoFMHYilPxqoRCXpuerjW5YkUVhGYQwEpPemPFF9AMuplyj7OZcmIcHwc8RKlQWJkifYY1hymHWlIIFhBf5Vy1IBQzUTMLM+tuTIHG7QgIL8ET3wQSikZRJLmnxSukJ4Ult9kGyf3CFLgdaOJScxag/iliWlWZPNBWGcWVSbN7r6xseOK0olwqiMlZbTgE/kW5CYNVSPRVVR4AboAjLANQLWdTz72XJp3aCyZ/2lv4F7t4ZyhQUUj9tlkTTMK9qcUegJiS2iHglZomnVIYrRiysLsqOg+gEBKKYbBJzSW8mSs6K6gRLtU7v26RZsGvrCjoqmR/02wJaiFHxn9bvf6F/aqOslqjM2mVUtm2kZqlTq1d3CYPr9qnN02YRmKI9LN87FULasKXcOQCHhcHlZj39bhO6r8H3uW27TBLU2mQeX86+Xl5fT+cSyXdRXgGDodA7myQIDSrbVNS0NJATV84DijtjTHXaJHsk9hXUYQ+xP8VwmhpE1FkkXXwzehyu2zu/w+Bk7z01VCtwhhb6ETgUyjKGmQL54enX4yK1lZEZtylDT06ZTMotDw9xKAFP2w4I9cXnWMM+kFQ/jhgYH5xvsi9jFkyabLVYto370hazhYS7B4l+Q68OjPkew1lhzXf2V3BCYh1RLts5s5Ja2fiyxrgl18hyR0a1T8FN/xm0sKfOqiGTreyq9tOOkrQ0w6XOScPqAntIqpmo4ZOWWR8kS3MzebBF0AcPVl4yqchUv5pgq0IzObPqH0q4e/K7ZU1dw5njsotYCxl5D87NnEZiS4EGNjA5lIMs0TBCK5VLxa9hsz1gW+SawOG+Pi9xH7pj6+hss1BR7I2y07p7Y+/8B2zR9jWWdhsX/TvusNfDNFtrq5ujrn2ulimwGuazmp+403IYozcPM/0dx2pjdnGabmVv9SqqBA+K4VkCmV6XuLpBOuu3scNan8rS1qR9d6VWfsDSMyzWRzMaAauupc/Ig7RO/9NpkK/FKpfah1cL172D6Di0ap0huy6/1dOWUwW7CGonpzxXlaKJ8gnaJFz91nXZ5kt2GaRK/LFYVXk+zCrb6KFOBZxcO9FeHsss3ySUyy26si2i4x+FY3S3mmt/8/QhQXXEsHGvxtAOGikHeqzGO3R4Dy7fV2NGJL7ipvaO+IGb3QuNbHto3kf0OAPBEJXkuU8rLRRDBCp6GmHZUEuOfBc9K3Ljb8bwG251WoySpWCg6ek+UrOxn7V3KjSDP6TdhsKk3qNjXryiulGfNCVOa8ZOrzXGcihkJ6XMfvLtGxP2aZAIT5/BhT5utRn9ub81iLaEROthusb4rIr3FN4TG3RuqFc728LvJzVyHqxlqbtXtKi1fgBtGNFZaUmK9CAeRyTJC/t+vELqIpXzaeSyqrhz6DkHV8gLCyEbvh0zm9plAw5fg7SG9NQFh8EhUWwA+9voGThhxc6g7vRtLSWQfzV257x1MAXJfLG36YFWkWASYK0ISQCJDo/fUSU/7wzhI+jggQ4CxM9HpEJrZZNratKSFB0dQ4hSi/BfmCYn+Gt87fFwjUusKvslv+Tu+FM110hpbTmbh41kssYF1+uNIG88HvN5PS8abXSAlPCVAPuX9kufdm4tuTeIZLduH/9X2tndY7RL3qhbnBRYwYBj3iWcNCPByGUJM8pz5NlIGAWyr2IL/44/OZWvczsAJ3e10b2K39va7eB+6FChu/PDNtroPnL9UFOaqu74G7/sVwNC9Ad/l924lKWcNVJH6pryb/FJDcZvaCCL1Xfw2f6NuvioOPCC9t4pp0qL1K4A260OHDYO/ndCK2u3nEy410e7IgJbM3Wj/5cNBitXFjuaV8930gaRKAL13uhfNX4eMlX2+XAKW15Te3cRvks94U9+RpwavptjAZaZxi7xbacrDnFFXOyQSsKFdyaeREfS/xULZT3z77hcmZO9VAAnxbAdiGwPU/o4g+UyRPFNLerevqAJwR2DFFJ1FEqCBm6dOWbgW94rnY1aOFlCfFAiOU3VVZm00Nan12hnEDf1bPV9cavyodCgI6Xm+OIS9eQPgyKtOK64uQ8vf+dkms7sH6JNWeW9xhAeo3/K4STuzU3MPeQ1d15Pb5BNl6neSQ3HU4sKC6ImoFn0Lm4AdY+uZdYjeyynFP9VQ/h4m1cUXguNhzTSt6vi/l6GHvf8AWDDgaA==</source>
+  </file>
+  <package name="Caffeinated" full_name="Caffeinated">
+    <package name="Themes" full_name="Caffeinated\Themes"/>
+  </package>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="Caffeinated" full_name="Caffeinated">
+    <namespace name="Themes" full_name="Caffeinated\Themes">
+      <namespace name="Console" full_name="Caffeinated\Themes\Console"/>
+      <namespace name="Contracts" full_name="Caffeinated\Themes\Contracts"/>
+      <namespace name="Exceptions" full_name="Caffeinated\Themes\Exceptions"/>
+      <namespace name="Facades" full_name="Caffeinated\Themes\Facades"/>
+      <namespace name="Providers" full_name="Caffeinated\Themes\Providers"/>
+      <namespace name="Traits" full_name="Caffeinated\Themes\Traits"/>
+    </namespace>
+  </namespace>
+  <deprecated count="0"/>
+</project>

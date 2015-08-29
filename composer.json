@@ -28,10 +28,10 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/support": "~5.1",
+
         "illuminate/view": "~5.1",
         "caffeinated/beverage": "~3.0",
-        "kriswallsmith/assetic": "~1.2",
+
         "vierbergenlars/php-semver": "3.0.*",
         "laravelcollective/html": "~5.1"
     },

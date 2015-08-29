@@ -113,14 +113,10 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      */
     public function setActive($theme)
     {
-        if ( ! $theme instanceof Theme )
-        {
+        if (! $theme instanceof Theme) {
             $theme = $this->resolveTheme($theme);
-        }
-        else
-        {
-            if ( ! array_key_exists($theme->getSlug(), $this->themes) )
-            {
+        } else {
+            if (! array_key_exists($theme->getSlug(), $this->themes)) {
                 $this->themes[ $theme->getSlug() ] = $theme;
             }
         }
@@ -137,8 +133,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      */
     public function getActive()
     {
-        if ( ! isset($this->active) )
-        {
+        if (! isset($this->active)) {
             throw new RuntimeException('Could not get active theme because there isn\'t any defined');
         }
 
@@ -152,8 +147,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      */
     public function getDefault()
     {
-        if ( ! isset($this->default) )
-        {
+        if (! isset($this->default)) {
             return null;
         }
 
@@ -167,14 +161,10 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      */
     public function setDefault($theme)
     {
-        if ( ! $theme instanceof Theme )
-        {
+        if (! $theme instanceof Theme) {
             $theme = $this->resolveTheme($theme);
-        }
-        else
-        {
-            if ( ! array_key_exists($theme->getSlug(), $this->themes) )
-            {
+        } else {
+            if (! array_key_exists($theme->getSlug(), $this->themes)) {
                 $this->themes[ $theme->getSlug() ] = $theme;
             }
         }
@@ -190,19 +180,16 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      */
     public function resolveTheme($slug)
     {
-        if ( array_key_exists($slug, $this->themes) )
-        {
+        if (array_key_exists($slug, $this->themes)) {
             return $this->themes[ $slug ];
         }
 
         list($area, $key) = with(new NamespacedItemResolver)->parseKey($slug);
 
-        foreach ( $this->paths[ 'themes' ] as $path )
-        {
+        foreach ($this->paths[ 'themes' ] as $path) {
             $themePath = $this->getThemePath($path, $key, $area);
 
-            if ( $this->files->isDirectory($themePath) )
-            {
+            if ($this->files->isDirectory($themePath)) {
                 return $this->themes[ $slug ] = new $this->themeClass($this, $this->dispatcher, $themePath);
             }
         }
@@ -296,18 +283,15 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
 
         $current = is_null($theme) ? $this->getActive() : $this->resolveTheme($theme);
 
-        while ( true )
-        {
+        while (true) {
             $paths[]  = $current->getCascadedPath($cascadeType, $cascadeName, $pathType);
             $looped[] = $current;
 
-            if ( ! $parent = $current->getParentTheme() )
-            {
+            if (! $parent = $current->getParentTheme()) {
                 break;
             }
 
-            if ( $parent === $this->getDefault() )
-            {
+            if ($parent === $this->getDefault()) {
                 break;
             }
 
@@ -315,8 +299,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
         }
 
         $default = $this->getDefault();
-        if ( ! in_array($default, $looped, true) )
-        {
+        if (! in_array($default, $looped, true)) {
             $paths[] = $default->getCascadedPath($cascadeType, $cascadeName, $pathType);
         }
 
@@ -335,15 +318,12 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     {
         $split = '/(\/|\\\)/';
 
-        if ( ($keyCount = count(preg_split($split, $key))) > 2 )
-        {
+        if (($keyCount = count(preg_split($split, $key))) > 2) {
             throw new RuntimeException("Theme had folder depth of [{$keyCount}] however it must be less than or equal to [2].");
         }
 
-        if ( isset($area) )
-        {
-            if ( ($areaCount = count(preg_split($split, $area))) != 1 )
-            {
+        if (isset($area)) {
+            if (($areaCount = count(preg_split($split, $area))) != 1) {
                 throw new RuntimeException("Theme area had folder depth of [{$areaCount}] however it must match [1].");
             }
 
@@ -401,29 +381,20 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      */
     public function publish($namespaceOrPackage = null, $theme = null)
     {
-        if ( is_null($namespaceOrPackage) )
-        {
-            foreach ( $this->publishers as $publisher )
-            {
-                if ( ! is_null($theme) )
-                {
+        if (is_null($namespaceOrPackage)) {
+            foreach ($this->publishers as $publisher) {
+                if (! is_null($theme)) {
                     $publisher->toTheme($theme instanceof Theme ? $theme : $this->resolveTheme($theme));
                 }
                 $publisher->publish();
             }
-        }
-        else
-        {
-            if ( isset($this->publishers[ $namespaceOrPackage ]) )
-            {
-                if ( ! is_null($theme) )
-                {
+        } else {
+            if (isset($this->publishers[ $namespaceOrPackage ])) {
+                if (! is_null($theme)) {
                     $this->publishers[ $namespaceOrPackage ]->toTheme($theme instanceof Theme ? $theme : $this->resolveTheme($theme));
                 }
                 $this->publishers[ $namespaceOrPackage ]->publish();
-            }
-            else
-            {
+            } else {
                 throw new \InvalidArgumentException("Could not publish [$namespaceOrPackage]. The publisher could not be resolved for $namespaceOrPackage");
             }
         }
@@ -449,45 +420,34 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     {
         list($section, $relativePath, $extension) = with(new NamespacedItemResolver)->parseKey($key);
 
-        if ( $key === null )
-        {
+        if ($key === null) {
             return $this->getActive()->getPath('assets');
         }
 
-        if ( $relativePath === null || strlen($relativePath) === 0 )
-        {
-            if ( array_key_exists($section, $this->finder->getHints()) )
-            {
+        if ($relativePath === null || strlen($relativePath) === 0) {
+            if (array_key_exists($section, $this->finder->getHints())) {
                 return $this->getActive()->getCascadedPath('namespaces', $section, 'assets');
             }
 
             return $this->getActive()->getCascadedPath('packages', $section, 'assets');
         }
 
-        if ( isset($section) )
-        {
-            if ( array_key_exists($section, $this->finder->getHints()) )
-            {
+        if (isset($section)) {
+            if (array_key_exists($section, $this->finder->getHints())) {
                 $paths = $this->getCascadedPaths('namespaces', $section, 'assets');
-            }
-            else
-            {
+            } else {
                 $paths = $this->getCascadedPaths('packages', $section, 'assets');
             }
-        }
-        else
-        {
+        } else {
             $paths = $this->getCascadedPaths(null, null, 'assets');
         }
 
         $file = null;
 
-        foreach ( $paths as $path )
-        {
+        foreach ($paths as $path) {
             $file = rtrim($path, '/') . '/' . $relativePath . '.' . $extension;
 
-            if ( $this->files->exists($file) )
-            {
+            if ($this->files->exists($file)) {
                 return $file;
             }
         }
@@ -515,11 +475,9 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     public function assetUri($key = null)
     {
         $path = Str::create($this->assetPath($key));
-        if ( $path->startsWith(public_path()) )
-        {
+        if ($path->startsWith(public_path())) {
             $path = $path->removeLeft(public_path() . '/');
-            if ( $path->endsWith('.') )
-            {
+            if ($path->endsWith('.')) {
                 $path = $path->removeRight('.');
             }
         }
@@ -536,12 +494,10 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     public function boot($bootParent = true, $bootDefault = false)
     {
         $this->getActive()->boot();
-        if ( $bootParent && $this->getActive()->hasParent() )
-        {
+        if ($bootParent && $this->getActive()->hasParent()) {
             $this->getActive()->getParentTheme()->boot();
         }
-        if ( $bootDefault )
-        {
+        if ($bootDefault) {
             $this->getDefault()->boot();
         }
     }
@@ -622,12 +578,9 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      */
     public function offsetSet($key, $value)
     {
-        if ( is_null($key) )
-        {
+        if (is_null($key)) {
             $this->themes[] = $value;
-        }
-        else
-        {
+        } else {
             $this->themes[ $key ] = $value;
         }
     }
@@ -687,6 +640,4 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
 
         return $this;
     }
-
-
 }

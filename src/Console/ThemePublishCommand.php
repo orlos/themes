@@ -35,5 +35,4 @@ class ThemePublishCommand extends Command
         app('themes')->publish($publisher, $theme);
         $this->info('Published ' . (! is_null($publisher) ? $publisher : 'all') . (! is_null($theme) ? " to theme $theme" : null));
     }
-
 }

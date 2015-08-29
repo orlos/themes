@@ -35,17 +35,14 @@ class ThemeInitCommand extends Command
 
         $gen = new ThemeGenerator(app('blade.compiler'));
 
-        foreach ( $themes as $theme )
-        {
+        foreach ($themes as $theme) {
             $success = $gen->generateTheme($theme[ 0 ], $theme[ 1 ], $theme[ 2 ], $theme[ 3 ]);
 
-            if ( ! $success )
-            {
+            if (! $success) {
                 $this->error('theme already exists');
             }
         }
 
         $this->info('Successfully created init themes');
     }
-
 }

@@ -103,18 +103,15 @@ class ThemeViewFinderTest extends TestCase
         $themesViewFinder = new ThemeViewFinder($fsMock, $paths, $oldViewFinder->getExtensions());
         $themesViewFinder->setThemes($themeFactoryMock);
 
-        foreach ( $oldViewFinder->getPaths() as $location )
-        {
+        foreach ($oldViewFinder->getPaths() as $location) {
             $themesViewFinder->addLocation($location);
         }
 
-        foreach ( $oldViewFinder->getHints() as $namespace => $hints )
-        {
+        foreach ($oldViewFinder->getHints() as $namespace => $hints) {
             $themesViewFinder->addNamespace($namespace, $hints);
         }
 
-        foreach ( $this->hints as $namespace => $hints )
-        {
+        foreach ($this->hints as $namespace => $hints) {
             $themesViewFinder->addNamespace($namespace, $hints);
         }
 

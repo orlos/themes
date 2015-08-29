@@ -69,5 +69,4 @@ class PublisherTest extends TestCase
             ->from($sourcePath)
             ->publish();
     }
-
 }

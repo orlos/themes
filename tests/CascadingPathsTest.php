@@ -121,6 +121,4 @@ class CascadingPathsTest extends TestCase
 
         #$this->assertViewContent('nstestaa::index', 'index of frontend/example::nstest');
     }
-
-
 }

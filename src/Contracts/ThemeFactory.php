@@ -19,5 +19,4 @@ interface ThemeFactory
 
     /** @return ThemeViewFinder */
     public function getFinder();
-
 }

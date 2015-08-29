@@ -64,8 +64,8 @@ class ThemeTest extends TestCase
     {
         $that = $this;
         $this->_getTheme([
-            'register' => function ($app, $_theme) use ($that)
-            {
+            'register' => function ($app, $_theme) use ($that) {
+            
                 $that->assertInstanceOf('Illuminate\Contracts\Foundation\Application', $app);
                 $that->assertInstanceOf(\Caffeinated\Themes\Theme::class, $_theme);
             }
@@ -98,8 +98,8 @@ class ThemeTest extends TestCase
     {
         $that  = $this;
         $theme = $this->_getTheme([
-            'boot' => function ($app, $_theme) use ($that)
-            {
+            'boot' => function ($app, $_theme) use ($that) {
+            
                 $that->assertInstanceOf('Illuminate\Contracts\Foundation\Application', $app);
                 $that->assertInstanceOf(\Caffeinated\Themes\Theme::class, $_theme);
             }
@@ -140,6 +140,4 @@ class ThemeTest extends TestCase
         $this->assertEquals('frontend/parent', $theme->getParentSlug());
         $this->assertInstanceOf(get_class($parent), $theme->getParentTheme());
     }
-
-
 }

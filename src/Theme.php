@@ -79,8 +79,7 @@ class Theme
         $this->path       = $path;
         $this->dispatcher = $dispatcher;
 
-        if ( ! $this->themes->getFiles()->exists($path . '/theme.php') )
-        {
+        if (! $this->themes->getFiles()->exists($path . '/theme.php')) {
             throw new FileNotFoundException("Error while loading theme, could not find {$path}/theme.php");
         }
 
@@ -89,14 +88,12 @@ class Theme
         $this->name       = $this->config[ 'name' ];
         $this->slug       = $this->config[ 'slug' ];
         $this->parentSlug = $this->config[ 'parent' ];
-        if ( isset($this->parentSlug) )
-        {
+        if (isset($this->parentSlug)) {
             $this->parentTheme = $this->themes->resolveTheme($this->parentSlug);
         }
 
 
-        if ( isset($this->config[ 'register' ]) && $this->config[ 'register' ] instanceof Closure )
-        {
+        if (isset($this->config[ 'register' ]) && $this->config[ 'register' ] instanceof Closure) {
             $this->config[ 'register' ](app(), $this);
         }
     }
@@ -113,17 +110,14 @@ class Theme
     {
         $path = $this->path;
 
-        if ( ! is_null($cascadeType) )
-        {
+        if (! is_null($cascadeType)) {
             $path .= '/' . $this->themes->getPath($cascadeType);
         }
-        if ( ! is_null($cascadeName) )
-        {
+        if (! is_null($cascadeName)) {
             $path .= '/' . $cascadeName;
         }
 
-        if ( ! is_null($pathType) )
-        {
+        if (! is_null($pathType)) {
             $path .= '/' . $this->themes->getPath($pathType);
         }
 
@@ -138,12 +132,9 @@ class Theme
      */
     public function getPath($for = null)
     {
-        if ( is_null($for) )
-        {
+        if (is_null($for)) {
             return $this->path;
-        }
-        else
-        {
+        }         else {
             return $this->path . '/' . $this->themes->getPath($for);
         }
     }
@@ -153,15 +144,13 @@ class Theme
      */
     public function boot()
     {
-        if ( $this->booted )
-        {
+        if ($this->booted) {
             return;
         }
 
         $this->dispatcher->fire('booting theme: ', [ $this ]);
 
-        if ( isset($this->config[ 'boot' ]) && $this->config[ 'boot' ] instanceof Closure )
-        {
+        if (isset($this->config[ 'boot' ]) && $this->config[ 'boot' ] instanceof Closure) {
             $this->config[ 'boot' ](app(), $this);
         }
 
@@ -298,5 +287,4 @@ class Theme
     {
         return new SemVer($this->config[ 'version' ]);
     }
-
 }

@@ -43,5 +43,4 @@ trait ThemeProviderTrait
     {
         #app('themes')->getPath()
     }
-
 }
