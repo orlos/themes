@@ -134,7 +134,7 @@ class Theme
     {
         if (is_null($for)) {
             return $this->path;
-        }         else {
+        } else {
             return $this->path . '/' . $this->themes->getPath($for);
         }
     }
