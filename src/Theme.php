@@ -6,8 +6,9 @@
  */
 namespace Caffeinated\Themes;
 
-use Caffeinated\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
+use Caffeinated\Themes\Contracts\Factory as ThemeFactoryContract;
 use Closure;
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use vierbergenlars\SemVer\Internal\SemVer;
@@ -23,7 +24,7 @@ use vierbergenlars\SemVer\Internal\SemVer;
 class Theme
 {
     /**
-     * @var \Caffeinated\Themes\ThemeFactory
+     * @var \Caffeinated\Themes\Factory
      */
     protected $themes;
 
@@ -67,14 +68,18 @@ class Theme
      */
     protected $booted = false;
 
+    protected $container;
+
     /**
-     * @param \Caffeinated\Themes\Contracts\ThemeFactory $themes
+     * @param \Illuminate\Contracts\Container\Container  $container
+     * @param \Caffeinated\Themes\Contracts\Factory      $themes
      * @param \Illuminate\Contracts\Events\Dispatcher    $dispatcher
      * @param                                            $path
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
-    public function __construct(ThemeFactoryContract $themes, Dispatcher $dispatcher, $path)
+    public function __construct(Container $container, ThemeFactoryContract $themes, Dispatcher $dispatcher, $path)
     {
+        $this->container = $container;
         $this->themes     = $themes;
         $this->path       = $path;
         $this->dispatcher = $dispatcher;
@@ -150,12 +155,23 @@ class Theme
 
         $this->dispatcher->fire('booting theme: ', [ $this ]);
 
-        if (isset($this->config[ 'boot' ]) && $this->config[ 'boot' ] instanceof Closure) {
-            $this->config[ 'boot' ](app(), $this);
+        if ($this->config('boot', false) && $this->config('boot') instanceof Closure) {
+             call_user_func_array($this->config('boot'), [app(), $this]);
         }
 
-
         $this->booted = true;
+    }
+
+    /**
+     * Get a config item using dot notation. The config is the theme.php array
+     *
+     * @param      $key
+     * @param null $default
+     * @return mixed
+     */
+    public function config($key, $default = null)
+    {
+        return array_get($this->config, $key, $default);
     }
 
     /**
@@ -191,7 +207,7 @@ class Theme
     /**
      * getThemes
      *
-     * @return \Caffeinated\Themes\Contracts\ThemeFactory|\Caffeinated\Themes\ThemeFactory
+     * @return \Caffeinated\Themes\Contracts\Factory|\Caffeinated\Themes\Factory
      */
     public function getThemes()
     {

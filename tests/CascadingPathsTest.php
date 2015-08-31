@@ -45,7 +45,7 @@ class CascadingPathsTest extends TestCase
     public function testDefinedThemes()
     {
         /**
-         * @var \Caffeinated\Themes\ThemeFactory $themes
+         * @var \Caffeinated\Themes\Factory $themes
          */
         $themes = $this->app[ 'caffeinated.themes' ];
 
@@ -63,7 +63,7 @@ class CascadingPathsTest extends TestCase
     {
 
         /**
-         * @var \Caffeinated\Themes\ThemeFactory $themes
+         * @var \Caffeinated\Themes\Factory $themes
          */
         $themes = $this->app[ 'caffeinated.themes' ];
         /**
@@ -91,7 +91,7 @@ class CascadingPathsTest extends TestCase
     {
 
         /**
-         * @var \Caffeinated\Themes\ThemeFactory $themes
+         * @var \Caffeinated\Themes\Factory $themes
          */
         $themes = $this->app[ 'caffeinated.themes' ];
         /**

@@ -30,13 +30,13 @@ class ThemeTest extends TestCase
         $this->fs->shouldReceive('exists')->once()->andReturn(true);
         $this->fs->shouldReceive('getRequire')->once()->andReturn($this->_getThemeConfig($opts));
 
-        return new Theme($this->factory, $this->events, $this->path);
+        return new Theme($this->app, $this->factory, $this->events, $this->path);
     }
 
     public function setUp()
     {
         parent::setUp();
-        $this->factory = m::mock('Caffeinated\Themes\ThemeFactory');
+        $this->factory = m::mock('Caffeinated\Themes\Factory');
         $this->fs      = m::mock('Illuminate\Filesystem\Filesystem');
         $this->events  = m::mock('Illuminate\Contracts\Events\Dispatcher');
         $this->path    = public_path('themes/frontend/example');
@@ -65,7 +65,7 @@ class ThemeTest extends TestCase
         $that = $this;
         $this->_getTheme([
             'register' => function ($app, $_theme) use ($that) {
-            
+
                 $that->assertInstanceOf('Illuminate\Contracts\Foundation\Application', $app);
                 $that->assertInstanceOf(\Caffeinated\Themes\Theme::class, $_theme);
             }
@@ -82,7 +82,7 @@ class ThemeTest extends TestCase
     {
         $this->factory->shouldReceive('getFiles')->once()->andReturn($this->fs);
         $this->fs->shouldReceive('exists')->once()->andReturn(false);
-        new Theme($this->factory, $this->events, $this->path);
+        new Theme($this->app, $this->factory, $this->events, $this->path);
     }
 
     public function testBootThemeWithoutClosure()
@@ -99,7 +99,7 @@ class ThemeTest extends TestCase
         $that  = $this;
         $theme = $this->_getTheme([
             'boot' => function ($app, $_theme) use ($that) {
-            
+
                 $that->assertInstanceOf('Illuminate\Contracts\Foundation\Application', $app);
                 $that->assertInstanceOf(\Caffeinated\Themes\Theme::class, $_theme);
             }

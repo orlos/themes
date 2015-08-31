@@ -21,7 +21,7 @@ return array(
     |---------------------------------------------------------------------
     |
     */
-    'themeClass' => '\\Caffeinated\\Themes\\Theme',
+    'theme_class' => 'Caffeinated\\Themes\\Theme',
     /*
     |---------------------------------------------------------------------
     | Path configuration

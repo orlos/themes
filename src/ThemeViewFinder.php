@@ -6,7 +6,7 @@
  */
 namespace Caffeinated\Themes;
 
-use Caffeinated\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
+use Caffeinated\Themes\Contracts\Factory as ThemeFactoryContract;
 use Caffeinated\Themes\Contracts\ThemeViewFinder as ThemeViewFinderContract;
 use Illuminate\Support\NamespacedItemResolver;
 use Illuminate\View\FileViewFinder;
@@ -24,7 +24,7 @@ class ThemeViewFinder extends FileViewFinder implements ThemeViewFinderContract
 {
 
     /**
-     * @var $themes \Caffeinated\Themes\ThemeFactory
+     * @var $themes \Caffeinated\Themes\Factory
      */
     protected $themes;
 

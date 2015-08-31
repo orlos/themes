@@ -60,6 +60,6 @@ class ThemesFacadeTest extends TestCase
      */
     protected function getFacadeRoot()
     {
-        return \Caffeinated\Themes\ThemeFactory::class;
+        return \Caffeinated\Themes\Factory::class;
     }
 }

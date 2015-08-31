@@ -13,6 +13,7 @@ use Caffeinated\Beverage\StubGenerator;
 /**
  * This is the ThemeGenerator.
  *
+ * @deprecated
  * @package        Caffeinated\Themes
  * @author         Caffeinated Dev Team
  * @copyright      Copyright (c) 2015, Caffeinated

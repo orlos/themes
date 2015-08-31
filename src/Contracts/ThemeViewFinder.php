@@ -27,12 +27,12 @@ interface ThemeViewFinder
      */
     public function find($key);
 
-    /** @return ThemeFactory */
+    /** @return Factory */
     public function getThemes();
 
     /**
-     * @param ThemeFactory $themes
+     * @param Factory $themes
      * @return $this
      */
-    public function setThemes(ThemeFactory $themes);
+    public function setThemes(Factory $themes);
 }

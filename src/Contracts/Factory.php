@@ -14,7 +14,7 @@ namespace Caffeinated\Themes\Contracts;
  * @copyright      Copyright (c) 2015, Caffeinated
  * @license        https://tldrlegal.com/license/mit-license MIT License
  */
-interface ThemeFactory
+interface Factory
 {
 
     /** @return ThemeViewFinder */

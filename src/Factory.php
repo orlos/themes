@@ -9,8 +9,10 @@ namespace Caffeinated\Themes;
 use ArrayAccess;
 use ArrayIterator;
 use Caffeinated\Beverage\Str;
-use Caffeinated\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
+use Caffeinated\Themes\Contracts\Factory as ThemeFactoryContract;
 use Countable;
+use Illuminate\Contracts\Config\Repository;
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Filesystem\Filesystem;
@@ -26,7 +28,7 @@ use RuntimeException;
  * @copyright      Copyright (c) 2015, Caffeinated
  * @license        https://tldrlegal.com/license/mit-license MIT License
  */
-class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFactoryContract
+class Factory implements ArrayAccess, Countable, IteratorAggregate, ThemeFactoryContract
 {
 
     /**
@@ -91,18 +93,45 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /** @var string The theme class name */
     protected $themeClass;
 
+    protected $config;
+
+    protected $container;
+
     /**
      * Instantiates the class
      *
+     * @param \Illuminate\Contracts\Container\Container  $container
      * @param \Illuminate\Filesystem\Filesystem          $files
      * @param \Illuminate\Contracts\Events\Dispatcher    $events
      * @param \Illuminate\Contracts\Routing\UrlGenerator $url
+     * @param \Illuminate\Contracts\Config\Repository    $config
      */
-    public function __construct(Filesystem $files, Dispatcher $events, UrlGenerator $url)
+    public function __construct(Container $container, Filesystem $files, Dispatcher $events, UrlGenerator $url, Repository $config)
     {
+        $this->container  = $container;
         $this->files      = $files;
         $this->dispatcher = $events;
         $this->url        = $url;
+
+        $this->config = $config->get('caffeinated.themes');
+        ;
+
+        $this->setPaths($this->config('paths'));
+        $this->setThemeClass($this->config('theme_class'));
+        $this->setActive($this->config('active'));
+        $this->setDefault($this->config('default'));
+    }
+
+    /**
+     * Get a config item from caffeinated.themes using dot notation
+     *
+     * @param      $key
+     * @param null $default
+     * @return mixed
+     */
+    public function config($key, $default = null)
+    {
+        return array_get($this->config, $key, $default);
     }
 
     /**
@@ -113,6 +142,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      */
     public function setActive($theme)
     {
+
         if (! $theme instanceof Theme) {
             $theme = $this->resolveTheme($theme);
         } else {
@@ -180,6 +210,10 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      */
     public function resolveTheme($slug)
     {
+        if ($slug instanceof Theme) {
+            return $slug;
+        }
+
         if (array_key_exists($slug, $this->themes)) {
             return $this->themes[ $slug ];
         }
@@ -190,7 +224,8 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
             $themePath = $this->getThemePath($path, $key, $area);
 
             if ($this->files->isDirectory($themePath)) {
-                return $this->themes[ $slug ] = new $this->themeClass($this, $this->dispatcher, $themePath);
+                $class = $this->themeClass;
+                return $this->themes[ $slug ] = new $class($this->container, $this, $this->dispatcher, $themePath);
             }
         }
     }
@@ -619,7 +654,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      * Set the themeClass value
      *
      * @param mixed $themeClass
-     * @return ThemeFactory
+     * @return Factory
      */
     public function setThemeClass($themeClass)
     {
@@ -632,7 +667,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
      * Set the paths value
      *
      * @param array $paths
-     * @return ThemeFactory
+     * @return Factory
      */
     public function setPaths($paths)
     {

@@ -6,9 +6,10 @@
  */
 namespace Caffeinated\Themes;
 
-use Illuminate\Foundation\Application;
-use Illuminate\View\FileViewFinder;
 use Caffeinated\Beverage\ServiceProvider;
+
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\View\FileViewFinder;
 
 /**
  * This is the ThemeServiceProvider.
@@ -29,7 +30,7 @@ class ThemeServiceProvider extends ServiceProvider
     /**
      * @var array
      */
-    protected $configFiles = ['caffeinated.themes'];
+    protected $configFiles = [ 'caffeinated.themes' ];
 
     /**
      * @var array
@@ -39,7 +40,15 @@ class ThemeServiceProvider extends ServiceProvider
         \Caffeinated\Themes\Providers\ConsoleServiceProvider::class
     ];
 
-    protected $provides = ['caffeinated.themes'];
+    protected $provides = [ 'caffeinated.themes' ];
+
+    protected $singletons = [
+        'caffeinated.themes' => Factory::class
+    ];
+
+    protected $aliases = [
+        'caffeinated.themes' => Contracts\Factory::class
+    ];
 
     /**
      * Register the service provider.
@@ -50,8 +59,9 @@ class ThemeServiceProvider extends ServiceProvider
     {
         /** @var \Illuminate\Foundation\Application $app */
         $app = parent::register();
+        $themeClass = $this->app->make('config')->get('caffeinated.themes.theme_class');
+        $app->bind($themeClass, $themeClass);
 
-        $this->registerThemes();
         $this->registerViewFinder();
 
         $app->make('events')->listen('creating: *', function (\Illuminate\Contracts\View\View $view) use ($app) {
@@ -61,55 +71,39 @@ class ThemeServiceProvider extends ServiceProvider
     }
 
     /**
-     * registerThemes
-     */
-    protected function registerThemes()
-    {
-        $this->app->singleton('caffeinated.themes', function (Application $app) {
-        
-            $themeFactory = new ThemeFactory($app->make('files'), $app->make('events'), $app->make('url'));
-            $themeFactory->setPaths(config('caffeinated.themes.paths'));
-            $themeFactory->setThemeClass(config('caffeinated.themes.themeClass'));
-            $themeFactory->setActive(config('caffeinated.themes.active'));
-            $themeFactory->setDefault(config('caffeinated.themes.default'));
-
-            return $themeFactory;
-        });
-        $this->app->alias('caffeinated.themes', 'Caffeinated\Themes\Contracts\ThemeFactory');
-    }
-
-    /**
      * registerViewFinder
      */
     protected function registerViewFinder()
     {
         /**
-         * @var $oldViewFinder FileViewFinder
+         * @var $oldFinder FileViewFinder
          */
-        $oldViewFinder = $this->app[ 'view.finder' ];
+        $oldFinder = $this->app->make('view.finder');
 
-        $this->app->bind('view.finder', function ($app) use ($oldViewFinder) {
+        $this->app->bind('view.finder', function ($app) use ($oldFinder) {
         
+
             $paths = array_merge(
                 $app[ 'config' ][ 'view.paths' ],
-                $oldViewFinder->getPaths()
+                $oldFinder->getPaths()
             );
 
-            $themesViewFinder = new ThemeViewFinder($app[ 'files' ], $paths, $oldViewFinder->getExtensions());
+            $themesViewFinder = new ThemeViewFinder($app[ 'files' ], $paths, $oldFinder->getExtensions());
             $themesViewFinder->setThemes($app[ 'caffeinated.themes' ]);
             $app[ 'caffeinated.themes' ]->setFinder($themesViewFinder);
 
-            foreach ($oldViewFinder->getPaths() as $location) {
+            foreach ($oldFinder->getPaths() as $location) {
                 $themesViewFinder->addLocation($location);
             }
 
-            foreach ($oldViewFinder->getHints() as $namespace => $hints) {
+            foreach ($oldFinder->getHints() as $namespace => $hints) {
                 $themesViewFinder->addNamespace($namespace, $hints);
             }
 
             return $themesViewFinder;
         });
 
-        $this->app[ 'view' ]->setFinder($this->app[ 'view.finder' ]);
+        $newFinder = $this->app->make('view.finder');
+        $this->app->make('view')->setFinder($newFinder);
     }
 }

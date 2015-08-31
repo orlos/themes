@@ -11,7 +11,7 @@
 namespace Caffeinated\Tests\Themes;
 
 use Illuminate\Support\NamespacedItemResolver;
-use Caffeinated\Themes\ThemeFactory;
+use Caffeinated\Themes\Factory;
 use Mockery as m;
 
 /**
@@ -23,13 +23,13 @@ class ThemeFactoryTest extends TestCase
 {
     protected $fs;
 
-    /** @var \Caffeinated\Themes\ThemeFactory */
+    /** @var \Caffeinated\Themes\Factory */
     protected $factory;
     public function setUp()
     {
         parent::setUp();
         $this->fs = m::mock('Illuminate\Filesystem\Filesystem');
-        $this->factory = new ThemeFactory($this->fs, $this->app->make('events'), $this->app->make('url'));
+        $this->factory = new Factory($this->app, $this->fs, $this->app->make('events'), $this->app->make('url'), $this->app->make('config'));
         $this->factory->setPaths($this->paths);
         $this->factory->setThemeClass(\Caffeinated\Themes\Theme::class);
     }
@@ -171,7 +171,7 @@ class ThemeFactoryTest extends TestCase
     public function testGettersSetters()
     {
         $this->app->register(\Caffeinated\Themes\ThemeServiceProvider::class);
-        /** @var \Caffeinated\Themes\ThemeFactory $themes */
+        /** @var \Caffeinated\Themes\Factory $themes */
         $themes = $this->app['caffeinated.themes'];
 
         $this->assertInstanceOf(\Caffeinated\Themes\Contracts\ThemeViewFinder::class, $themes->getFinder());
