@@ -8,8 +8,7 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Response;
 use Illuminate\View\Factory as ViewFactory;
 use URL;
-
-/** eleiva **/
+/* eleiva version */
 class Themes
 {
 	/**
@@ -381,6 +380,27 @@ class Themes
 			.$this->config->get('themes.paths.assets').'/'
 			.$asset);
 	}
+
+	public function trans($key,$locale = 'en', $substitute = []){
+		$segments = explode('::', $key);
+    $theme    = null;
+
+    $locale = session('tenantLocale') ? session('tenantLocale') : 'en';
+
+		list($theme, $key) = $segments;
+    $messageLocation = "resources".DIRECTORY_SEPARATOR."lang".DIRECTORY_SEPARATOR.$locale.DIRECTORY_SEPARATOR."messages.php";
+		$path = $this->getThemePath($theme).$messageLocation;
+    $messages = include $path;
+    if (!empty($substitute)){
+      $translation = $messages[$key];
+      foreach ($substitute as $k => $val) {
+        $translation = str_replace('{'.$k.'}', $val, $translation );
+      }
+    } else {
+      $translation = isset($messages[$key] ) ? $messages[$key] : $key;
+    }
+    return $translation;
+  }
 
 	/**
 	 * Generate a HTML link to the given asset using HTTPS for the
