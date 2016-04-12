@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 use Illuminate\View\Factory as ViewFactory;
 use URL;
 
+/** eleiva **/
 class Themes
 {
 	/**
