@@ -385,7 +385,7 @@ class Themes
 		$segments = explode('::', $key);
     $theme    = null;
 
-    $locale = session('tenantLocale') ? session('tenantLocale') : 'en';
+  $locale = session('tenantLocale') ? session('tenantLocale') : ($locale != null ? $locale :'en');
 
 		list($theme, $key) = $segments;
     $messageLocation = "resources".DIRECTORY_SEPARATOR."lang".DIRECTORY_SEPARATOR.$locale.DIRECTORY_SEPARATOR."messages.php";
