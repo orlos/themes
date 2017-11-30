@@ -11,6 +11,7 @@ use Illuminate\View\Factory as ViewFactory;
 use URL;
 use File;
 
+/* eleiva version */
 
 class Themes
 {
@@ -386,12 +387,11 @@ class Themes
         }
 
 
-
         $urlPath = $this->config->get('themes.paths.base').'/'
-            .($theme ?: $this->getActive()).'/'
-            .$this->config->get('themes.paths.assets').'/'
+            .($theme ?: $this->getActive()).'/views/'
             .$this->config->get('child.location').'/'
             .$this->config->get('child.slug').'/'
+            .$this->config->get('themes.paths.assets').'/'
             .$asset;
 
         if(File::exists($urlPath)) {
