@@ -11,7 +11,7 @@ use Illuminate\View\Factory as ViewFactory;
 use URL;
 use File;
 
-/* eleiva version */
+/* orlos&eleiva version */
 
 class Themes
 {
